@@ -1,0 +1,118 @@
+.banner {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  transition: background-image 1s ease-in-out;
+}
+
+/* Text container */
+.banner-overlay {
+  max-width: 760px;
+  font-family: "Poppins", sans-serif;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  color: #000000; /* ✅ text white for better visibility */
+  margin-left: 40px;
+}
+
+/* Icon at top */
+.banner-icon {
+  font-size: 3.8rem;
+  color: #000000;
+  animation: bounce 2s infinite;
+}
+
+/* Wrapper for icon */
+.banner-icon-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Heading below icon */
+.banner-title {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  animation: slideUp 0.8s ease forwards;
+  color: black;
+}
+
+/* Slogan below heading */
+.banner-slogan {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+
+   color: black;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner {
+    padding-left: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .banner-overlay {
+    align-items: center;
+  }
+
+  .banner-title {
+    font-size: 2.6rem;
+  }
+
+  .banner-icon {
+    font-size: 2.5rem;
+  }
+
+  .banner-slogan {
+    font-size: 1.1rem;
+  }
+}

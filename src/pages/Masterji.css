@@ -1,0 +1,96 @@
+.masterji {
+  padding: 80px 10%;
+  background: #F1F1F1;
+}
+
+.masterji-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+   
+}
+
+.masterji-left {
+  max-width: 600px;
+}
+
+.mj-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.mj-title span {
+  color: #534A92; /* highlight blue */
+}
+
+.mj-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mj-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  color: #e63946; /* red highlight */
+}
+
+.mj-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mj-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #444;
+  font-family: "Poppins", sans-serif;
+}
+
+.mj-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #06d6a0; /* green tick */
+  font-weight: bold;
+}
+
+.masterji-right img {
+  width: 480px;
+  border-radius: 15px;
+
+  transition: transform 0.4s ease;
+}
+
+.masterji-right img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .masterji-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .masterji-right img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .mj-list li {
+    text-align: left;
+  }
+}

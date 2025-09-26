@@ -1,0 +1,119 @@
+.mv-section {
+  padding: 70px 30px;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.mv-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #111;
+  position: relative;
+}
+
+.mv-title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, #9b3eff, #ff3e83);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Mission & Vision cards */
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.mv-card {
+  background: #f9f9f9;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+  background: #fff;
+}
+
+.mv-icon {
+  font-size: 40px;
+  color: #9b3eff;
+  margin-bottom: 12px;
+  animation: bounce 2s infinite;
+}
+
+.mv-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.mv-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Values grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.value-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: scale(1.05);
+  background: #fff;
+}
+
+.value-icon {
+  font-size: 32px;
+  color: #ff3e83;
+  margin-bottom: 10px;
+  animation: pulse 2s infinite;
+}
+
+.value-card h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #111;
+}
+
+.value-card p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}

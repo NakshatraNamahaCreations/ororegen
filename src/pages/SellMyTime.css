@@ -1,0 +1,96 @@
+.sellmytime {
+  padding: 80px 10%;
+  background: #ffffff;
+}
+
+.sellmytime-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+     font-family: "Poppins", sans-serif;
+}
+
+.sellmytime-left img {
+  width: 480px;
+  border-radius: 15px;
+
+  transition: transform 0.4s ease;
+}
+
+.sellmytime-left img:hover {
+  transform: scale(1.05);
+}
+
+.sellmytime-right {
+  max-width: 600px;
+}
+
+.smt-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+     font-family: "Poppins", sans-serif;
+}
+
+.smt-title span {
+  color: #ff9d09; /* red highlight */
+}
+
+.smt-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+     font-family: "Poppins", sans-serif;
+}
+
+.smt-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  color: #1d3557; /* blue highlight */
+     font-family: "Poppins", sans-serif;
+}
+
+.smt-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.smt-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.smt-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #06d6a0; /* green tick */
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sellmytime-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sellmytime-left img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .smt-list li {
+    text-align: left;
+  }
+}
