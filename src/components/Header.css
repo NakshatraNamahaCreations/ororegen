@@ -70,3 +70,88 @@
 body {
   padding-top: 80px; /* adjust based on header height */
 }
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 999;
+}
+
+/* Dropdown items */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+  color: #ff6600;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Ensure OUR APP stays highlighted if dropdown is open */
+.dropdown > a.active {
+  color: #ff6600;
+}
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+  color: #ff6600;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Active link color */
+.nav-links .active {
+  color: #ff6600;
+  font-weight: bold;
+}
