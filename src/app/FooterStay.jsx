@@ -225,7 +225,7 @@ const FooterStay = () => {
                   fontWeight: 600,
                 }}
               />
-             
+             support@stayfindr.com
             </div>
 
             <div
