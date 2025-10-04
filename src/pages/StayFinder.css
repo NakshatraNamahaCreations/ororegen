@@ -1,94 +1,105 @@
+/* ===== StayFinder Section ===== */
 .stayfinder {
-  padding: 80px 10%;
-  background: #F6F6F7;
+  padding: 80px 50px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .stayfinder-content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   gap: 50px;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap; /* makes it responsive */
 }
 
+/* ===== Left Content ===== */
 .stayfinder-left {
-  max-width: 600px;
+  flex: 1;
+  min-width: 320px;
 }
 
 .sf-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #222;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .sf-title span {
-  color: #ff09a1; /* blue highlight */
+  color: #ff385c;
 }
 
 .sf-description {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.7;
-  color: #555;
+  color: #444;
   margin-bottom: 20px;
-    font-family: "Poppins", sans-serif;
 }
 
 .sf-subtitle {
   font-size: 1.3rem;
   font-weight: 600;
-  margin: 20px 0 10px;
-  color: #e63946; /* red highlight */
+  color: #ff385c;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .sf-list {
   list-style: none;
-  padding: 0;
-  margin: 0 0 20px;
-    font-family: "Poppins", sans-serif;
+  padding-left: 0;
+  margin-bottom: 30px;
 }
 
 .sf-list li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 12px;
   font-size: 1rem;
-  color: #444;
-    font-family: "Poppins", sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
-.sf-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #06d6a0; /* green tick */
-  font-weight: bold;
+/* ===== Right Image ===== */
+.stayfinder-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .stayfinder-right img {
-  width: 480px;
-  border-radius: 15px;
-  transition: transform 0.4s ease;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-.stayfinder-right img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive */
+/* ===== Responsive (Mobile / Tablet) ===== */
 @media (max-width: 992px) {
   .stayfinder-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .stayfinder-right img {
-    width: 100%;
-    max-width: 400px;
+  .stayfinder-left {
+    order: 1;
   }
 
-  .sf-list li {
-    text-align: left;
+  .stayfinder-right {
+    order: 2;
+    margin-top: 30px;
+  }
+
+  .sf-title {
+    font-size: 1.8rem;
+  }
+
+  .sf-description {
+    font-size: 1rem;
   }
 }
