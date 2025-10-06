@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./EnquiryForm.css";
-import enquiryImg from "../assets/enquirycontact.jpg"; // ✅ main image
-import dotted from "../../src/assets/dotted.png"; // ✅ top gradient dots
-import dotted1 from "../../src/assets/dotted1.png"; // ✅ small dotted shape
+import enquiryImg from "../assets/enquirycontact.jpg"; 
+import dotted from "../assets/dotted.png";
+import dotted1 from "../assets/dotted1.png";
 
 const EnquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -13,20 +13,78 @@ const EnquiryForm = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  // ✅ Brevo email integration
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("✅ Your message has been sent!");
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      phone: "",
-      message: "",
-    });
+    setLoading(true);
+
+    try {
+      const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key":
+            "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",
+        },
+        body: JSON.stringify({
+          sender: {
+            email: "ororegencompanies@gmail.com", // ✅ must be verified in Brevo
+            name: "Oro Regen Website",
+          },
+          to: [
+            {
+              email: "ororegencompanies@gmail.com", // ✅ receiver (your inbox)
+              name: "Oro Regen Admin",
+            },
+          ],
+          replyTo: {
+            email: formData.email,
+            name: formData.name,
+          },
+          subject: `📩 New Enquiry from ${formData.name}`,
+          htmlContent: `
+            <div style="font-family:Poppins, sans-serif; color:#333;">
+              <h2 style="color:#000;">New Enquiry Form Submission</h2>
+              <p><strong>Name:</strong> ${formData.name}</p>
+              <p><strong>Email:</strong> ${formData.email}</p>
+              <p><strong>Phone:</strong> ${formData.phone}</p>
+              <p><strong>Subject:</strong> ${formData.subject || "N/A"}</p>
+              <p><strong>Message:</strong><br>${formData.message}</p>
+              <br/>
+              <p>📨 Submitted via Oro Regen website enquiry form.</p>
+            </div>
+          `,
+        }),
+      });
+
+      const data = await response.json();
+      console.log("📬 Brevo Response:", data);
+
+      if (response.ok) {
+        alert("✅ Your enquiry has been sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        console.error("❌ Brevo Error:", data);
+        alert("❌ Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Network Error:", error);
+      alert("❌ Network error occurred while sending your enquiry.");
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -35,7 +93,7 @@ const EnquiryForm = () => {
       <div className="contact-heading">
         <p className="contact-now">Contact Now</p>
         <h2>
-          Have Question? <br /> Write a Message
+          Have a Question? <br /> Write a Message
         </h2>
       </div>
 
@@ -63,7 +121,6 @@ const EnquiryForm = () => {
             </div>
 
             <div className="form-row">
-           
               <input
                 type="tel"
                 name="phone"
@@ -71,6 +128,7 @@ const EnquiryForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
               />
+            
             </div>
 
             <textarea
@@ -82,8 +140,8 @@ const EnquiryForm = () => {
               required
             ></textarea>
 
-            <button type="submit" className="send-btn">
-              Send Message
+            <button type="submit" className="send-btn" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
@@ -92,9 +150,12 @@ const EnquiryForm = () => {
         <div className="contact-right">
           <div className="image-container">
             <img src={enquiryImg} alt="Contact" className="contact-image" />
-            {/* Dotted overlays */}
             <img src={dotted} alt="Dotted overlay" className="dotted-overlay" />
-            <img src={dotted1} alt="Dotted overlay 2" className="dotted-overlay2" />
+            <img
+              src={dotted1}
+              alt="Dotted overlay 2"
+              className="dotted-overlay2"
+            />
           </div>
         </div>
       </div>
