@@ -13,7 +13,7 @@ const RefundPolicy = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#ff4500" }}>
-        SellMyTime – Refund & Cancellation Policy
+        NetworkX – Refund & Cancellation Policy
       </h1>
       <p style={{ textAlign: "center", fontStyle: "italic", marginBottom: "40px" }}>
         Effective Date: <strong>[August 5, 2025]</strong>

@@ -13,14 +13,14 @@ const PrivacyPolicy = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#ff4500" }}>
-        SellMyTime – Privacy Policy
+       NetworkX – Privacy Policy
       </h1>
       <p style={{ textAlign: "center", fontStyle: "italic", marginBottom: "40px" }}>
         Effective Date: <strong>[August 5, 2025]</strong>
       </p>
 
       <p>
-        At <strong>SellMyTime</strong>, we value your privacy and are committed
+        At <strong>NetworkX</strong>, we value your privacy and are committed
         to safeguarding your personal information. This Privacy Policy outlines
         how we collect, use, and protect data when you use our platform.
       </p>
@@ -83,8 +83,8 @@ const PrivacyPolicy = () => {
 
       <p style={{ marginTop: "40px", fontStyle: "italic" }}>
         If you have any questions about this Privacy Policy, please contact us at{" "}
-        <a href="mailto:support@sellyourtime.com" style={{ color: "#ff4500" }}>
-          support@sellyourtime.com
+        <a href="mailto:support@networkx.com" style={{ color: "#ff4500" }}>
+          support@networkx.com
         </a>.
       </p>
     </div>

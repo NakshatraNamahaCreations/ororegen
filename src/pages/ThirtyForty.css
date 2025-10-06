@@ -8,6 +8,7 @@
 .tf-heading {
   text-align: center;
   margin-bottom: 60px;
+   font-family: "Poppins", sans-serif;
 }
 
 .tf-main-title {
@@ -25,6 +26,7 @@
   color: #000000;
   line-height: 1.6;
   font-weight: 600;
+     font-family: "Poppins", sans-serif;
 }
 
 /* ---------- CONTENT LAYOUT ---------- */
@@ -57,10 +59,12 @@
   font-weight: 700;
   color: #000000;
   margin-bottom: 15px;
+   font-family: "Poppins", sans-serif;
 }
 
 .tf-title span {
   color: #174dff;
+   font-family: "Poppins", sans-serif;
 }
 
 .tf-description {
@@ -68,6 +72,7 @@
   line-height: 1.7;
   color: #000000;
   margin-bottom: 20px;
+   font-family: "Poppins", sans-serif;
 }
 
 .tf-subtitle {
@@ -75,12 +80,14 @@
   font-weight: 600;
   margin: 20px 0 10px;
   color: #1d3557;
+   font-family: "Poppins", sans-serif;
 }
 
 .tf-list {
   list-style: none;
   padding: 0;
   margin: 0 0 20px;
+   font-family: "Poppins", sans-serif;
 }
 
 .tf-list li {
@@ -89,6 +96,7 @@
   margin-bottom: 12px;
   font-size: 1rem;
   color: #444;
+   font-family: "Poppins", sans-serif;
 }
 
 .tf-list li::before {
@@ -98,6 +106,7 @@
   top: 0;
   color: #06d6a0;
   font-weight: bold;
+   font-family: "Poppins", sans-serif;
 }
 
 /* ---------- TABLET VIEW ---------- */

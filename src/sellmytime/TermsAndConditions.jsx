@@ -13,20 +13,20 @@ const TermsAndConditions = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#ff4500" }}>
-        SellMyTime – Terms & Conditions
+        NetworkX – Terms & Conditions
       </h1>
       <p style={{ textAlign: "center", fontStyle: "italic", marginBottom: "40px" }}>
         Effective Date: <strong>[August 5, 2025]</strong>
       </p>
 
       <p>
-        Welcome to <strong>SellMyTime</strong>. By using our platform, you agree
+        Welcome to <strong>NetworkX</strong>. By using our platform, you agree
         to these Terms & Conditions.
       </p>
 
       <h2 style={{ marginTop: "30px", color: "#000" }}>1. Definitions</h2>
       <ul>
-        <li><strong>Platform</strong> – The SellMyTime app/website.</li>
+        <li><strong>Platform</strong> – The NetworkX app/website.</li>
         <li><strong>User</strong> – Any registered individual (Consultant or Client).</li>
         <li><strong>Consultant/Expert</strong> – Professionals offering their time/skills on the platform.</li>
         <li><strong>Client</strong> – Users booking consultant sessions.</li>
@@ -41,7 +41,7 @@ const TermsAndConditions = () => {
 
       <h2 style={{ marginTop: "30px", color: "#000" }}>3. Bookings & Payments</h2>
       <ul>
-        <li>All bookings must be completed through SellMyTime.</li>
+        <li>All bookings must be completed through NetworkX.</li>
         <li>Payment is processed securely via third-party gateways.</li>
         <li>Platform service fees may apply (displayed before booking).</li>
       </ul>
@@ -68,7 +68,7 @@ const TermsAndConditions = () => {
 
       <h2 style={{ marginTop: "30px", color: "#000" }}>7. Limitation of Liability</h2>
       <p>
-        SellMyTime is a facilitator. We are not responsible for the quality of
+        NetworkX is a facilitator. We are not responsible for the quality of
         consultant advice, nor for disputes between users.
       </p>
 

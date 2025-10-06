@@ -231,8 +231,8 @@ const Footersellmytime = () => {
         <div className="footer-section">
           <img src={logo} alt="Sell Your Time" className="footer-logo" />
           <p>
-            Connect, collaborate, and earn through meaningful interactions.
-            Sell your time — your way.
+          Our platform transforms traditional consulting into flexible, on-demand opportunities that fit every schedule.
+Whether you’re a coach, mentor, or freelancer — we help you share your knowledge, grow your network, and earn effortlessly.
           </p>
           <div className="store-buttons">
             <button> App Store</button>
@@ -241,7 +241,7 @@ const Footersellmytime = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="footer-section">
+        <div className="footer-section" style={{marginRight:'-40px'}}>
           <h4>Quick Links</h4>
           <ul>
             {footerLinks.map((item, i) => (
@@ -268,7 +268,7 @@ const Footersellmytime = () => {
             <FaPhone />+91 78291 25869
           </p>
           <p>
-            <FaEnvelope /> support@sellmytime.com
+            <FaEnvelope /> support@networkx.com
           </p>
           <p>
             <FaMapMarkerAlt />#36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
