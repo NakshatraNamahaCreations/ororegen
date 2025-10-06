@@ -18,12 +18,12 @@ const TermsAndConditions = () => {
         Oro Regen – Terms & Conditions
       </h1>
       <p>
-        <strong>Effective Date:</strong> [Insert Date]
+        <strong>Effective Date:</strong> [October: 06-10-2025]
       </p>
       <p>
-        Welcome to Oro Regen Pvt. Ltd. (“Oro Regen,” “we,” “our,” or “us”). By
+        Welcome to Oro Regen Company(“Oro Regen,” “we,” “our,” or “us”). By
         accessing our website and digital platforms, including our apps Stay
-        Finder, 30Forty, SellMyTime, and Masterji, you agree to the following
+        Findr, 30Forty, NetworkX, and Masterji, you agree to the following
         Terms & Conditions.
       </p>
 
@@ -31,7 +31,7 @@ const TermsAndConditions = () => {
       <p>
         These Terms govern the use of the Oro Regen corporate website and its
         associated products, platforms, and services. Additional terms may apply
-        within each app (Stay Finder, 30Forty, SellMyTime, Masterji).
+        within each app (Stay Findr, 30Forty, NetworkX, Masterji).
       </p>
 
       <h2>2. User Eligibility</h2>
@@ -49,7 +49,7 @@ const TermsAndConditions = () => {
       <h2>3. Intellectual Property</h2>
       <p>
         All content on the Oro Regen website and apps, including logos, designs,
-        and software, is the property of Oro Regen Pvt. Ltd. and protected under
+        and software, is the property of Oro Regen Company and protected under
         copyright and trademark laws.
       </p>
       <p>Unauthorized use of our intellectual property is prohibited.</p>

@@ -15,15 +15,15 @@ const PrivacyPolicy = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        Oro Regen – Privacy Policy
+        OroRegen – Privacy Policy
       </h1>
       <p>
-        <strong>Effective Date:</strong> [Insert Date]
+        <strong>Effective Date:</strong> [October: 06-10-2025]
       </p>
       <p>
-        At Oro Regen Pvt. Ltd., we respect your privacy and are committed to
-        protecting your personal data across our website and apps (Stay Finder,
-        30Forty, SellMyTime, and Masterji).
+        At Oro Regen Company., we respect your privacy and are committed to
+        protecting your personal data across our website and apps (StayFindr,
+        30Forty, NetworkX, and Masterji).
       </p>
 
       <h2>1. Information We Collect</h2>

@@ -21,13 +21,13 @@ const AppsSection = () => {
 
           <div className="app-card">
             <FaHotel className="app-icon" />
-            <h3>Stay Finder</h3>
+            <h3>StayFindr</h3>
             <p>Discover and book your perfect stay with trusted hosts worldwide.</p>
           </div>
 
           <div className="app-card">
             <FaClock className="app-icon" />
-            <h3>SellMyTime</h3>
+            <h3>NetworkX</h3>
             <p>Connect, collaborate, and monetize your time effectively.</p>
           </div>
 
