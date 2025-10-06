@@ -29,8 +29,8 @@ const EnquiryForm = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "api-key":
-            "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",
+          "api-key":process.env.ACCESS-KEY
+            ,
         },
         body: JSON.stringify({
           sender: {
