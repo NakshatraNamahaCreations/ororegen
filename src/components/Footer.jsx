@@ -72,7 +72,7 @@ const Footer = () => {
     <li>
       <FaEnvelope className="contact-icon" />
       <a href="mailto:ororegencompanies@gmail.com">
-        ororegencompanies@gmail.com
+      ororegencompanies@gmail.com
       </a>
     </li>
     <li>

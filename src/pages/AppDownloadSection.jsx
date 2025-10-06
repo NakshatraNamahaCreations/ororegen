@@ -10,7 +10,7 @@ const AppDownloadSection = () => {
           Download our App Today & <br />
           Experience Endless Possibilities
         </h2>
-        <p>and get started with a free 1 month trial for your business</p>
+        
 
         <div className="app-buttons">
           <a
@@ -33,7 +33,7 @@ const AppDownloadSection = () => {
             <FaApple className="store-icon" />
             <div className="store-text">
               <small>Get in</small>
-              <span>Apple Store</span>
+              <span>App Store</span>
             </div>
           </a>
         </div>

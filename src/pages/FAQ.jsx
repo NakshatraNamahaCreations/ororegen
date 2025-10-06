@@ -47,7 +47,7 @@ const faqData = [
   },
   {
     question: "9. How can I contact customer support?",
-    answer: "You can reach us anytime at support@ororegen.com.",
+    answer: "You can reach us anytime at ororegencompanies@gmail.com",
   },
   {
     question: "10. How do I stay updated about new features?",
