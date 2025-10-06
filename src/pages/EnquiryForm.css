@@ -1,84 +1,206 @@
-.enquiry-section {
-  padding: 60px 40px;
+.contact-section {
+  background-color: #ffffff;
   font-family: "Poppins", sans-serif;
+  padding: 90px 100px;
 }
 
-.enquiry-container {
+/* --- Heading --- */
+.contact-heading {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.contact-now {
+  color: #ff5f6d;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.contact-heading h2 {
+  font-size: 42px;
+  color: #1a1a1a;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* --- Wrapper --- */
+.contact-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.enquiry-image img {
-  max-width: 400px;
-  width: 100%;
-}
-
-.enquiry-form {
+/* --- Left Form --- */
+.contact-left {
   flex: 1;
+  min-width: 400px;
 }
 
-.enquiry-form h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #0d0d3b;
-}
-
-.enquiry-form p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 25px;
-  line-height: 1.6;
-}
-
-.enquiry-form form {
+.contact-left form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
-.enquiry-form input,
-.enquiry-form textarea {
-  width: 100%;
-  padding: 12px 14px;
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 14px 16px;
   border-radius: 8px;
-  border: none;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  font-size: 14px;
+  border: 1px solid #e2e2e2;
+  background: #f8f8fc;
+  font-size: 15px;
+  color: #333;
+  transition: 0.3s;
+}
+
+textarea {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  background: #f8f8fc;
+  font-size: 15px;
+  color: #333;
+  resize: none;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #845ef7;
+  box-shadow: 0 0 0 3px rgba(132, 94, 247, 0.1);
   outline: none;
 }
 
-.enquiry-form textarea {
-  resize: none;
-}
-
-.enquiry-form button {
-  background: linear-gradient(135deg, #454546, #000000);
-  color: #fff;
+/* --- Send Button --- */
+.send-btn {
+  width: 180px;
+  padding: 14px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #ff5f6d, #845ef7) 1;
+  background: #fff;
+  color: #845ef7;
   font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 25px;
-  border: none;
+  font-size: 15px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.4s ease;
 }
 
-.enquiry-form button:hover {
-  opacity: 0.9;
+.send-btn:hover {
+  background: linear-gradient(90deg, #ff5f6d, #845ef7);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(132, 94, 247, 0.25);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .enquiry-container {
+/* --- Right Image + Dots --- */
+.contact-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 470px;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 60% 40% 60% 40% / 60% 40% 60% 40%;
+  background: #f3f1ff;
+}
+
+/* Image */
+.contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  position: relative;
+  z-index: 2;
+}
+
+/* Dotted overlays */
+.dotted-overlay {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+.dotted-overlay2 {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  width: 150px;
+  opacity: 0.6;
+  z-index: 1; /* ensures it's behind dotted-overlay */
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 60px 40px;
+  }
+
+  .contact-heading {
+    text-align: center;
+  }
+
+  .contact-heading h2 {
+    font-size: 32px;
+  }
+
+  .contact-wrapper {
     flex-direction: column;
     text-align: center;
   }
 
-  .enquiry-image img {
-    max-width: 300px;
+  .form-row {
+    flex-direction: column;
+  }
+
+  .send-btn {
+    margin: 0 auto;
+  }
+
+  .image-container {
+    width: 360px;
+    height: 320px;
+  }
+
+  .dotted-overlay {
+    width: 140px;
+    top: -25px;
+    right: -25px;
+  }
+
+  .dotted-overlay2 {
+    width: 120px;
+    top: 25px;
+    right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-heading h2 {
+    font-size: 26px;
+  }
+
+  .image-container {
+    width: 300px;
+    height: 260px;
   }
 }

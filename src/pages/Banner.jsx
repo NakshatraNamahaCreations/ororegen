@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import "./Banner.css";
 import ban1 from "../assets/ban3.jpg";
@@ -22,7 +24,7 @@ const texts = [
     icon: <FaHotel className="banner-icon" />,
   },
   {
-    title: "Sell My Time / NETWOKX",
+    title: "NETWORKX",
     slogan:
       "Turn your time into new opportunities. Connect, collaborate, and earn while doing what you love.",
     icon: <FaClock className="banner-icon" />,
@@ -51,15 +53,10 @@ export default function Banner() {
       style={{ backgroundImage: `url(${banners[index]})` }}
     >
       <div className="banner-overlay">
-        {/* Icon */}
         <div className="banner-icon-wrap">{texts[index].icon}</div>
-
-        {/* Heading */}
         <h1 key={texts[index].title} className="banner-title">
           {texts[index].title}
         </h1>
-
-        {/* Slogan */}
         <p key={texts[index].slogan} className="banner-slogan">
           {texts[index].slogan}
         </p>

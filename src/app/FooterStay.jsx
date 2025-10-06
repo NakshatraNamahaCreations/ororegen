@@ -206,7 +206,7 @@ const FooterStay = () => {
               }}
             >
               <FaPhoneAlt style={{ marginRight: "10px", color: "black" }} />{" "}
-              +91 78291 25869
+             +91 78291 25869
             </div>
 
             <div
@@ -236,9 +236,9 @@ const FooterStay = () => {
                 color: "black",
               }}
             >
-            #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, 
+           #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
               <br />
-             SRINAGARA, MYSORE-570008
+         
             </div>
           </div>
         </div>

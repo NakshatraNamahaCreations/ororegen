@@ -247,8 +247,7 @@ const FooterThirtyForty = () => {
             }}
           >
             <FaMapMarkerAlt style={{ marginRight: "10px", color: "#d1001f" }} />{" "}
-            #336/A, 20th Main Road, D Block, Nachanally, JP Nagar, Mysore,
-            Karnataka - 570008
+           #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
           </p>
           <p
             style={{
@@ -259,8 +258,8 @@ const FooterThirtyForty = () => {
               color: "#555",
             }}
           >
-            <FaPhone style={{ marginRight: "10px", color: "#d1001f" }} /> +91
-            73495 79436
+            <FaPhone style={{ marginRight: "10px", color: "#d1001f" }} />
+           +91 78291 25869
           </p>
           <p
             style={{

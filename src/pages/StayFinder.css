@@ -1,7 +1,7 @@
 /* ===== StayFinder Section ===== */
 .stayfinder {
-  padding: 80px 50px;
-  background: #fff;
+  padding: 80px 8%;
+  background: #F6F5F6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,10 +12,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 60px;
   max-width: 1200px;
   width: 100%;
-  flex-wrap: wrap; /* makes it responsive */
+  flex-wrap: nowrap;
 }
 
 /* ===== Left Content ===== */
@@ -25,7 +25,7 @@
 }
 
 .sf-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #222;
   margin-bottom: 20px;
@@ -36,7 +36,7 @@
 }
 
 .sf-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: #444;
   margin-bottom: 20px;
@@ -61,6 +61,17 @@
   color: #333;
   margin-bottom: 10px;
   line-height: 1.6;
+  position: relative;
+  padding-left: 25px;
+}
+
+.sf-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #06d6a0;
+  font-weight: bold;
 }
 
 /* ===== Right Image ===== */
@@ -76,14 +87,52 @@
   max-width: 500px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.4s ease;
 }
 
-/* ===== Responsive (Mobile / Tablet) ===== */
-@media (max-width: 992px) {
+.stayfinder-right img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Tablet View ===== */
+@media (max-width: 1024px) {
+  .stayfinder {
+    padding: 70px 6%;
+  }
+
   .stayfinder-content {
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .sf-title {
+    font-size: 2rem;
+  }
+
+  .sf-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .sf-description {
+    font-size: 0.95rem;
+  }
+
+  .stayfinder-right img {
+    max-width: 400px;
+  }
+}
+
+/* ===== Mobile View ===== */
+@media (max-width: 768px) {
+  .stayfinder {
+    padding: 60px 5%;
+  }
+
+  .stayfinder-content {
+    flex-direction: column-reverse; /* image below text for better flow */
     text-align: center;
+    gap: 30px;
   }
 
   .stayfinder-left {
@@ -92,7 +141,6 @@
 
   .stayfinder-right {
     order: 2;
-    margin-top: 30px;
   }
 
   .sf-title {
@@ -100,6 +148,46 @@
   }
 
   .sf-description {
+    font-size: 0.95rem;
+  }
+
+  .sf-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sf-list {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 25px;
+  }
+
+  .stayfinder-right img {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+/* ===== Small Mobile ===== */
+@media (max-width: 480px) {
+  .stayfinder {
+    padding: 50px 5%;
+  }
+
+  .sf-title {
+    font-size: 1.6rem;
+  }
+
+  .sf-subtitle {
     font-size: 1rem;
+  }
+
+  .sf-description,
+  .sf-list li {
+    font-size: 0.9rem;
+  }
+
+  .stayfinder-right img {
+    width: 100%;
+    max-width: 260px;
   }
 }

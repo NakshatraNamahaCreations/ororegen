@@ -1,6 +1,6 @@
 import React from "react";
 import "./WhoWeAre.css";
-import teamImg from "../assets/about.png"; // replace with your own illustration/image
+import teamImg from "../assets/img2.png";
 
 const WhoWeAre = () => {
   return (
@@ -8,14 +8,15 @@ const WhoWeAre = () => {
       <div className="who-container">
         {/* Left Illustration */}
         <div className="who-image">
-         <img src={teamImg} alt="Team" style={{ width: "500px", height: "500px" }} />
-
+          <img src={teamImg} alt="Team" />
         </div>
 
         {/* Right Content */}
         <div className="who-content">
           <h2 className="who-title">WHO WE ARE</h2>
-          <h2 style={{color:'black',fontSize:'30px',marginTop:'-20px'}}>Ideas to Impact, One Platform at a Time.</h2>
+          <h2 className="who-subtitle">
+            Ideas to Impact, One Platform at a Time.
+          </h2>
           <p>
             Oro Regen Company is a next-generation technology firm committed to
             building platforms that solve real-world challenges. Our focus is on
@@ -31,7 +32,6 @@ const WhoWeAre = () => {
             We believe in the power of ideas—and our apps are designed to bring
             those ideas to life.
           </p>
-        
         </div>
       </div>
     </section>

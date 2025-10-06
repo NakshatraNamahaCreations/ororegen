@@ -1,21 +1,21 @@
 .sellmytime {
   padding: 80px 10%;
   background: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 .sellmytime-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-     font-family: "Poppins", sans-serif;
+  gap: 60px;
+  flex-wrap: nowrap;
 }
 
+/* ---------- IMAGE ---------- */
 .sellmytime-left img {
   width: 480px;
   border-radius: 15px;
-
   transition: transform 0.4s ease;
 }
 
@@ -23,6 +23,7 @@
   transform: scale(1.05);
 }
 
+/* ---------- TEXT ---------- */
 .sellmytime-right {
   max-width: 600px;
 }
@@ -32,11 +33,10 @@
   font-weight: 700;
   color: #222;
   margin-bottom: 15px;
-     font-family: "Poppins", sans-serif;
 }
 
 .smt-title span {
-  color: #ff9d09; /* red highlight */
+  color: #ff9d09;
 }
 
 .smt-description {
@@ -44,15 +44,13 @@
   line-height: 1.7;
   color: #555;
   margin-bottom: 20px;
-     font-family: "Poppins", sans-serif;
 }
 
 .smt-subtitle {
   font-size: 1.3rem;
   font-weight: 600;
-  margin: 20px 0 10px;
-  color: #1d3557; /* blue highlight */
-     font-family: "Poppins", sans-serif;
+  margin: 25px 0 10px;
+  color: #1d3557;
 }
 
 .smt-list {
@@ -74,23 +72,103 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #06d6a0; /* green tick */
+  color: #06d6a0;
   font-weight: bold;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+/* ---------- TABLET VIEW ---------- */
+@media (max-width: 1024px) {
+  .sellmytime {
+    padding: 70px 8%;
+  }
+
+  .sellmytime-content {
+    gap: 40px;
+  }
+
+  .sellmytime-left img {
+    width: 400px;
+  }
+
+  .smt-title {
+    font-size: 2rem;
+  }
+
+  .smt-description {
+    font-size: 0.95rem;
+  }
+
+  .smt-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* ---------- MOBILE VIEW ---------- */
+@media (max-width: 768px) {
+  .sellmytime {
+    padding: 60px 6%;
+  }
+
   .sellmytime-content {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
+  }
+
+  .sellmytime-left img {
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .sellmytime-right {
+    max-width: 100%;
+  }
+
+  .smt-title {
+    font-size: 1.8rem;
+  }
+
+  .smt-description {
+    font-size: 0.95rem;
+  }
+
+  .smt-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .smt-list {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+  .sellmytime {
+    padding: 50px 5%;
+  }
+
+  .sellmytime-content {
+    gap: 30px;
   }
 
   .sellmytime-left img {
     width: 100%;
-    max-width: 400px;
+    max-width: 280px;
   }
 
+  .smt-title {
+    font-size: 1.5rem;
+  }
+
+  .smt-subtitle {
+    font-size: 1rem;
+  }
+
+  .smt-description,
   .smt-list li {
-    text-align: left;
+    font-size: 0.9rem;
   }
 }

@@ -24,12 +24,12 @@ const Masterji = () => {
             <li><strong>Progress Tracking</strong> – Assignments, quizzes, and certification to ensure measurable growth.</li>
           </ul>
 
-          <h3 className="mj-subtitle">🌟 Vision</h3>
+          {/* <h3 className="mj-subtitle">🌟 Vision</h3>
           <p className="mj-description">
             Masterji aims to democratize learning by connecting learners with the right mentors and
             resources. Its mission is to create a global knowledge-sharing community where education
             goes beyond classrooms and empowers every individual to achieve more.
-          </p>
+          </p> */}
         </div>
 
         {/* Right Image */}

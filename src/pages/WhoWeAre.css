@@ -1,68 +1,130 @@
+/* ===== WHO WE ARE - Modern Glass Gradient Design ===== */
+
 .who-section {
-  padding: 80px 40px;
-  background: linear-gradient(135deg, #ffffff);
-  color: #000000;
+  padding: 100px 5%;
   font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Subtle decorative blobs */
+.who-section::before,
+.who-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.who-section::before {
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  left: -100px;
+  background: #f6f3ff;
+}
+
+.who-section::after {
+  width: 350px;
+  height: 350px;
+  bottom: -80px;
+  right: -120px;
+  background: #ff5f6d;
+}
+
+/* ===== Container ===== */
 .who-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  flex-wrap: nowrap;
 }
 
-/* Left Image */
+/* ===== IMAGE ===== */
+.who-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .who-image img {
-  width: 350px;
-  max-width: 100%;
-  border-radius: 20px;
- 
-  animation: float 3s ease-in-out infinite;
+  width: 480px;
+  height: auto;
+  border-radius: 24px;
+  animation: float 4s ease-in-out infinite;
+  transition: all 0.4s ease;
 }
 
-/* Right Content */
+.who-image img:hover {
+  transform: scale(1.04);
+
+}
+
+/* ===== CONTENT ===== */
 .who-content {
   flex: 1;
-  min-width: 300px;
-  animation: fadeIn 1.2s ease;
+
+  backdrop-filter: blur(10px);
+  padding: 40px 45px;
+  border-radius: 20px;
+ 
+  animation: fadeIn 1.3s ease;
 }
 
 .who-title {
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
   position: relative;
-  color: 'pink';
+  text-transform: uppercase;
 }
 
 .who-title::after {
   content: "";
   display: block;
-  width: 80px;
+  width: 90px;
   height: 3px;
-  background: #fff;
+  background: linear-gradient(90deg, #845ef7, #ff5f6d);
   margin-top: 6px;
   border-radius: 2px;
 }
 
-.who-content p {
-  font-size: 15px;
-  margin-bottom: 15px;
-  line-height: 1.7;
-  color: #000000;
+.who-subtitle {
+  color: #222;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff5f6d, #845ef7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+.who-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* ===== BUTTON (Optional CTA) ===== */
 .who-btn {
   margin-top: 10px;
-  padding: 12px 28px;
+  padding: 12px 32px;
   border: none;
   border-radius: 30px;
-  background: #fff;
-  color: #9b3eff;
+  background: linear-gradient(135deg, #ff5f6d, #845ef7);
+  color: #fff;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
@@ -70,28 +132,87 @@
 }
 
 .who-btn:hover {
-  background: #ff3e83;
-  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 95, 109, 0.3);
 }
 
-/* Animations */
+/* ===== Animations ===== */
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .who-container {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .who-content {
+    padding: 30px;
+  }
+  .who-image img {
+    width: 400px;
+  }
+  .who-subtitle {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
   .who-container {
     flex-direction: column;
     text-align: center;
   }
+
   .who-content {
-    margin-top: 20px;
+    
+    padding: 30px 25px;
+  }
+
+  .who-image img {
+    width: 320px;
+  }
+
+  .who-title {
+    font-size: 22px;
+  }
+
+  .who-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .who-content p {
+    font-size: 0.95rem;
+  }
+
+  .who-title::after {
+    margin: 6px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .who-section {
+    padding: 60px 20px;
+  }
+  .who-image img {
+    width: 260px;
+  }
+  .who-subtitle {
+    font-size: 1.3rem;
+  }
+  .who-content p {
+    font-size: 0.9rem;
   }
 }

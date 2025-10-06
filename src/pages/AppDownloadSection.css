@@ -1,0 +1,96 @@
+.app-download-section {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); /* geometric look */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  bottom: 40px;
+}
+
+.app-download-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.app-download-content p {
+  font-size: 16px;
+  color: #bcbcc7;
+  margin-bottom: 40px;
+}
+
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* --- Store Buttons --- */
+.store-btn {
+  display: flex;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  gap: 10px;
+}
+
+.google-play {
+  border-image: linear-gradient(90deg, #ff5f6d, #845ef7) 1;
+}
+
+.apple-store {
+  border-image: linear-gradient(90deg, #ff5f6d, #845ef7) 1;
+}
+
+.store-icon {
+  font-size: 24px;
+}
+
+.store-text small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #d0d0d0;
+  margin-bottom: -3px;
+}
+
+.store-text span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* --- Hover Effects --- */
+.store-btn:hover {
+  background: linear-gradient(90deg, #ff5f6d, #845ef7);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .app-download-content h2 {
+    font-size: 28px;
+  }
+
+  .app-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .store-btn {
+    width: 220px;
+    justify-content: center;
+  }
+}

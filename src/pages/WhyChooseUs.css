@@ -1,87 +1,110 @@
 .whychoose {
   text-align: center;
-  padding: 80px 20px;
-  background: #ecf0f5;
-    font-family: "Poppins", sans-serif;
-    margin-top: -80px;
+  padding: 90px 40px;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Top Heading */
+.feature-subtitle {
+  color: #ff5f6d;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
 }
 
 .whychoose-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  color: #000000;
-  margin-bottom: 10px;
-    font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  line-height: 1.3;
 }
 
-.whychoose-subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 50px;
-    font-family: "Poppins", sans-serif;
-}
-
-.whychoose-container {
+/* Grid Layout */
+.feature-grid {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  gap: 40px;
+  align-items: stretch;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
-.whychoose-left,
-.whychoose-right {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  max-width: 300px;
+/* Card Design */
+.feature-card {
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  width: 250px;
+  transition: all 0.3s ease;
 }
 
-.whychoose-center img {
-  max-width: 600px;
-  transition: transform 0.5s ease;
-}
-
-.whychoose-center img:hover {
-  transform: scale(1.05);
-}
-
-.whychoose-card {
-  background: #fff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.whychoose-card:hover {
+.feature-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-.why-icon {
-  font-size: 1.8rem;
-  color: #e63946;
+/* Icon Circle */
+.icon-wrapper {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff5f6d, #845ef7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #ffffff;
+}
+
+/* Text Styling */
+.feature-card h3 {
+  font-size: 18px;
+  color: #1f1f1f;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-/* Responsive */
+.feature-card p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+/* Responsive Layout */
 @media (max-width: 992px) {
-  .whychoose-container {
+  .feature-grid {
+    gap: 30px;
+  }
+
+  .feature-card {
+    width: 220px;
+    padding: 30px 20px;
+  }
+
+  .icon-wrapper {
+    width: 75px;
+    height: 75px;
+    font-size: 28px;
+  }
+
+  .whychoose-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-grid {
     flex-direction: column;
     align-items: center;
   }
 
-  .whychoose-left,
-  .whychoose-right {
-    max-width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .whychoose-card {
-    width: 260px;
-    text-align: center;
+  .feature-card {
+    width: 80%;
+    max-width: 320px;
   }
 }

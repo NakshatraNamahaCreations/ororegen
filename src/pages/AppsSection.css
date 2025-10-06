@@ -1,28 +1,48 @@
 .apps-section {
-  background: linear-gradient(135deg, #e9f2fc, #ffffff);
-  padding: 70px 20px;
-  color: #000000;
+  background: linear-gradient(135deg, #0b0b0d, #1b0f1f);
+  padding: 90px 20px;
+  color: #ffffff;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional faint background pattern */
+.apps-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(255, 95, 109, 0.05), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(132, 94, 247, 0.05), transparent 60%);
+  pointer-events: none;
 }
 
 .apps-container {
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .apps-title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ff5f6d, #845ef7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .apps-subtitle {
   font-size: 16px;
   max-width: 700px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  color: #000000;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+  color: #ccc;
 }
 
 .apps-grid {
@@ -31,46 +51,69 @@
   gap: 25px;
 }
 
+/* 🔹 Card Styling */
 .app-card {
-  background: rgba(0, 0, 0, 0.733);
-  border-radius: 12px;
-  padding: 25px 20px;
+  background: #111111;
+  border-radius: 16px;
+  padding: 35px 25px;
   text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .app-card:hover {
-  background: rgb(99, 97, 97);
-  transform: translateY(-5px);
+  background: linear-gradient(135deg, #181818, #242424);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(255, 95, 109, 0.3);
 }
 
+/* 🔹 Icon Gradient */
 .app-icon {
-  font-size: 40px;
-  margin-bottom: 12px;
-  color: #fff;
+  font-size: 45px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #ff5f6d, #845ef7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
 }
 
+.app-card:hover .app-icon {
+  transform: scale(1.15);
+}
+
+/* 🔹 Texts */
 .app-card h3 {
   font-size: 20px;
-  margin-bottom: 12px;
-  color: #fff;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .app-card p {
   font-size: 14px;
-  color: #eee;
+  color: #bfbfbf;
+  line-height: 1.6;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
   .apps-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
 @media (max-width: 600px) {
   .apps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .apps-title {
+    font-size: 30px;
+  }
+
+  .apps-subtitle {
+    font-size: 14px;
   }
 }

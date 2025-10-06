@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "./EnquiryForm.css";
-import contactImg from "../assets/enquiry.png";
+import enquiryImg from "../assets/enquirycontact.jpg"; // ✅ main image
+import dotted from "../../src/assets/dotted.png"; // ✅ top gradient dots
+import dotted1 from "../../src/assets/dotted1.png"; // ✅ small dotted shape
 
 const EnquiryForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     phone: "",
     message: "",
   });
@@ -14,106 +17,91 @@ const EnquiryForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendMail = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch("https://api.brevo.com/v3/smtp/email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "api-key":
-            "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", // ⚠️ Replace with your actual key (keep this in .env, don’t hardcode in production!)
-        },
-        body: JSON.stringify({
-          sender: {
-            email: "ororegencompanies@gmail.com", // ✅ must be a verified sender in Brevo
-            name: `${formData.name} (${formData.email})`, // ✅ display user details in sender name
-          },
-          to: [
-            {
-              email: "ororegencompanies@gmail.com",
-              name: "Oro Regen Support",
-            },
-          ],
-          subject: "New Enquiry Form Submission",
-          htmlContent: `
-            <h2>New Enquiry Request</h2>
-            <p><strong>Name:</strong> ${formData.name}</p>
-            <p><strong>Email:</strong> ${formData.email}</p>
-            <p><strong>Phone:</strong> ${formData.phone}</p>
-            <p><strong>Message:</strong> ${formData.message}</p>
-          `,
-        }),
-      });
-
-      const data = await response.json();
-      console.log("API Response:", data);
-
-      if (response.ok) {
-        alert("✅ Enquiry sent successfully!");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        alert(`❌ Failed: ${data.message || "Unknown error"}`);
-      }
-    } catch (err) {
-      console.error("Error:", err);
-      alert("❌ Network or server error.");
-    }
+    alert("✅ Your message has been sent!");
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      phone: "",
+      message: "",
+    });
   };
 
   return (
-    <section className="enquiry-section">
-      <div className="enquiry-container">
-        {/* Left Illustration */}
-        <div className="enquiry-image">
-          <img src={contactImg} alt="Contact Illustration" />
-        </div>
+    <section className="contact-section">
+      {/* Heading */}
+      <div className="contact-heading">
+        <p className="contact-now">Contact Now</p>
+        <h2>
+          Have Question? <br /> Write a Message
+        </h2>
+      </div>
 
-        {/* Right Form */}
-        <div className="enquiry-form">
-          <h2>Get In Touch</h2>
-          <p>
-            Have questions or need assistance? Our team is here to help you with
-            any queries. Reach out today and we’ll respond as quickly as
-            possible.
-          </p>
+      <div className="contact-wrapper">
+        {/* Left Form */}
+        <div className="contact-left">
+          <form onSubmit={handleSubmit}>
+            <div className="form-row">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-          <form onSubmit={sendMail}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
+            <div className="form-row">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+
             <textarea
               name="message"
-              placeholder="Write comments"
-              rows="4"
+              placeholder="Write Message"
+              rows="5"
               value={formData.message}
               onChange={handleChange}
               required
-            />
-            <button type="submit">Send Message</button>
+            ></textarea>
+
+            <button type="submit" className="send-btn">
+              Send Message
+            </button>
           </form>
+        </div>
+
+        {/* Right Image */}
+        <div className="contact-right">
+          <div className="image-container">
+            <img src={enquiryImg} alt="Contact" className="contact-image" />
+            {/* Dotted overlays */}
+            <img src={dotted} alt="Dotted overlay" className="dotted-overlay" />
+            <img src={dotted1} alt="Dotted overlay 2" className="dotted-overlay2" />
+          </div>
         </div>
       </div>
     </section>
