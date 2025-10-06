@@ -638,7 +638,7 @@
 import React, { useState } from "react";
 import Footersellmytime from "./Footersellmytime";
 import Headersellmytime from "./Headersellmytime";
-import bannerImg from "../assets/sellmytimebanner.jpg";
+import bannerImg from "../assets/network.jpg";
 import aboutImage from "../assets/sellmytimeabout.png";
 import appStore from "../assets/appstore.webp";
 import googlePlay from "../assets/playstore.webp";

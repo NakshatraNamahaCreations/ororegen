@@ -273,18 +273,18 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           <p>
             <FaMapMarkerAlt />#36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
           </p>
-          <div className="social-icons">
+          {/* <div className="social-icons">
             <FaInstagram />
             <FaFacebook />
             <FaYoutube />
             <FaTwitter />
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* 🔸 Bottom Bar */}
       <div className="smt-footer-bottom">
-        <p>© 2025 Sell Your Time. All rights reserved.</p>
+        <p>© 2025 Networkx. All rights reserved.</p>
         <div>
           <a href="/sellmytime/privacy-policy">Privacy Policy</a>
           <a href="/sellmytime/terms-and-conditions">Terms & Conditions</a>

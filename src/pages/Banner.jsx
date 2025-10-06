@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import "./Banner.css";
 import ban1 from "../assets/ban3.jpg";
 import ban2 from "../assets/ban2.jpg";
-import ban3 from "../assets/ban1.jpg";
-import ban4 from "../assets/ban4.jpg";
+import ban3 from "../assets/network.jpg";
+import ban4 from "../assets/masterjinew.jpg";
 import { FaHome, FaHotel, FaClock, FaSchool } from "react-icons/fa";
 
 const banners = [ban1, ban2, ban3, ban4];
