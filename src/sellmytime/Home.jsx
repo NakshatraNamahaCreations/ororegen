@@ -639,7 +639,7 @@ import React, { useState } from "react";
 import Footersellmytime from "./Footersellmytime";
 import Headersellmytime from "./Headersellmytime";
 import bannerImg from "../assets/network.jpg";
-import aboutImage from "../assets/sellmytimeabout.png";
+import aboutImage from "../assets/networkmobile.jpg";
 import appStore from "../assets/appstore.webp";
 import googlePlay from "../assets/playstore.webp";
 import { FaLightbulb, FaDollarSign, FaShieldAlt, FaGlobe } from "react-icons/fa";
@@ -805,7 +805,7 @@ function Home() {
             }}
           >
             Book Time. Share Knowledge.{" "}
-            <span style={{ color: "#ff4500" }}>Grow Together.</span>
+            <span style={{ color: "#24428B" }}>Grow Together.</span>
           </h1>
 
           <p
@@ -846,7 +846,7 @@ function Home() {
       >
         <div>
           <h2 style={{ fontSize: "32px", fontWeight: "700", marginBottom: "20px",  fontFamily: '"Poppins", sans-serif',}}>
-            Turn Your Expertise <span style={{ color: "#ff6600",  fontFamily: '"Poppins", sans-serif', }}>Into Income.</span>
+            Turn Your Expertise <span style={{ color: "#24428B",  fontFamily: '"Poppins", sans-serif', }}>Into Income.</span>
           </h2>
           <p style={{ fontSize: "16px", lineHeight: "1.8", marginBottom: "20px",  fontFamily: '"Poppins", sans-serif', }}>
             NetworkX is built on a simple idea — time is the most valuable currency. We connect professionals, creators, and learners through a seamless platform that values every moment shared.
@@ -856,7 +856,7 @@ function Home() {
           </p>
         </div>
         <div style={{ textAlign: "center" }}>
-          <img src={aboutImage} alt="About" style={{ width: "100%", maxWidth: "420px" }} />
+          <img src={aboutImage} alt="About" style={{ width: "100%", maxWidth: "600px" }} />
         </div>
       </section>
 
@@ -897,7 +897,7 @@ function Home() {
                   width: "60px",
                   height: "60px",
                   borderRadius: "50%",
-                  backgroundColor: "#ff6600",
+                  backgroundColor: "#24428B",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -945,7 +945,7 @@ function Home() {
             >
               <div style={{ display: "flex", justifyContent: "space-between",  fontFamily: '"Poppins", sans-serif', }}>
                 {faq.question}
-                <span style={{ color: "#ff6600" ,  fontFamily: '"Poppins", sans-serif',}}>{activeIndex === idx ? "▲" : "▼"}</span>
+                <span style={{ color: "#24428B" ,  fontFamily: '"Poppins", sans-serif',}}>{activeIndex === idx ? "▲" : "▼"}</span>
               </div>
               {activeIndex === idx && (
                 <p style={{ marginTop: "10px", fontSize: "14px" }}>{faq.answer}</p>
@@ -974,7 +974,7 @@ function Home() {
             <h2 style={{ fontSize: "30px", fontWeight: "700", lineHeight: "1.3" }}>
               Download app to start <br />
               <span style={{ color: "#fff" }}>meaningful</span>{" "}
-              <span style={{ color: "#ff6600" }}>connections</span>
+              <span style={{ color: "#24428B" }}>connections</span>
             </h2>
             <div style={{ display: "flex", gap: "15px", marginTop: "20px" }}>
               <a href="#appstore">
@@ -1006,7 +1006,7 @@ function Home() {
           </div>
 
           <div>
-            <h2 style={{ color: "#ff6600", fontSize: "28px", fontWeight: "700",  fontFamily: '"Poppins", sans-serif', }}>
+            <h2 style={{ color: "#24428B", fontSize: "28px", fontWeight: "700",  fontFamily: '"Poppins", sans-serif', }}>
               Get In Touch
             </h2>
             <form
@@ -1053,7 +1053,7 @@ function Home() {
                 type="submit"
                 disabled={loading}
                 style={{
-                  background: "linear-gradient(to right, #ff6600, #ff4b5c)",
+                  background: "linear-gradient(to right, #24428B, #24428B)",
                   color: "#fff",
                   padding: "12px 20px",
                   border: "none",

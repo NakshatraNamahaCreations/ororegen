@@ -1255,16 +1255,16 @@ const Home = () => {
       }}>
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}></div>
         <div style={{ position: "relative", zIndex: 2, maxWidth: "900px", padding: "20px" }}>
-          <h1 style={{ fontSize: "48px", fontWeight: "900", color: "#ff385c", marginBottom: "20px", marginTop: "-400px" }}>
+          <h1 style={{ fontSize: "48px", fontWeight: "900", color: "#ff385c", marginBottom: "20px", marginTop: "-400px", fontFamily: '"Poppins", sans-serif', }}>
             Book Your Stay. Anywhere, Anytime.
           </h1>
-          <p style={{ fontSize: "18px", color: "#000", marginBottom: "10px", fontWeight: 600 }}>
+          <p style={{ fontSize: "18px", color: "#000", marginBottom: "10px", fontWeight: 600 , fontFamily: '"Poppins", sans-serif',}}>
             Find comfortable rooms, trusted stays, and hassle-free bookings
           </p>
-          <p style={{ fontSize: "18px", color: "#000", marginBottom: "20px", fontWeight: 600 }}>
+          <p style={{ fontSize: "18px", color: "#000", marginBottom: "20px", fontWeight: 600 , fontFamily: '"Poppins", sans-serif',}}>
             at the best prices with StayFind.
           </p>
-          <p style={{ fontSize: "15px", fontWeight: "700", marginBottom: "30px" }}>
+          <p style={{ fontSize: "15px", fontWeight: "700", marginBottom: "30px", fontFamily: '"Poppins", sans-serif', }}>
             Free booking for first 5 stays!
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: "15px" }}>
@@ -1309,9 +1309,9 @@ const Home = () => {
           <img src={aboutImage} alt="About StayFind" style={{ width: "150%", maxWidth: "700px" }} />
         </div>
         <div style={{ flex: 1 }}>
-          <h3 style={{ color: "#FF385C" }}>ABOUT US</h3>
+          <h3 style={{ color: "#FF385C", fontFamily: '"Poppins", sans-serif',}}>ABOUT US</h3>
           <h1 style={{ fontSize: 35, fontWeight: 800, lineHeight: "1.5" }}>
-            Rooms you can <span style={{ color: "hotpink" }}>trust,</span><br />
+            Rooms you can <span style={{ color: "hotpink" , fontFamily: '"Poppins", sans-serif',}}>trust,</span><br />
             <span style={{ color: "hotpink" }}>bookings</span> you’ll love.
           </h1>
           <p style={{ fontSize: "1.1rem", lineHeight: "1.6", color: "#444" }}>
@@ -1326,8 +1326,8 @@ const Home = () => {
       <section id="whychooseus" style={{
         padding: "100px 20px", background: "#fff", textAlign: "center"
       }}>
-        <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "15px", color: "#FF385C" }}>Why Choose Us</h2>
-        <p style={{ fontSize: "1.1rem", color: "#666", marginBottom: "70px", maxWidth: "700px", margin: "0 auto" }}>
+        <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "15px", color: "#FF385C" , fontFamily: '"Poppins", sans-serif',}}>Why Choose Us</h2>
+        <p style={{ fontSize: "1.1rem", color: "#666", marginBottom: "70px", maxWidth: "700px", margin: "0 auto", fontFamily: '"Poppins", sans-serif', }}>
           StayFind makes travel simple, safe, and affordable. Here’s why travelers trust us.
         </p>
 
@@ -1518,6 +1518,7 @@ const Home = () => {
           maxWidth: "1500px",
           color: "#fff",
           height: "500px",
+ fontFamily: '"Poppins", sans-serif',      
         }}
       >
         {/* Left Content */}
@@ -1533,6 +1534,7 @@ const Home = () => {
               display: "inline-block",
               marginBottom: "20px",
               paddingRight: "20px",
+               fontFamily: '"Poppins", sans-serif',
             }}
           >
             DOWNLOAD
@@ -1543,6 +1545,7 @@ const Home = () => {
               fontWeight: "800",
               marginBottom: "15px",
               color: "#fff",
+               fontFamily: '"Poppins", sans-serif',
             }}
           >
             Download StayFindr
@@ -1556,6 +1559,7 @@ const Home = () => {
               marginBottom: "30px",
               maxWidth: "400px",
               color: "#fff",
+               fontFamily: '"Poppins", sans-serif',
             }}
           >
             Find cozy rooms, premium stays, and verified listings across India.
@@ -1574,6 +1578,7 @@ const Home = () => {
                   background: "black",
                   padding: "10px",
                   borderRadius: 10,
+                   fontFamily: '"Poppins", sans-serif',
                 }}
               />
             </a>
@@ -1587,6 +1592,7 @@ const Home = () => {
                   background: "black",
                   padding: "10px",
                   borderRadius: 10,
+                   fontFamily: '"Poppins", sans-serif',
                 }}
               />
             </a>
@@ -1602,6 +1608,7 @@ const Home = () => {
             justifyContent: "center",
             position: "relative",
             marginTop: "20px",
+             fontFamily: '"Poppins", sans-serif',
           }}
         ></div>
       </section>
@@ -1615,6 +1622,7 @@ const Home = () => {
             fontWeight: "bold",
             marginBottom: "15px",
             color: "#FF385C",
+             fontFamily: '"Poppins", sans-serif',
           }}
         >
           💬 What Our Clients Say
@@ -1626,6 +1634,7 @@ const Home = () => {
             marginBottom: "50px",
             maxWidth: "700px",
             margin: "0 auto 50px",
+             fontFamily: '"Poppins", sans-serif',
           }}
         >
           Trusted by thousands of happy travelers across India
@@ -1644,6 +1653,7 @@ const Home = () => {
                   minHeight: "320px",
                   position: "relative",
                   transition: "all 0.3s ease",
+                   fontFamily: '"Poppins", sans-serif',
                 }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = "translateY(-8px)";
@@ -1667,6 +1677,7 @@ const Home = () => {
                     margin: "0 auto 15px",
                     border: "4px solid #ff385c",
                     objectFit: "cover",
+                     fontFamily: '"Poppins", sans-serif',
                   }}
                 />
 
@@ -1682,6 +1693,7 @@ const Home = () => {
                     color: "#444",
                     lineHeight: "1.6",
                     fontStyle: "italic",
+                     fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   <span style={{ fontSize: "2rem", color: "#ff385c" }}>“</span>
@@ -1698,6 +1710,7 @@ const Home = () => {
                     transform: "translateX(-50%)",
                     fontSize: "2rem",
                     color: "#ff385c33",
+                     fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   ❝

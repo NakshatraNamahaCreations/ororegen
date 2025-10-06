@@ -302,7 +302,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
 
         /* Support bar */
         .smt-support-bar {
-          background: #ff4c00;
+          background: #24428B;
           color: #fff;
           text-align: center;
           padding: 40px 20px;
@@ -372,7 +372,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           transition: color 0.3s;
         }
         .footer-section ul li a:hover {
-          color: #ff4c00;
+          color: #24428B;
         }
 
         .store-buttons button {
@@ -391,7 +391,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           gap: 12px;
           margin-top: 15px;
           font-size: 18px;
-          color: #ff4c00;
+          color: #24428B;
         }
 
         /* Bottom bar */
@@ -411,7 +411,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           margin-right: 15px;
         }
         .smt-footer-bottom a:hover {
-          color: #ff4c00;
+          color: #24428B;
         }
 
         /* 🔹 Responsive */

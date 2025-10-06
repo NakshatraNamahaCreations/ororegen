@@ -9,6 +9,7 @@
   padding-bottom: 40px;
   position: relative;
   overflow: visible; /* ⬆️ Ensures no element gets clipped */
+  
 }
 
 /* Adjust newsletter position */

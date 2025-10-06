@@ -270,11 +270,11 @@ const Headersellmytime = () => {
           transition: color 0.3s;
         }
         .smt-nav ul li a:hover {
-          color: #ff4500;
+          color: #24428B;
         }
 
         .smt-btn {
-          background-color: #ff4500;
+          background-color: #24428B;
           color: #fff;
           padding: 8px 20px;
           border-radius: 5px;
@@ -285,7 +285,7 @@ const Headersellmytime = () => {
           margin-right: 40px;
         }
         .smt-btn:hover {
-          background-color: #e03e00;
+          background-color: #24428B;
         }
 
         /* 🔸 Mobile */
@@ -319,11 +319,11 @@ const Headersellmytime = () => {
           transition: color 0.3s;
         }
         .smt-mobile-menu a:hover {
-          color: #ff4500;
+          color: #24428B;
         }
 
         .smt-btn-mobile {
-          background: #ff4500;
+          background: #24428B;
           color: #fff;
           padding: 10px 25px;
           border-radius: 6px;

@@ -16,12 +16,14 @@
   max-width: 1200px;
   width: 100%;
   flex-wrap: nowrap;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ===== Left Content ===== */
 .stayfinder-left {
   flex: 1;
   min-width: 320px;
+  font-family: "Poppins", sans-serif;
 }
 
 .sf-title {
@@ -29,6 +31,7 @@
   font-weight: 700;
   color: #222;
   margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .sf-title span {
@@ -40,6 +43,7 @@
   line-height: 1.7;
   color: #444;
   margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .sf-subtitle {
@@ -48,12 +52,14 @@
   color: #ff385c;
   margin-top: 30px;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .sf-list {
   list-style: none;
   padding-left: 0;
   margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
 }
 
 .sf-list li {
@@ -63,6 +69,7 @@
   line-height: 1.6;
   position: relative;
   padding-left: 25px;
+  font-family: "Poppins", sans-serif;
 }
 
 .sf-list li::before {
@@ -72,6 +79,7 @@
   top: 0;
   color: #06d6a0;
   font-weight: bold;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ===== Right Image ===== */
@@ -80,6 +88,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .stayfinder-right img {
@@ -99,23 +108,28 @@
 @media (max-width: 1024px) {
   .stayfinder {
     padding: 70px 6%;
+    font-family: "Poppins", sans-serif;
   }
 
   .stayfinder-content {
     flex-wrap: wrap;
     gap: 40px;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-title {
     font-size: 2rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-subtitle {
     font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-description {
     font-size: 0.95rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .stayfinder-right img {
@@ -127,38 +141,46 @@
 @media (max-width: 768px) {
   .stayfinder {
     padding: 60px 5%;
+    font-family: "Poppins", sans-serif;
   }
 
   .stayfinder-content {
     flex-direction: column-reverse; /* image below text for better flow */
     text-align: center;
     gap: 30px;
+    font-family: "Poppins", sans-serif;
   }
 
   .stayfinder-left {
     order: 1;
+    font-family: "Poppins", sans-serif;
   }
 
   .stayfinder-right {
     order: 2;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-title {
     font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-description {
     font-size: 0.95rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-subtitle {
     font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-list {
     text-align: left;
     max-width: 500px;
     margin: 0 auto 25px;
+    font-family: "Poppins", sans-serif;
   }
 
   .stayfinder-right img {
@@ -175,19 +197,23 @@
 
   .sf-title {
     font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-subtitle {
     font-size: 1rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .sf-description,
   .sf-list li {
     font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
   }
 
   .stayfinder-right img {
     width: 100%;
     max-width: 260px;
+    font-family: "Poppins", sans-serif;
   }
 }
