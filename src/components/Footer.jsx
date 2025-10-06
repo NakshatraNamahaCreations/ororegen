@@ -57,7 +57,7 @@ const Footer = () => {
           <ul>
             <li><a href="/news">30Forty</a></li>
             <li><a href="/features">Stayfindr</a></li>
-            <li><a href="/download">Sell My Time / NETWORKX</a></li>
+            <li><a href="/download"> Networkx</a></li>
             <li><a href="/free-trial">Masterji</a></li>
           </ul>
         </div>

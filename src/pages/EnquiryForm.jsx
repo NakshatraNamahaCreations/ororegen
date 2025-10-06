@@ -63,13 +63,7 @@ const EnquiryForm = () => {
             </div>
 
             <div className="form-row">
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={handleChange}
-              />
+           
               <input
                 type="tel"
                 name="phone"

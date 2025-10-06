@@ -9,10 +9,10 @@ const StayFinder = () => {
         {/* Left Text */}
         <div className="stayfinder-left">
           <h2 className="sf-title">
-            Stay Finder – <span>Travel & Short-Stay Rental App</span>
+            Stay Findr – <span>Travel & Short-Stay Rental App</span>
           </h2>
           <p className="sf-description">
-            Stay Finder is a next-gen travel and accommodation app that connects
+            StayFindr is a next-gen travel and accommodation app that connects
             explorers with hosts offering unique stays. Whether it’s a cozy
             apartment, a luxury villa, or a budget-friendly homestay, Stay Finder
             makes booking the right space effortless.

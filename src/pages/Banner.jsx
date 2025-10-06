@@ -18,7 +18,7 @@ const texts = [
     icon: <FaHome className="banner-icon" />,
   },
   {
-    title: "Stay Finder",
+    title: "Stay Findr",
     slogan:
       "Book trusted stays worldwide with confidence. Comfort and convenience are always just a click away.",
     icon: <FaHotel className="banner-icon" />,
