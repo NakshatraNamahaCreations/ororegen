@@ -20,6 +20,7 @@
   padding: 20px;
   position: relative;
   z-index: 2;
+  font-family: "Poppins", sans-serif;
 }
 
 .banner-content h1 {
@@ -29,6 +30,7 @@
   margin-bottom: 20px;
   margin-top: -250px; /* ✅ less negative for smaller screens */
   line-height: 1.2;
+  font-family: "Poppins", sans-serif;
 }
 
 .banner-content p {
@@ -36,6 +38,7 @@
   font-weight: 600;
   color: #000;
   margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 .banner-content .offer {
@@ -44,6 +47,7 @@
   margin-top: 10px;
   margin-bottom: 30px;
   color: #111;
+  font-family: "Poppins", sans-serif;
 }
 
 .store-buttons {
@@ -51,6 +55,7 @@
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
 }
 
 .store-buttons img {
@@ -61,6 +66,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 .store-buttons img:hover {
@@ -78,6 +84,7 @@
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
 }
 
 .feature-card {
@@ -90,11 +97,13 @@
   color: #fff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  
 }
 
 .feature-card h3 {
@@ -115,6 +124,7 @@
   padding: 80px 20px;
   text-align: center;
   position: relative;
+  font-family: "Poppins", sans-serif;
 }
 
 .screenshots h2 {
@@ -122,6 +132,7 @@
   font-weight: 800;
   margin-bottom: 15px;
   color: #ff385c;
+  font-family: "Poppins", sans-serif;
 }
 
 .screenshots p {
@@ -130,12 +141,14 @@
   color: #666;
   font-size: 1.05rem;
   line-height: 1.6;
+  font-family: "Poppins", sans-serif;
 }
 
 .screenshots-slider {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
+  font-family: "Poppins", sans-serif;
 }
 
 .screenshot-img {

@@ -177,6 +177,7 @@ export default function Navbar() {
         left: 0,
         zIndex: 1000,
         transition: "background-color 0.3s ease, box-shadow 0.3s ease",
+        fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
       }}
     >
       {/* Logo */}
@@ -194,6 +195,7 @@ export default function Navbar() {
           position: "absolute",
           left: "50%",
           transform: "translateX(-50%)",
+          fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
         }}
       >
         {/* Home → External */}
@@ -207,6 +209,7 @@ export default function Navbar() {
               color: "#111",
               fontSize: "17px",
               fontWeight: "700",
+              fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
             }}
             onMouseEnter={(e) => (e.target.style.color = "#FF385C")}
             onMouseLeave={(e) => (e.target.style.color = "#111")}
@@ -226,6 +229,7 @@ export default function Navbar() {
               fontSize: "17px",
               fontWeight: "700",
               cursor: "pointer",
+              fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
             }}
             onMouseEnter={(e) => (e.target.style.color = "#FF385C")}
             onMouseLeave={(e) => (e.target.style.color = "#111")}
@@ -244,6 +248,7 @@ export default function Navbar() {
               fontSize: "17px",
               fontWeight: "700",
               cursor: "pointer",
+              fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
             }}
             onMouseEnter={(e) => (e.target.style.color = "#FF385C")}
             onMouseLeave={(e) => (e.target.style.color = "#111")}
@@ -262,6 +267,7 @@ export default function Navbar() {
               fontSize: "17px",
               fontWeight: "700",
               cursor: "pointer",
+              fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
             }}
             onMouseEnter={(e) => (e.target.style.color = "#FF385C")}
             onMouseLeave={(e) => (e.target.style.color = "#111")}
@@ -279,6 +285,7 @@ export default function Navbar() {
               fontSize: "17px",
               fontWeight: "700",
               cursor: "pointer",
+              fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
             }}
             onMouseEnter={(e) => (e.target.style.color = "#FF385C")}
             onMouseLeave={(e) => (e.target.style.color = "#111")}
@@ -308,6 +315,7 @@ export default function Navbar() {
             cursor: "pointer",
             marginRight: 100,
             transition: "background 0.3s ease",
+            fontFamily: "'Poppins', sans-serif", // ✅ Added Poppins font
           }}
           onMouseEnter={(e) => (e.target.style.background = "#FF385C")}
           onMouseLeave={(e) => (e.target.style.background = "#000")}

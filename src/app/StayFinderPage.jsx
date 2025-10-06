@@ -1254,7 +1254,7 @@ const Home = () => {
         textAlign: "center", marginTop: "200px"
       }}>
         <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}></div>
-        <div style={{ position: "relative", zIndex: 2, maxWidth: "900px", padding: "20px" }}>
+        <div style={{ position: "relative", zIndex: 2, maxWidth: "900px", padding: "20px" ,fontFamily: '"Poppins", sans-serif'}}>
           <h1 style={{ fontSize: "48px", fontWeight: "900", color: "#ff385c", marginBottom: "20px", marginTop: "-400px", fontFamily: '"Poppins", sans-serif', }}>
             Book Your Stay. Anywhere, Anytime.
           </h1>
@@ -1267,12 +1267,12 @@ const Home = () => {
           <p style={{ fontSize: "15px", fontWeight: "700", marginBottom: "30px", fontFamily: '"Poppins", sans-serif', }}>
             Free booking for first 5 stays!
           </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: "15px" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "15px",fontFamily: '"Poppins", sans-serif' }}>
             <a href="#"><img src={googlePlayImg} alt="Google Play" style={{
               height: "40px", width: "150px", background: "black", padding: "10px", borderRadius: "10px"
             }} /></a>
             <a href="#"><img src={appStoreImg} alt="App Store" style={{
-              height: "40px", width: "150px", background: "black", padding: "10px", borderRadius: "10px"
+              height: "40px", width: "150px", background: "black", padding: "10px", borderRadius: "10px",fontFamily: '"Poppins", sans-serif'
             }} /></a>
           </div>
         </div>
