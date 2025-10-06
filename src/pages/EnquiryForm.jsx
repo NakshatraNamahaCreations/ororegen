@@ -29,7 +29,7 @@ const EnquiryForm = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "api-key":process.env.ACCESS-KEY
+          "api-key":import.meta.env.VITE_BREVO_KEY
             ,
         },
         body: JSON.stringify({

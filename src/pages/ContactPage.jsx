@@ -19,8 +19,7 @@ const ContactPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ✅ Brevo (Sendinblue) email integration
- const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
 
@@ -29,7 +28,8 @@ const ContactPage = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-       "api-key":process.env.ACCESS-KEY
+        "api-key":
+          import.meta.env.VITE_BREVO_KEY,
       },
       body: JSON.stringify({
         sender: {
@@ -77,6 +77,7 @@ const ContactPage = () => {
 
   setLoading(false);
 };
+
 
 
   return (
