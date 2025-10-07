@@ -158,7 +158,7 @@ const Home = () => {
               fontWeight: 600,
             }}
           >
-            at the best prices with StayFind.
+            at the best prices with StayFindr.
           </p>
           <p
             style={{
@@ -168,7 +168,7 @@ const Home = () => {
               color: "#111",
             }}
           >
-            Free booking for first 5 stays!
+       
           </p>
           <div
             style={{
@@ -476,40 +476,7 @@ const Home = () => {
           </Slider>
         </div>
 
-        <p style={{ fontWeight: 600, color: "#111", marginBottom: 20,fontFamily: '"Poppins", sans-serif', }}>
-          🎉 Free booking fee for your first 5 stays!
-        </p>
 
-        <div style={{ display: "flex", gap: 12, justifyContent: "center" ,fontFamily: '"Poppins", sans-serif',}}>
-          <a href="#">
-            <img
-              src={googlePlayImg}
-              alt="Google Play"
-              style={{
-                height: "44px",
-                width: "170px",
-                background: "#000",
-                padding: "10px",
-                borderRadius: 12,
-                fontFamily: '"Poppins", sans-serif',
-              }}
-            />
-          </a>
-          <a href="#">
-            <img
-              src={appStoreImg}
-              alt="App Store"
-              style={{
-                height: "44px",
-                width: "170px",
-                background: "#000",
-                padding: "10px",
-                borderRadius: 12,
-                fontFamily: '"Poppins", sans-serif',
-              }}
-            />
-          </a>
-        </div>
       </section>
 
       {/* ===== Download CTA ===== */}

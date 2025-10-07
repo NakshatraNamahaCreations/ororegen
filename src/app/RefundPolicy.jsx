@@ -67,7 +67,7 @@ const RefundPolicy = () => {
         <li>Fraudulent or misleading property listings.</li>
         <li>
           Safety or health hazards reported by the guest (verified by Stay
-          Finder team).
+          Findr team).
         </li>
       </ul>
     </div>
