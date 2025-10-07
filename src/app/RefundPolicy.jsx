@@ -15,10 +15,10 @@ const RefundPolicy = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        Stay Finder – Refund & Cancellation Policy
+        StayFindr – Refund & Cancellation Policy
       </h1>
       <p>
-        <strong>Effective Date:</strong> [Insert Date]
+        <strong>Effective Date:</strong> [October: 06-10-2025]
       </p>
 
       <h2>1. Guest Cancellations</h2>

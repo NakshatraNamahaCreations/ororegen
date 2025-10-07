@@ -15,20 +15,20 @@ const TermsAndConditions = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        Stay Finder – Terms & Conditions
+        Stay Findr – Terms & Conditions
       </h1>
       <p>
-        <strong>Effective Date:</strong> [Insert Date]
+        <strong>Effective Date:</strong> [October: 06-10-2025]
       </p>
       <p>
-        Welcome to Stay Finder. By accessing or using our services, you agree to
+        Welcome to Stay Findr. By accessing or using our services, you agree to
         the following Terms & Conditions.
       </p>
 
       <h2>1. Definitions</h2>
       <ul>
         <li>
-          <strong>“Platform”</strong> refers to the Stay Finder mobile app/website.
+          <strong>“Platform”</strong> refers to the StayFindr mobile app/website.
         </li>
         <li>
           <strong>“User”</strong> means anyone using the platform, including Guests
@@ -39,7 +39,7 @@ const TermsAndConditions = () => {
         </li>
         <li>
           <strong>“Guest”</strong> means an individual booking a property through
-          Stay Finder.
+          StayFindr.
         </li>
       </ul>
 
@@ -52,7 +52,7 @@ const TermsAndConditions = () => {
 
       <h2>3. Booking & Payments</h2>
       <ul>
-        <li>All bookings must be made through the Stay Finder platform.</li>
+        <li>All bookings must be made through the StayFindr platform.</li>
         <li>Payment is processed via secure third-party gateways.</li>
         <li>
           Prices are displayed in local currency and include applicable taxes
@@ -89,7 +89,7 @@ const TermsAndConditions = () => {
 
       <h2>7. Limitation of Liability</h2>
       <p>
-        Stay Finder is a facilitator and does not own/manage listed properties.
+        StayFindr is a facilitator and does not own/manage listed properties.
         We are not responsible for disputes, damages, or losses arising between
         hosts and guests.
       </p>
@@ -103,7 +103,7 @@ const TermsAndConditions = () => {
 
       <h2>9. Termination</h2>
       <p>
-        Stay Finder reserves the right to suspend or terminate accounts violating
+        StayFindr reserves the right to suspend or terminate accounts violating
         these terms.
       </p>
     </div>
