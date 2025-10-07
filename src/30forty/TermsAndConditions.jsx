@@ -25,14 +25,14 @@ const TermsAndConditions = () => {
         <strong>Effective Date:</strong> August 5, 2025
       </p>
       <p>
-        <strong>Company Name:</strong> Thirty Forty
+        <strong>Company Name:</strong> 30Forty
       </p>
       <p>
         <strong>Website:</strong> <a href="https://www.30forty.in">www.30forty.in</a>
       </p>
 
       <p>
-        Welcome to <strong>Thirty Forty</strong> (“Company,” “we,” “our,” or “us”).
+        Welcome to <strong>30Forty</strong> (“Company,” “we,” “our,” or “us”).
         These Terms and Conditions govern your use of our platform accessible at{" "}
         <a href="https://www.30forty.in">www.30forty.in</a>, including our mobile
         application (collectively referred to as the “Platform”).
@@ -43,7 +43,7 @@ const TermsAndConditions = () => {
 
       <h2>1. Platform Purpose</h2>
       <p>
-        Thirty Forty is a real estate listing and aggregator platform. We allow users
+        30Forty is a real estate listing and aggregator platform. We allow users
         to list, explore, and discover properties and PG (Paying Guest)
         accommodations. We act solely as an aggregator and are not involved in any
         financial transactions, legal procedures, or facility management services.

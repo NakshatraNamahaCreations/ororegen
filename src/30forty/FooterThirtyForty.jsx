@@ -174,7 +174,7 @@ const FooterThirtyForty = () => {
           <img
             src={logo}
             alt="30Forty Logo"
-            style={{ height: "80px", marginBottom: "15px" }}
+            style={{ height: "130px", marginBottom: "15px" }}
           />
           <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555" }}>
             30Forty is a modern real estate platform that makes searching,
@@ -247,7 +247,7 @@ const FooterThirtyForty = () => {
             }}
           >
             <FaMapMarkerAlt style={{ marginRight: "10px", color: "#d1001f" }} />{" "}
-           #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
+          #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
           </p>
           <p
             style={{

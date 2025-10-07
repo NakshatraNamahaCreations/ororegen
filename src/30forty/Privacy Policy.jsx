@@ -22,15 +22,14 @@ const PrivacyPolicy = () => {
         <strong>Effective Date:</strong> August 5, 2025
       </p>
       <p>
-        <strong>Company Name:</strong> Thirty Forty
+        <strong>Company Name:</strong> 30Forty
       </p>
       <p>
         <strong>Website:</strong> <a href="https://www.30forty.in">www.30forty.in</a>
       </p>
 
       <p>
-        Your privacy is important to us. This Privacy Policy explains how Thirty
-        Forty collects, uses, and protects your information.
+        Your privacy is important to us. This Privacy Policy explains how 30Forty collects, uses, and protects your information.
       </p>
 
       <h2 style={{ color: "#d1001f", marginTop: "30px" }}>1. What We Collect</h2>
