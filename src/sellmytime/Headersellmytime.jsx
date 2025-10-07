@@ -826,6 +826,7 @@ const Headersellmytime = () => {
           padding: 6px;
           border-radius: 8px;
           transition: background .2s ease;
+          margin-left:50px;
         }
         .smt-menu-icon:active { background: rgba(0,0,0,.06); }
 
