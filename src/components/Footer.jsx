@@ -177,7 +177,7 @@ const Footer = () => {
           <ul>
             <li>
               <a href="https://ororegencompanies.in/apps/sellmytime">
-                SellMyTime
+                Networkx
               </a>
             </li>
             <li>

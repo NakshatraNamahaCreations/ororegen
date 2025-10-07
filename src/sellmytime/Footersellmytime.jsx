@@ -193,7 +193,7 @@ import {
   FaYoutube,
   FaTwitter,
 } from "react-icons/fa";
-import logo from "../assets/sellmytime.png";
+import logo from "../assets/networkzlogo.png";
 
 const Footersellmytime = () => {
   const footerLinks = [
@@ -296,7 +296,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
       <style>{`
         .smt-footer {
           font-family: 'Poppins', sans-serif;
-          background: #fff3e0;
+          background: #edeff8ff;
           color: #000;
         }
 
@@ -340,7 +340,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           max-width: 1300px;
           margin: 0 auto;
           padding: 80px 60px;
-          background: #fff3e0;
+          background: #edeff8ff;
         }
 
         .footer-section {

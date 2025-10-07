@@ -132,7 +132,7 @@
 
 // export default Headersellmytime;
 import React, { useState, useEffect } from "react";
-import logo from "../assets/sellmytime.png";
+import logo from "../assets/networkzlogo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Headersellmytime = () => {
