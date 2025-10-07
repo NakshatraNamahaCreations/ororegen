@@ -735,9 +735,10 @@ function Home() {
           color: "#fff",
           padding: isMobile ? "56px 18px" : "80px 40px",
           textAlign: "center",
+              fontFamily: "'Poppins', sans-serif",
         }}
       >
-        <h2 style={{ fontSize: isMobile ? "26px" : "32px", marginBottom: isMobile ? 26 : 40 }}>
+        <h2 style={{ fontSize: isMobile ? "26px" : "32px", marginBottom: isMobile ? 26 : 40 ,    fontFamily: "'Poppins', sans-serif",}}>
           Why Choose Us
         </h2>
 
@@ -758,6 +759,7 @@ function Home() {
                 padding: isMobile ? "24px 18px" : "40px 25px",
                 borderRadius: "12px",
                 boxShadow: "0 4px 10px rgba(0,0,0,0.5)",
+                    fontFamily: "'Poppins', sans-serif",
               }}
             >
               <div
@@ -771,6 +773,7 @@ function Home() {
                   justifyContent: "center",
                   fontSize: isMobile ? 20 : 22,
                   margin: "0 auto 16px",
+                      fontFamily: "'Poppins', sans-serif",
                 }}
               >
                 {feature.icon}
