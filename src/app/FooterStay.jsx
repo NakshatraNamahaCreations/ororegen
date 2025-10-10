@@ -670,8 +670,12 @@ const FooterStay = () => {
             </a>
           </div>
 
-          © {new Date().getFullYear()} StayFindr. All Rights Reserved.
+  
+             <p style={{ margin: 0, fontSize: 16 ,alignItems:'center',textAlign:'center'}}>
+          © 2025<strong>  StayFindr.  </strong> This App is managed by Oro Regen Companies. All Rights Reserved.
+        </p>
         </div>
+      
       </div>
     </footer>
   );

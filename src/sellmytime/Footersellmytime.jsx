@@ -284,7 +284,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
 
       {/* 🔸 Bottom Bar */}
       <div className="smt-footer-bottom">
-        <p>© 2025 Networkx. All rights reserved.</p>
+        <p>© 2025 Networkx. This App is managed by Oro Regen Companies. All Rights Reserved.</p>
         <div>
           <a href="/sellmytime/privacy-policy">Privacy Policy</a>
           <a href="/sellmytime/terms-and-conditions">Terms & Conditions</a>
