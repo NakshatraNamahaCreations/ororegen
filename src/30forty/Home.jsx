@@ -1650,10 +1650,12 @@ function Home() {
         >
           <h2
             style={{
-              fontSize: isMobile ? 24 : 42,
+              fontSize: isMobile ? 22 : 42,
               fontWeight: 800,
               lineHeight: 1.25,
               margin: 0,
+              maxWidth: isMobile ? 220 : "none",
+              textShadow: isMobile ? "0 2px 10px rgba(0,0,0,0.65)" : "none",
                   fontFamily: "'Poppins', sans-serif",
             }}
           >

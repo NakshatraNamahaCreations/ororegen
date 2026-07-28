@@ -899,7 +899,16 @@ function Home() {
       >
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", alignItems: "center" }}>
           <div style={{ color: "#000", paddingLeft: isMobile ? 0 : 140, textAlign: isMobile ? "center" : "left" }}>
-            <h2 style={{ fontSize: isMobile ? 22 : 30, fontWeight: 700, lineHeight: 1.35 }}>
+            <h2
+              style={{
+                fontSize: isMobile ? 19 : 30,
+                fontWeight: 700,
+                lineHeight: 1.35,
+                maxWidth: isMobile ? 170 : "none",
+                margin: isMobile ? "0 auto" : 0,
+                textShadow: isMobile ? "0 2px 10px rgba(255,255,255,0.85)" : "none",
+              }}
+            >
               Download app to start <br />
               <span style={{ color: "#fff" }}>meaningful</span>{" "}
               <span style={{ color: "#24428B" }}>connections</span>

@@ -826,7 +826,6 @@ const Headersellmytime = () => {
           padding: 6px;
           border-radius: 8px;
           transition: background .2s ease;
-          margin-left:50px;
         }
         .smt-menu-icon:active { background: rgba(0,0,0,.06); }
 
@@ -958,9 +957,14 @@ const Headersellmytime = () => {
           .smt-logo img { height: 68px; }
         }
         @media (max-width: 480px) {
-          .smt-logo img { height: 64px; }
+          .smt-header { padding: 10px 14px; }
+          .smt-logo img { height: 48px; }
           .smt-mobile-link { font-size: 15px; padding: 11px 10px; }
           .smt-btn-mobile { font-size: 15px; padding: 11px 14px; }
+        }
+
+        html, body {
+          overflow-x: hidden;
         }
       `}</style>
     </header>

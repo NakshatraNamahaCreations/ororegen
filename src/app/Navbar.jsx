@@ -611,7 +611,7 @@ export default function Navbar() {
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? "auto" : "none",
           transition: "opacity .25s ease",
-          zIndex: 998,
+          zIndex: 1998,
         }}
         aria-hidden={!menuOpen}
       />
@@ -632,7 +632,7 @@ export default function Navbar() {
           boxShadow: "0 10px 40px rgba(0,0,0,0.18)",
           transform: menuOpen ? "translateX(0)" : "translateX(-100%)",
           transition: "transform .28s ease",
-          zIndex: 999,
+          zIndex: 1999,
           padding: "16px 18px 18px",
           display: "flex",
           flexDirection: "column",

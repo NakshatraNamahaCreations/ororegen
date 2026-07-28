@@ -37,6 +37,7 @@
 .contact-left {
   flex: 1;
   min-width: 400px;
+  max-width: 100%;
 }
 
 .contact-left form {
@@ -195,12 +196,54 @@ textarea:focus {
 }
 
 @media (max-width: 600px) {
+  .contact-section {
+    padding: 50px 20px;
+  }
+
   .contact-heading h2 {
     font-size: 26px;
   }
 
+  .contact-left {
+    min-width: 0;
+    width: 100%;
+  }
+
   .image-container {
-    width: 300px;
+    width: min(300px, 100%);
     height: 260px;
+  }
+
+  .dotted-overlay {
+    width: 110px;
+    top: -18px;
+    right: -18px;
+  }
+
+  .dotted-overlay2 {
+    width: 90px;
+    top: 18px;
+    right: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-section {
+    padding: 40px 16px;
+  }
+
+  .form-row input,
+  textarea {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .send-btn {
+    width: 100%;
+  }
+
+  .image-container {
+    width: min(240px, 100%);
+    height: 220px;
   }
 }

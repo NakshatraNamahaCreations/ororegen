@@ -7,6 +7,12 @@ import { FaPhone } from "react-icons/fa";
 const Header = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const closeAll = () => {
+    setMenuOpen(false);
+    setDropdownOpen(false);
+  };
 
   return (
     <header className="header">
@@ -41,35 +47,64 @@ const Header = () => {
           <span></span>
         </div>
 
+        {/* Mobile overlay (tap outside to close) */}
+        {menuOpen && (
+          <div className="nav-overlay" onClick={closeAll} aria-hidden="true" />
+        )}
+
         {/* Navigation */}
         <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+          <Link
+            to="/"
+            className={location.pathname === "/" ? "active" : ""}
+            onClick={closeAll}
+          >
             HOME
           </Link>
           <Link
             to="/about"
             className={location.pathname === "/about" ? "active" : ""}
+            onClick={closeAll}
           >
             ABOUT US
           </Link>
 
-          <div className="dropdown">
-            <Link
-              to="/apps"
-              className={location.pathname.startsWith("/apps") ? "active" : ""}
-            >
-              OUR APP ▾
-            </Link>
+          <div className={`dropdown ${dropdownOpen ? "open" : ""}`}>
+            <div className="dropdown-trigger">
+              <Link
+                to="/apps"
+                className={location.pathname.startsWith("/apps") ? "active" : ""}
+                onClick={closeAll}
+              >
+                OUR APP
+              </Link>
+              <button
+                type="button"
+                className="dropdown-caret"
+                onClick={() => setDropdownOpen((v) => !v)}
+                aria-expanded={dropdownOpen}
+                aria-label="Toggle Our App menu"
+              >
+                ▾
+              </button>
+            </div>
             <div className="dropdown-menu">
-              <Link to="/apps/sellmytime">Networkx</Link>
-              <Link to="/apps/30forty">30Forty</Link>
-              <Link to="/apps/indianhotels">Indianhotels</Link>
+              <Link to="/apps/sellmytime" onClick={closeAll}>
+                Networkx
+              </Link>
+              <Link to="/apps/30forty" onClick={closeAll}>
+                30Forty
+              </Link>
+              <Link to="/apps/indianhotels" onClick={closeAll}>
+                Indianhotels
+              </Link>
             </div>
           </div>
 
           <Link
             to="/contact"
             className={location.pathname === "/contact" ? "active" : ""}
+            onClick={closeAll}
           >
             CONTACT US
           </Link>
