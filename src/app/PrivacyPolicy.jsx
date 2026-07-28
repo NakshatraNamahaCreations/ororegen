@@ -15,13 +15,13 @@ const PrivacyPolicy = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        StayFindr – Privacy Policy
+        Indianhotels – Privacy Policy
       </h1>
       <p>
         <strong>Effective Date:</strong> [October: 06-10-2025]
       </p>
       <p>
-        StayFindr (“we,” “our,” “us”) respects your privacy and is committed
+        Indianhotels (“we,” “our,” “us”) respects your privacy and is committed
         to protecting the personal information you share with us when using our
         platform, mobile application, or website.
       </p>
@@ -80,7 +80,7 @@ const PrivacyPolicy = () => {
 
       <h2>6. Cookies & Tracking</h2>
       <p>
-        StayFindr uses cookies and similar technologies for analytics and
+        Indianhotels uses cookies and similar technologies for analytics and
         improving user experience.
       </p>
 

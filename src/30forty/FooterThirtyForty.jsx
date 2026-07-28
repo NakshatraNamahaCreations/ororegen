@@ -44,7 +44,7 @@
 //           height: 4,
 //           width: "100%",
 //           background:
-//             "linear-gradient(90deg, #ff4d4d 0%, #d1001f 40%, #ff6a6a 100%)",
+//             "linear-gradient(90deg, #5DBB1F 0%, #83E011 40%, #FEFD03 100%)",
 //           borderRadius: 4,
 //           marginBottom: isMobile ? 18 : 24,
 //           opacity: 0.9,
@@ -144,7 +144,7 @@
 //                     transition: "all .25s ease",
 //                   }}
 //                   onMouseOver={(e) => {
-//                     e.currentTarget.style.color = "#d1001f";
+//                     e.currentTarget.style.color = "#5DBB1F";
 //                     e.currentTarget.style.background = "rgba(209,0,31,0.06)";
 //                   }}
 //                   onMouseOut={(e) => {
@@ -198,7 +198,7 @@
 //                   height: 28,
 //                   borderRadius: 8,
 //                   background:
-//                     "linear-gradient(135deg, #ff4d4d, #d1001f)",
+//                     "linear-gradient(135deg, #5DBB1F, #FEFD03)",
 //                   display: "inline-flex",
 //                   alignItems: "center",
 //                   justifyContent: "center",
@@ -228,7 +228,7 @@
 //                   height: 28,
 //                   borderRadius: 8,
 //                   background:
-//                     "linear-gradient(135deg, #ff4d4d, #d1001f)",
+//                     "linear-gradient(135deg, #5DBB1F, #FEFD03)",
 //                   display: "inline-flex",
 //                   alignItems: "center",
 //                   justifyContent: "center",
@@ -262,7 +262,7 @@
 //                   height: 28,
 //                   borderRadius: 8,
 //                   background:
-//                     "linear-gradient(135deg, #ff4d4d, #d1001f)",
+//                     "linear-gradient(135deg, #5DBB1F, #FEFD03)",
 //                   display: "inline-flex",
 //                   alignItems: "center",
 //                   justifyContent: "center",
@@ -326,7 +326,7 @@
 import React, { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
-import logo from "../assets/30fortylogo.webp";
+const logo = "/30FortyLogo.png";
 
 /* ---------- Responsive Hook ---------- */
 function useIsMobile(breakpoint = 768) {
@@ -373,7 +373,7 @@ const FooterThirtyForty = () => {
           height: 4,
           width: "100%",
           background:
-            "linear-gradient(90deg, #ff4d4d 0%, #d1001f 40%, #ff6a6a 100%)",
+            "linear-gradient(90deg, #5DBB1F 0%, #83E011 40%, #FEFD03 100%)",
           borderRadius: 4,
           marginBottom: isMobile ? 24 : 30,
           opacity: 0.9,
@@ -474,7 +474,7 @@ const FooterThirtyForty = () => {
                     transition: "all .25s ease",
                   }}
                   onMouseOver={(e) => {
-                    e.currentTarget.style.color = "#d1001f";
+                    e.currentTarget.style.color = "#5DBB1F";
                     e.currentTarget.style.background = "rgba(209,0,31,0.06)";
                   }}
                   onMouseOut={(e) => {
@@ -530,7 +530,7 @@ const FooterThirtyForty = () => {
                   width: 30,
                   height: 30,
                   borderRadius: 8,
-                  background: "linear-gradient(135deg, #ff4d4d, #d1001f)",
+                  background: "linear-gradient(135deg, #5DBB1F, #FEFD03)",
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -560,7 +560,7 @@ const FooterThirtyForty = () => {
                   width: 30,
                   height: 30,
                   borderRadius: 8,
-                  background: "linear-gradient(135deg, #ff4d4d, #d1001f)",
+                  background: "linear-gradient(135deg, #5DBB1F, #FEFD03)",
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -576,7 +576,7 @@ const FooterThirtyForty = () => {
                   textDecoration: "none",
                   transition: "color .25s ease",
                 }}
-                onMouseOver={(e) => (e.currentTarget.style.color = "#d1001f")}
+                onMouseOver={(e) => (e.currentTarget.style.color = "#5DBB1F")}
                 onMouseOut={(e) => (e.currentTarget.style.color = "#333")}
               >
                 +91 78291 25869
@@ -600,7 +600,7 @@ const FooterThirtyForty = () => {
                   width: 30,
                   height: 30,
                   borderRadius: 8,
-                  background: "linear-gradient(135deg, #ff4d4d, #d1001f)",
+                  background: "linear-gradient(135deg, #5DBB1F, #FEFD03)",
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -616,7 +616,7 @@ const FooterThirtyForty = () => {
                   textDecoration: "none",
                   transition: "color .25s ease",
                 }}
-                onMouseOver={(e) => (e.currentTarget.style.color = "#d1001f")}
+                onMouseOver={(e) => (e.currentTarget.style.color = "#5DBB1F")}
                 onMouseOut={(e) => (e.currentTarget.style.color = "#333")}
               >
                 support@30forty.in

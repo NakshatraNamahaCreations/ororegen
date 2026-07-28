@@ -184,8 +184,8 @@ const Footer = () => {
               <a href="https://ororegencompanies.in/apps/30forty">30Forty</a>
             </li>
             <li>
-              <a href="https://ororegencompanies.in/apps/stayfinder">
-                Stayfinder
+              <a href="https://ororegencompanies.in/apps/indianhotels">
+                Indianhotels
               </a>
             </li>
           </ul>

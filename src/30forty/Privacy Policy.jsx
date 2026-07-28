@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
         color: "#333",
       }}
     >
-      <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#d1001f" }}>
+      <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#5DBB1F" }}>
         Privacy Policy
       </h1>
       <p>
@@ -32,13 +32,13 @@ const PrivacyPolicy = () => {
         Your privacy is important to us. This Privacy Policy explains how 30Forty collects, uses, and protects your information.
       </p>
 
-      <h2 style={{ color: "#d1001f", marginTop: "30px" }}>1. What We Collect</h2>
+      <h2 style={{ color: "#5DBB1F", marginTop: "30px" }}>1. What We Collect</h2>
       <ul>
         <li>Name, email, and phone number (voluntarily submitted)</li>
         <li>Listing details and location (if enabled)</li>
       </ul>
 
-      <h2 style={{ color: "#d1001f", marginTop: "30px" }}>2. What We Don’t Collect</h2>
+      <h2 style={{ color: "#5DBB1F", marginTop: "30px" }}>2. What We Don’t Collect</h2>
       <ul>
         <li>
           We do not store or process payment details, card numbers, UPI IDs, or
@@ -47,26 +47,26 @@ const PrivacyPolicy = () => {
         <li>No contact data is stored without explicit consent.</li>
       </ul>
 
-      <h2 style={{ color: "#d1001f", marginTop: "30px" }}>3. How We Use Your Data</h2>
+      <h2 style={{ color: "#5DBB1F", marginTop: "30px" }}>3. How We Use Your Data</h2>
       <ul>
         <li>To allow posting and searching of listings</li>
         <li>To send service-related communication (with consent)</li>
         <li>To improve overall user experience</li>
       </ul>
 
-      <h2 style={{ color: "#d1001f", marginTop: "30px" }}>4. Data Sharing</h2>
+      <h2 style={{ color: "#5DBB1F", marginTop: "30px" }}>4. Data Sharing</h2>
       <ul>
         <li>We do not sell or share data for third-party marketing.</li>
         <li>Contact details are shared only with mutual consent.</li>
       </ul>
 
-      <h2 style={{ color: "#d1001f", marginTop: "30px" }}>5. Data Security</h2>
+      <h2 style={{ color: "#5DBB1F", marginTop: "30px" }}>5. Data Security</h2>
       <p>
         We implement industry-standard security measures and encryption
         technologies to protect your data.
       </p>
 
-      <h2 style={{ color: "#d1001f", marginTop: "30px" }}>6. Your Rights</h2>
+      <h2 style={{ color: "#5DBB1F", marginTop: "30px" }}>6. Your Rights</h2>
       <ul>
         <li>You can request data deletion at any time.</li>
         <li>Opt-out of location tracking and marketing communication.</li>

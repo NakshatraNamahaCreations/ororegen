@@ -1,5 +1,5 @@
 // import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -82,7 +82,8 @@ function App() {
         <Route path="/apps" element={<OurAppPage />} />
         <Route path="/apps/sellmytime" element={<SellMyTimePage />} />
         <Route path="/apps/30forty" element={<ThirtyFortyPage />} />
-        <Route path="/apps/stayfinder" element={<StayFinderPage />} />
+        <Route path="/apps/indianhotels" element={<StayFinderPage />} />
+        <Route path="/apps/stayfinder" element={<Navigate to="/apps/indianhotels" replace />} />
         <Route path="/contact" element={<ContactPage />} />
 
         {/* ✅ Privacy Policy Page */}

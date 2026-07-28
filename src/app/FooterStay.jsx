@@ -94,7 +94,7 @@
 //             />
 //             <p style={{ fontSize: "14px", lineHeight: "1.8", color: "black" }}>
 //               Discover unique stays and unforgettable experiences. Book your
-//               perfect getaway with StayFindr.
+//               perfect getaway with Indianhotels.
 //             </p>
 //             <div style={{ display: "flex", gap: "15px", marginTop: "20px" }}>
 //               {[FaFacebookF, FaTwitter, FaInstagram, FaGooglePlusG].map(
@@ -263,7 +263,7 @@
 //               href="/privacy-policy"
 //               style={{
 //                 margin: "0 15px",
-//                 color: "#FF385C",
+//                 color: "#02B538",
 //                 textDecoration: "none",
 //                 fontSize: "14px",
 //                 fontWeight: 600,
@@ -275,7 +275,7 @@
 //               href="/refund-policy"
 //               style={{
 //                 margin: "0 15px",
-//                 color: "#FF385C",
+//                 color: "#02B538",
 //                 textDecoration: "none",
 //                 fontSize: "14px",
 //                 fontWeight: 600,
@@ -287,7 +287,7 @@
 //               href="/terms-and-conditions"
 //               style={{
 //                 margin: "0 15px",
-//                 color: "#FF385C",
+//                 color: "#02B538",
 //                 textDecoration: "none",
 //                 fontSize: "14px",
 //                 fontWeight: 600,
@@ -297,7 +297,7 @@
 //             </a>
 //           </div>
 
-//           © {new Date().getFullYear()} StayFindr. All Rights Reserved.
+//           © {new Date().getFullYear()} Indianhotels. All Rights Reserved.
 //         </div>
 //       </div>
 //     </footer>
@@ -313,8 +313,10 @@ import {
   FaGooglePlusG,
   FaPhoneAlt,
   FaEnvelope,
+  FaWhatsapp,
+  FaArrowUp,
 } from "react-icons/fa";
-import logo from "../assets/stay.png";
+const logo = "/IndianHotelsLogo.png";
 import footerBg from "../assets/footer.jpeg";
 
 function useIsMobile(bp = 768) {
@@ -331,6 +333,18 @@ function useIsMobile(bp = 768) {
 
 const FooterStay = () => {
   const isMobile = useIsMobile(768);
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const wrap = (style) => ({
     ...style,
@@ -343,6 +357,7 @@ const FooterStay = () => {
   });
 
   return (
+    <>
     <footer
       style={wrap({
         fontFamily: "'Poppins', sans-serif",
@@ -423,7 +438,7 @@ const FooterStay = () => {
           <div>
             <img
               src={logo}
-              alt="StayFindr"
+              alt="Indianhotels"
               style={{
                 height: isMobile ? 80 : 120,
                 objectFit: "contain",
@@ -440,7 +455,7 @@ const FooterStay = () => {
               }}
             >
               Discover unique stays and unforgettable experiences. Book your
-              perfect getaway with StayFindr.
+              perfect getaway with Indianhotels.
             </p>
 
             <div
@@ -452,39 +467,49 @@ const FooterStay = () => {
                 flexWrap: "wrap",
               }}
             >
-              {[FaFacebookF, FaTwitter, FaInstagram, FaGooglePlusG].map(
-                (Icon, idx) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    aria-label="Social link"
-                    style={{
-                      color: "#111",
-                      fontSize: 18,
-                      width: 42,
-                      height: 42,
-                      borderRadius: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      background: "rgba(0,0,0,0.06)",
-                      transition: "transform .2s ease, background .2s ease",
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.background = "#FF385C";
-                      e.currentTarget.style.color = "#fff";
-                      e.currentTarget.style.transform = "translateY(-2px)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.background = "rgba(0,0,0,0.06)";
-                      e.currentTarget.style.color = "#111";
-                      e.currentTarget.style.transform = "translateY(0)";
-                    }}
-                  >
-                    <Icon />
-                  </a>
-                )
-              )}
+              {[
+                { Icon: FaFacebookF, href: "#", label: "Facebook" },
+                { Icon: FaTwitter, href: "#", label: "Twitter" },
+                { Icon: FaInstagram, href: "#", label: "Instagram" },
+                { Icon: FaGooglePlusG, href: "#", label: "Google Plus" },
+                {
+                  Icon: FaWhatsapp,
+                  href: "https://wa.me/917829125869",
+                  label: "WhatsApp",
+                },
+              ].map(({ Icon, href, label }, idx) => (
+                <a
+                  key={idx}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  aria-label={label}
+                  style={{
+                    color: "#111",
+                    fontSize: 18,
+                    width: 42,
+                    height: 42,
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "rgba(0,0,0,0.06)",
+                    transition: "transform .2s ease, background .2s ease",
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = "#02B538";
+                    e.currentTarget.style.color = "#fff";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = "rgba(0,0,0,0.06)";
+                    e.currentTarget.style.color = "#111";
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -497,7 +522,7 @@ const FooterStay = () => {
                 fontSize: 18,
                 display: "inline-block",
                 paddingBottom: 4,
-                borderBottom: "2px solid #FF385C",
+                borderBottom: "2px solid #02B538",
                 color: "#111",
               }}
             >
@@ -536,7 +561,7 @@ const FooterStay = () => {
                     }}
                     onMouseOver={(e) => {
                       e.currentTarget.style.background = "rgba(255,56,92,0.12)";
-                      e.currentTarget.style.color = "#FF385C";
+                      e.currentTarget.style.color = "#02B538";
                     }}
                     onMouseOut={(e) => {
                       e.currentTarget.style.background = "transparent";
@@ -559,7 +584,7 @@ const FooterStay = () => {
                 fontSize: 19,
                 display: "inline-block",
                 paddingBottom: 4,
-                borderBottom: "2px solid #FF385C",
+                borderBottom: "2px solid #02B538",
                 color: "#111",
               }}
             >
@@ -584,7 +609,7 @@ const FooterStay = () => {
             </a>
 
             <a
-              href="mailto:support@stayfindr.com"
+              href="mailto:support@indianhotels.com"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -597,7 +622,7 @@ const FooterStay = () => {
               }}
             >
               <FaEnvelope aria-hidden />
-              support@stayfindr.com
+              support@indianhotels.com
             </a>
 
             <p
@@ -639,7 +664,7 @@ const FooterStay = () => {
             <a
               href="/privacy-policy"
               style={{
-                color: "#FF385C",
+                color: "#02B538",
                 textDecoration: "none",
                 fontWeight: 600,
               }}
@@ -650,7 +675,7 @@ const FooterStay = () => {
             <a
               href="/refund-policy"
               style={{
-                color: "#FF385C",
+                color: "#02B538",
                 textDecoration: "none",
                 fontWeight: 600,
               }}
@@ -661,7 +686,7 @@ const FooterStay = () => {
             <a
               href="/terms-and-conditions"
               style={{
-                color: "#FF385C",
+                color: "#02B538",
                 textDecoration: "none",
                 fontWeight: 600,
               }}
@@ -672,12 +697,71 @@ const FooterStay = () => {
 
   
              <p style={{ margin: 0, fontSize: 16 ,alignItems:'center',textAlign:'center'}}>
-          © 2025<strong>  StayFindr.  </strong> This App is managed by Oro Regen Companies. All Rights Reserved.
+          © 2025<strong>  Indianhotels.  </strong> This App is managed by Oro Regen Companies. All Rights Reserved.
         </p>
         </div>
-      
+
       </div>
     </footer>
+
+    {/* Floating WhatsApp button */}
+    <a
+      href="https://wa.me/917829125869"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      style={{
+        position: "fixed",
+        bottom: isMobile ? 20 : 28,
+        left: isMobile ? 20 : 28,
+        width: 56,
+        height: 56,
+        borderRadius: "50%",
+        background: "#25D366",
+        color: "#fff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: 28,
+        boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
+        zIndex: 1000,
+        transition: "transform .2s ease",
+      }}
+      onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
+      onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+    >
+      <FaWhatsapp />
+    </a>
+
+    {/* Floating Back-to-top button */}
+    <button
+      onClick={scrollToTop}
+      aria-label="Back to top"
+      style={{
+        position: "fixed",
+        bottom: isMobile ? 20 : 28,
+        right: isMobile ? 20 : 28,
+        width: 48,
+        height: 48,
+        borderRadius: "50%",
+        background: "#02B538",
+        color: "#fff",
+        border: "none",
+        display: showTop ? "flex" : "none",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: 20,
+        cursor: "pointer",
+        boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
+        zIndex: 1000,
+        transition: "transform .2s ease, opacity .2s ease",
+      }}
+      onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-3px)")}
+      onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+    >
+      <FaArrowUp />
+    </button>
+    </>
   );
 };
 

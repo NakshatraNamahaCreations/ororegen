@@ -37,25 +37,25 @@
 //       number: "1",
 //       title: "Expertise You Can Trust",
 //       text: "With years of real estate experience, 30Forty brings unmatched industry knowledge and a network of reliable professionals.",
-//       icon: <FaBullseye size={22} color="#d1001f" />,
+//       icon: <FaBullseye size={22} color="#5DBB1F" />,
 //     },
 //     {
 //       number: "2",
 //       title: "Personalized Property Matches",
 //       text: "Your dream property is unique — and so is our approach. We use smart filters to tailor every recommendation to your preferences.",
-//       icon: <FaFlagCheckered size={22} color="#d1001f" />,
+//       icon: <FaFlagCheckered size={22} color="#5DBB1F" />,
 //     },
 //     {
 //       number: "3",
 //       title: "Seamless End-to-End Process",
 //       text: "Real estate shouldn’t be stressful — with 30Forty, we simplify every step from search to possession.",
-//       icon: <FaListAlt size={22} color="#d1001f" />,
+//       icon: <FaListAlt size={22} color="#5DBB1F" />,
 //     },
 //     {
 //       number: "4",
 //       title: "Strong Local Network",
 //       text: "We know your neighborhood better than anyone — connecting you to genuine listings and trusted agents.",
-//       icon: <FaHandshake size={22} color="#d1001f" />,
+//       icon: <FaHandshake size={22} color="#5DBB1F" />,
 //     },
 //   ];
 
@@ -283,7 +283,7 @@
 //           }}
 //         >
 //           <div>
-//             <h4 style={{ color: "#d1001f", fontWeight: 700 }}>About Us</h4>
+//             <h4 style={{ color: "#5DBB1F", fontWeight: 700 }}>About Us</h4>
 //             <h2 style={{ fontSize: isMobile ? "24px" : "28px", fontWeight: 700 }}>
 //               Redefining Real Estate
 //             </h2>
@@ -373,7 +373,7 @@
 //             >
 //               <h2
 //                 style={{
-//                   color: "#d1001f",
+//                   color: "#5DBB1F",
 //                   fontWeight: 800,
 //                   marginBottom: 18,
 //                   fontSize: 26,
@@ -386,7 +386,7 @@
 //                   <div
 //                     style={{
 //                       fontWeight: 700,
-//                       color: "#d1001f",
+//                       color: "#5DBB1F",
 //                       marginRight: 12,
 //                       minWidth: 22,
 //                     }}
@@ -406,7 +406,7 @@
 //           <div style={{ maxWidth: 960, margin: "0 auto" }}>
 //             <h2
 //               style={{
-//                 color: "#d1001f",
+//                 color: "#5DBB1F",
 //                 fontWeight: 800,
 //                 fontSize: 22,
 //                 marginBottom: 16,
@@ -525,7 +525,7 @@
 //               onClick={() => toggleFAQ(i)}
 //               style={{
 //                 padding: isMobile ? "14px 16px" : "18px 22px",
-//                 border: openIndex === i ? "1px solid #d1001f" : "1px solid #eee",
+//                 border: openIndex === i ? "1px solid #5DBB1F" : "1px solid #eee",
 //                 marginBottom: "10px",
 //                 borderRadius: "8px",
 //                 cursor: "pointer",
@@ -590,17 +590,17 @@
 //         >
 //           {/* Left Info */}
 //           <div>
-//             <h3 style={{ color: "#d1001f", fontWeight: 700 }}>📍 Address</h3>
+//             <h3 style={{ color: "#5DBB1F", fontWeight: 700 }}>📍 Address</h3>
 //             <p style={{ marginTop: 6 }}>
 //               #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
 //             </p>
 
-//             <h3 style={{ color: "#d1001f", fontWeight: 700, marginTop: 16 }}>
+//             <h3 style={{ color: "#5DBB1F", fontWeight: 700, marginTop: 16 }}>
 //               📞 Call
 //             </h3>
 //             <p style={{ marginTop: 6 }}>+91 73495 79436</p>
 
-//             <h3 style={{ color: "#d1001f", fontWeight: 700, marginTop: 16 }}>
+//             <h3 style={{ color: "#5DBB1F", fontWeight: 700, marginTop: 16 }}>
 //               ✉ Mail
 //             </h3>
 //             <p style={{ marginTop: 6 }}>support@30forty.in</p>
@@ -739,7 +739,7 @@
 //                 style={{
 //                   background: loading
 //                     ? "linear-gradient(90deg, #bbb, #999)"
-//                     : "linear-gradient(90deg, #ff4d4d, #d1001f)",
+//                     : "linear-gradient(90deg, #5DBB1F, #FEFD03)",
 //                   color: "#fff",
 //                   padding: "12px",
 //                   border: "none",
@@ -841,25 +841,25 @@ function Home() {
       number: "1",
       title: "Expertise You Can Trust",
       text: "With years of real estate experience, 30Forty brings unmatched industry knowledge and a network of reliable professionals.",
-      icon: <FaBullseye size={22} color="#d1001f" />,
+      icon: <FaBullseye size={22} color="#5DBB1F" />,
     },
     {
       number: "2",
       title: "Personalized Property Matches",
       text: "Your dream property is unique — and so is our approach. We use smart filters to tailor every recommendation to your preferences.",
-      icon: <FaFlagCheckered size={22} color="#d1001f" />,
+      icon: <FaFlagCheckered size={22} color="#5DBB1F" />,
     },
     {
       number: "3",
       title: "Seamless End-to-End Process",
       text: "Real estate shouldn’t be stressful — with 30Forty, we simplify every step from search to possession.",
-      icon: <FaListAlt size={22} color="#d1001f" />,
+      icon: <FaListAlt size={22} color="#5DBB1F" />,
     },
     {
       number: "4",
       title: "Strong Local Network",
       text: "We know your neighborhood better than anyone — connecting you to genuine listings and trusted agents.",
-      icon: <FaHandshake size={22} color="#d1001f" />,
+      icon: <FaHandshake size={22} color="#5DBB1F" />,
     },
   ];
 
@@ -1134,7 +1134,7 @@ function Home() {
           }}
         >
           <div>
-            <h4 style={{ color: "#d1001f", fontWeight: 700 ,    fontFamily: "'Poppins', sans-serif",}}>About Us</h4>
+            <h4 style={{ color: "#5DBB1F", fontWeight: 700 ,    fontFamily: "'Poppins', sans-serif",}}>About Us</h4>
             <h2 style={{ fontSize: isMobile ? "24px" : "28px", fontWeight: 700,    fontFamily: "'Poppins', sans-serif", }}>
               Redefining Real Estate
             </h2>
@@ -1230,7 +1230,7 @@ function Home() {
             >
               <h2
                 style={{
-                  color: "#d1001f",
+                  color: "#5DBB1F",
                   fontWeight: 800,
                   marginBottom: 18,
                   fontSize: 26,
@@ -1244,7 +1244,7 @@ function Home() {
                   <div
                     style={{
                       fontWeight: 700,
-                      color: "#d1001f",
+                      color: "#5DBB1F",
                       marginRight: 12,
                       minWidth: 22,
                           fontFamily: "'Poppins', sans-serif",
@@ -1264,7 +1264,7 @@ function Home() {
           <div style={{ maxWidth: 960, margin: "0 auto" }}>
             <h2
               style={{
-                color: "#d1001f",
+                color: "#5DBB1F",
                 fontWeight: 800,
                 fontSize: 22,
                 marginBottom: 16,
@@ -1389,7 +1389,7 @@ function Home() {
               onClick={() => toggleFAQ(i)}
               style={{
                 padding: isMobile ? "14px 16px" : "18px 22px",
-                border: openIndex === i ? "1px solid #d1001f" : "1px solid #eee",
+                border: openIndex === i ? "1px solid #5DBB1F" : "1px solid #eee",
                 marginBottom: "10px",
                 borderRadius: "8px",
                 cursor: "pointer",
@@ -1455,17 +1455,17 @@ function Home() {
           }}
         >
           <div>
-            <h3 style={{ color: "#d1001f", fontWeight: 700 }}>📍 Address</h3>
+            <h3 style={{ color: "#5DBB1F", fontWeight: 700 }}>📍 Address</h3>
             <p style={{ marginTop: 6 }}>
               #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
             </p>
 
-            <h3 style={{ color: "#d1001f", fontWeight: 700, marginTop: 16 ,    fontFamily: "'Poppins', sans-serif",}}>
+            <h3 style={{ color: "#5DBB1F", fontWeight: 700, marginTop: 16 ,    fontFamily: "'Poppins', sans-serif",}}>
               📞 Call
             </h3>
             <p style={{ marginTop: 6 }}>+91 73495 79436</p>
 
-            <h3 style={{ color: "#d1001f", fontWeight: 700, marginTop: 16 ,    fontFamily: "'Poppins', sans-serif",}}>
+            <h3 style={{ color: "#5DBB1F", fontWeight: 700, marginTop: 16 ,    fontFamily: "'Poppins', sans-serif",}}>
               ✉ Mail
             </h3>
             <p style={{ marginTop: 6 ,    fontFamily: "'Poppins', sans-serif",}}>support@30forty.in</p>
@@ -1608,7 +1608,7 @@ function Home() {
                 style={{
                   background: loading
                     ? "linear-gradient(90deg, #bbb, #999)"
-                    : "linear-gradient(90deg, #ff4d4d, #d1001f)",
+                    : "linear-gradient(90deg, #5DBB1F, #FEFD03)",
                   color: "#fff",
                   padding: "12px",
                   border: "none",
@@ -1675,7 +1675,11 @@ function Home() {
                 style={{ height: isMobile ? 36 : 50 }}
               />
             </a>
-            <a href="#">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ororegencompanies.thirtyforty&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={playStore}
                 alt="Google Play"

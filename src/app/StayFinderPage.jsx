@@ -45,18 +45,18 @@
 
 //   const screenshots = [scr1, scr2, scr3, scr4, scr5, scr7, scr8, scr9, scr10];
 //   const roomIcons = [
-//     { icon: <FaHotel size={60} color="#FF385C" />, label: "Hotels" },
-//     { icon: <FaHome size={60} color="#FF385C" />, label: "Apartments" },
-//     { icon: <FaBed size={60} color="#FF385C" />, label: "Hostels" },
-//     { icon: <FaBuilding size={60} color="#FF385C" />, label: "PGs" },
-//     { icon: <FaCity size={60} color="#FF385C" />, label: "City Stays" },
-//     { icon: <FaUmbrellaBeach size={60} color="#FF385C" />, label: "Villas" },
+//     { icon: <FaHotel size={60} color="#02B538" />, label: "Hotels" },
+//     { icon: <FaHome size={60} color="#02B538" />, label: "Apartments" },
+//     { icon: <FaBed size={60} color="#02B538" />, label: "Hostels" },
+//     { icon: <FaBuilding size={60} color="#02B538" />, label: "PGs" },
+//     { icon: <FaCity size={60} color="#02B538" />, label: "City Stays" },
+//     { icon: <FaUmbrellaBeach size={60} color="#02B538" />, label: "Villas" },
 //   ];
 
 //   const [openIndex, setOpenIndex] = useState(null);
 
 //   const faqs = [
-//     { q: "How do I book a room on StayFindr?", a: "Simply search your destination, choose from available stays, and confirm your booking online." },
+//     { q: "How do I book a room on Indianhotels?", a: "Simply search your destination, choose from available stays, and confirm your booking online." },
 //     { q: "Are there hidden charges?", a: "No, we maintain transparent pricing with all taxes and fees shown upfront." },
 //     { q: "Can I cancel or modify my booking?", a: "Yes, depending on the property’s cancellation policy. You’ll see details before booking." },
 //     { q: "Is payment secure?", a: "Absolutely. We use encrypted payment gateways for your safety." },
@@ -64,9 +64,9 @@
 //   ];
 
 //   const testimonials = [
-//     { name: "Riya, Bangalore", text: "I booked my weekend trip through StayFind and loved the easy process. The room was exactly as shown.", img: p1 },
+//     { name: "Riya, Bangalore", text: "I booked my weekend trip through Indianhotels and loved the easy process. The room was exactly as shown.", img: p1 },
 //     { name: "Arjun, Hyderabad", text: "Great platform! Found affordable stays quickly, and the booking experience was smooth.", img: p2 },
-//     { name: "Priya, Delhi", text: "I liked the transparent pricing — no surprises at checkout. Definitely using StayFind again!", img: p3 },
+//     { name: "Priya, Delhi", text: "I liked the transparent pricing — no surprises at checkout. Definitely using Indianhotels again!", img: p3 },
 //   ];
 
 //   const settings = {
@@ -131,7 +131,7 @@
 //             style={{
 //               fontSize: isMobile ? "34px" : "48px",
 //               fontWeight: "900",
-//               color: "#ff385c",
+//               color: "#02B538",
 //               marginBottom: "16px",
 //               marginTop: isMobile ? "0" : "-400px",
 //               lineHeight: 1.2,
@@ -158,7 +158,7 @@
 //               fontWeight: 600,
 //             }}
 //           >
-//             at the best prices with StayFindr.
+//             at the best prices with Indianhotels.
 //           </p>
 //           <p
 //             style={{
@@ -213,7 +213,7 @@
 //       {/* ===== Features Section ===== */}
 //       <section
 //         style={{
-//           background: "linear-gradient(135deg, #F7A7AB, #FF385C)",
+//           background: "linear-gradient(135deg, #F7A7AB, #02B538)",
 //           padding: isMobile ? "28px 16px" : "30px",
 //           display: "flex",
 //           justifyContent: "center",
@@ -266,19 +266,19 @@
 //         <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
 //           <img
 //             src={aboutImage}
-//             alt="About StayFind"
+//             alt="About Indianhotels"
 //             style={{ width: isMobile ? "100%" : "150%", maxWidth: "700px" }}
 //           />
 //         </div>
 //         <div style={{ flex: 1 }}>
-//           <h3 style={{ color: "#FF385C" ,fontFamily: '"Poppins", sans-serif',}}>ABOUT US</h3>
+//           <h3 style={{ color: "#02B538" ,fontFamily: '"Poppins", sans-serif',}}>ABOUT US</h3>
 //           <h1 style={{ fontSize: isMobile ? 28 : 35, fontWeight: 800, lineHeight: 1.5 }}>
 //             Rooms you can <span style={{ color: "hotpink" }}>trust,</span>
 //             <br />
 //             <span style={{ color: "hotpink" }}>bookings</span> you’ll love.
 //           </h1>
 //           <p style={{ fontSize: isMobile ? "1rem" : "1.1rem", lineHeight: 1.6, color: "#444" }}>
-//             At StayFindr, we make travel easy and affordable. Whether you need a
+//             At Indianhotels, we make travel easy and affordable. Whether you need a
 //             cozy room for a weekend getaway, a business trip, or a long vacation,
 //             our platform helps you discover verified stays with just a few clicks.
 //           </p>
@@ -287,7 +287,7 @@
 
 //       {/* ===== Why Choose Us ===== */}
 //       <section id="whychooseus" style={{ padding: isMobile ? "60px 16px" : "100px 20px", background: "#fff", textAlign: "center",fontFamily: '"Poppins", sans-serif', }}>
-//         <h2 style={{ fontSize: isMobile ? "2rem" : "2.5rem", fontWeight: "bold", marginBottom: "12px", color: "#FF385C" ,fontFamily: '"Poppins", sans-serif',}}>
+//         <h2 style={{ fontSize: isMobile ? "2rem" : "2.5rem", fontWeight: "bold", marginBottom: "12px", color: "#02B538" ,fontFamily: '"Poppins", sans-serif',}}>
 //           Why Choose Us
 //         </h2>
 //         <p
@@ -300,7 +300,7 @@
 //             fontFamily: '"Poppins", sans-serif',
 //           }}
 //         >
-//           StayFind makes travel simple, safe, and affordable. Here’s why travelers trust us.
+//           Indianhotels makes travel simple, safe, and affordable. Here’s why travelers trust us.
 //         </p>
 
 //         <div
@@ -333,7 +333,7 @@
 //                   fontFamily: '"Poppins", sans-serif',
 //                 }}
 //               >
-//                 <div style={{ fontSize: isMobile ? 34 : 40, color: "#FF385C", marginBottom: 12,fontFamily: '"Poppins", sans-serif', }}>{r.icon}</div>
+//                 <div style={{ fontSize: isMobile ? 34 : 40, color: "#02B538", marginBottom: 12,fontFamily: '"Poppins", sans-serif', }}>{r.icon}</div>
 //                 <h3 style={{ fontSize: "1.15rem", fontWeight: 600 }}>{r.title}</h3>
 //                 <p style={{ color: "#555" }}>{r.text}</p>
 //               </div>
@@ -355,7 +355,7 @@
 //             />
 //             <img
 //               src={scr4}
-//               alt="StayFind App"
+//               alt="Indianhotels App"
 //               style={{
 //                 position: "absolute",
 //                 top: "50%",
@@ -387,7 +387,7 @@
 //                   fontFamily: '"Poppins", sans-serif',
 //                 }}
 //               >
-//                 <div style={{ fontSize: isMobile ? 34 : 40, color: "#FF385C", marginBottom: 12 ,fontFamily: '"Poppins", sans-serif',}}>{r.icon}</div>
+//                 <div style={{ fontSize: isMobile ? 34 : 40, color: "#02B538", marginBottom: 12 ,fontFamily: '"Poppins", sans-serif',}}>{r.icon}</div>
 //                 <h3 style={{ fontSize: "1.15rem", fontWeight: 600 }}>{r.title}</h3>
 //                 <p style={{ color: "#555" }}>{r.text}</p>
 //               </div>
@@ -408,7 +408,7 @@
 //         <span
 //           style={{
 //             background: "#ffe6ef",
-//             color: "#FF385C",
+//             color: "#02B538",
 //             padding: "6px 16px",
 //             fontWeight: 600,
 //             fontSize: 13,
@@ -443,7 +443,7 @@
 //             fontFamily: '"Poppins", sans-serif',
 //           }}
 //         >
-//           From cozy hostels to premium villas, StayFindr helps you discover
+//           From cozy hostels to premium villas, Indianhotels helps you discover
 //           verified stays across India. Book instantly and travel worry-free.
 //         </p>
 
@@ -503,7 +503,7 @@
 //           <span
 //             style={{
 //               background: "#fff",
-//               color: "#FF385C",
+//               color: "#02B538",
 //               fontWeight: 600,
 //               fontSize: 13,
 //               padding: "12px 16px",
@@ -524,7 +524,7 @@
 //               fontFamily: '"Poppins", sans-serif',
 //             }}
 //           >
-//             Download StayFindr
+//             Download Indianhotels
 //             <br />
 //             for hassle-free <span style={{ color: "#ffe066",fontFamily: '"Poppins", sans-serif', }}>bookings</span>
 //           </h2>
@@ -539,7 +539,7 @@
 //             }}
 //           >
 //             Find cozy rooms, premium stays, and verified listings across India.
-//             StayFindr makes travel easy, affordable, and secure.
+//             Indianhotels makes travel easy, affordable, and secure.
 //           </p>
 
 //           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -596,7 +596,7 @@
 //             fontSize: isMobile ? "2rem" : "2.5rem",
 //             fontWeight: "bold",
 //             marginBottom: 12,
-//             color: "#FF385C",
+//             color: "#02B538",
 //             fontFamily: '"Poppins", sans-serif',
 //           }}
 //         >
@@ -649,7 +649,7 @@
 //                     height: isMobile ? "80px" : "90px",
 //                     borderRadius: "50%",
 //                     margin: "0 auto 12px",
-//                     border: "4px solid #ff385c",
+//                     border: "4px solid #02B538",
 //                     objectFit: "cover",
 //                     fontFamily: '"Poppins", sans-serif',
 //                   }}
@@ -664,9 +664,9 @@
 //                     fontFamily: '"Poppins", sans-serif',
 //                   }}
 //                 >
-//                   <span style={{ fontSize: "2rem", color: "#ff385c",fontFamily: '"Poppins", sans-serif', }}>“</span>
+//                   <span style={{ fontSize: "2rem", color: "#02B538",fontFamily: '"Poppins", sans-serif', }}>“</span>
 //                   {t.text}
-//                   <span style={{ fontSize: "2rem", color: "#ff385c",fontFamily: '"Poppins", sans-serif',}}>”</span>
+//                   <span style={{ fontSize: "2rem", color: "#02B538",fontFamily: '"Poppins", sans-serif',}}>”</span>
 //                 </p>
 
 //                 <div
@@ -676,7 +676,7 @@
 //                     left: "50%",
 //                     transform: "translateX(-50%)",
 //                     fontSize: "2rem",
-//                     color: "#ff385c33",
+//                     color: "#02B53833",
 //                     fontFamily: '"Poppins", sans-serif',
 //                   }}
 //                 >
@@ -695,14 +695,14 @@
 //             fontSize: isMobile ? "2rem" : "2.5rem",
 //             fontWeight: "bold",
 //             marginBottom: 10,
-//             color: "#ff385c",
+//             color: "#02B538",
 //             fontFamily: '"Poppins", sans-serif',
 //           }}
 //         >
 //           Our App Screenshots
 //         </h2>
 //         <p style={{ maxWidth: 700, margin: "0 auto 40px", color: "#666",fontFamily: '"Poppins", sans-serif', }}>
-//           Explore how StayFindr makes booking simple, fast, and secure. From
+//           Explore how Indianhotels makes booking simple, fast, and secure. From
 //           search to checkout, every screen is designed for a smooth experience.
 //         </p>
 
@@ -793,7 +793,7 @@
 //               style={{
 //                 fontSize: isMobile ? "1.05rem" : "1.2rem",
 //                 fontWeight: 600,
-//                 color: "#ff385c",
+//                 color: "#02B538",
 //                 display: "flex",
 //                 justifyContent: "space-between",
 //                 alignItems: "center",
@@ -866,19 +866,19 @@ const Home = () => {
   const screenshots = [scr1, scr2, scr3, scr4, scr5, scr7, scr8, scr9, scr10];
 
   const roomIcons = [
-    { icon: <FaHotel size={60} color="#FF385C" />, label: "Hotels" },
-    { icon: <FaHome size={60} color="#FF385C" />, label: "Apartments" },
-    { icon: <FaBed size={60} color="#FF385C" />, label: "Hostels" },
-    { icon: <FaBuilding size={60} color="#FF385C" />, label: "PGs" },
-    { icon: <FaCity size={60} color="#FF385C" />, label: "City Stays" },
-    { icon: <FaUmbrellaBeach size={60} color="#FF385C" />, label: "Villas" },
+    { icon: <FaHotel size={60} color="#02B538" />, label: "Hotels" },
+    { icon: <FaHome size={60} color="#02B538" />, label: "Apartments" },
+    { icon: <FaBed size={60} color="#02B538" />, label: "Hostels" },
+    { icon: <FaBuilding size={60} color="#02B538" />, label: "PGs" },
+    { icon: <FaCity size={60} color="#02B538" />, label: "City Stays" },
+    { icon: <FaUmbrellaBeach size={60} color="#02B538" />, label: "Villas" },
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
     {
-      q: "How do I book a room on StayFindr?",
+      q: "How do I book a room on Indianhotels?",
       a: "Simply search your destination, choose from available stays, and confirm your booking online.",
     },
     {
@@ -899,7 +899,7 @@ const Home = () => {
   const testimonials = [
     {
       name: "Riya, Bangalore",
-      text: "I booked my weekend trip through StayFind and loved the easy process. The room was exactly as shown.",
+      text: "I booked my weekend trip through Indianhotels and loved the easy process. The room was exactly as shown.",
       img: p1,
     },
     {
@@ -909,7 +909,7 @@ const Home = () => {
     },
     {
       name: "Priya, Delhi",
-      text: "I liked the transparent pricing — no surprises at checkout. Definitely using StayFind again!",
+      text: "I liked the transparent pricing — no surprises at checkout. Definitely using Indianhotels again!",
       img: p3,
     },
   ];
@@ -990,7 +990,7 @@ const Home = () => {
               style={{
                 fontSize: "48px",
                 fontWeight: "900",
-                color: "#ff385c",
+                color: "#02B538",
                 marginBottom: "16px",
                 marginTop: "-400px",
                 lineHeight: 1.2,
@@ -1016,7 +1016,7 @@ const Home = () => {
                 fontWeight: 600,
               }}
             >
-              at the best prices with StayFindr.
+              at the best prices with Indianhotels.
             </p>
 
             <div
@@ -1027,7 +1027,11 @@ const Home = () => {
                 flexWrap: "wrap",
               }}
             >
-              <a href="#">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={googlePlayImg}
                   alt="Google Play"
@@ -1071,7 +1075,7 @@ const Home = () => {
               style={{
                 fontSize: "34px",
                 fontWeight: 900,
-                color: "#ff385c",
+                color: "#02B538",
                 marginBottom: 10,
                 lineHeight: 1.2,
               }}
@@ -1096,7 +1100,7 @@ const Home = () => {
                 fontWeight: 600,
               }}
             >
-              at the best prices with StayFindr.
+              at the best prices with Indianhotels.
             </p>
 
             <div
@@ -1107,7 +1111,11 @@ const Home = () => {
                 marginBottom: 14,
               }}
             >
-              <a href="#">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={googlePlayImg}
                   alt="Google Play"
@@ -1140,7 +1148,7 @@ const Home = () => {
 
           <img
             src={bannerImage}
-            alt="StayFindr banner"
+            alt="Indianhotels banner"
             style={{
               width: "100%",
               display: "block",
@@ -1155,7 +1163,7 @@ const Home = () => {
       {/* ===== Features Section ===== */}
       <section
         style={{
-          background: "linear-gradient(135deg, #F7A7AB, #FF385C)",
+          background: "linear-gradient(135deg, #F7A7AB, #02B538)",
           padding: isMobile ? "28px 16px" : "30px",
           display: "flex",
           justifyContent: "center",
@@ -1217,19 +1225,19 @@ const Home = () => {
         <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
           <img
             src={aboutImage}
-            alt="About StayFind"
+            alt="About Indianhotels"
             style={{ width: isMobile ? "100%" : "150%", maxWidth: "700px" }}
           />
         </div>
         <div style={{ flex: 1 }}>
-          <h3 style={{ color: "#FF385C" }}>ABOUT US</h3>
+          <h3 style={{ color: "#02B538" }}>ABOUT US</h3>
           <h1 style={{ fontSize: isMobile ? 28 : 35, fontWeight: 800, lineHeight: 1.5 }}>
             Rooms you can <span style={{ color: "hotpink" }}>trust,</span>
             <br />
             <span style={{ color: "hotpink" }}>bookings</span> you’ll love.
           </h1>
           <p style={{ fontSize: isMobile ? "1rem" : "1.1rem", lineHeight: 1.6, color: "#444" }}>
-            At StayFindr, we make travel easy and affordable. Whether you need a
+            At Indianhotels, we make travel easy and affordable. Whether you need a
             cozy room for a weekend getaway, a business trip, or a long vacation,
             our platform helps you discover verified stays with just a few clicks.
           </p>
@@ -1251,7 +1259,7 @@ const Home = () => {
             fontSize: isMobile ? "2rem" : "2.5rem",
             fontWeight: "bold",
             marginBottom: 12,
-            color: "#FF385C",
+            color: "#02B538",
           }}
         >
           Why Choose Us
@@ -1265,7 +1273,7 @@ const Home = () => {
             margin: "0 auto",
           }}
         >
-          StayFind makes travel simple, safe, and affordable. Here’s why travelers trust us.
+          Indianhotels makes travel simple, safe, and affordable. Here’s why travelers trust us.
         </p>
 
         {/* Desktop: 3 columns with phone mockup in middle; Mobile: stacked cards */}
@@ -1298,7 +1306,7 @@ const Home = () => {
                     boxShadow: "0 6px 20px rgba(0,0,0,0.08)",
                   }}
                 >
-                  <div style={{ fontSize: 40, color: "#FF385C", marginBottom: 12 }}>{r.icon}</div>
+                  <div style={{ fontSize: 40, color: "#02B538", marginBottom: 12 }}>{r.icon}</div>
                   <h3 style={{ fontSize: "1.15rem", fontWeight: 600 }}>{r.title}</h3>
                   <p style={{ color: "#555" }}>{r.text}</p>
                 </div>
@@ -1314,7 +1322,7 @@ const Home = () => {
               />
               <img
                 src={scr4}
-                alt="StayFind App"
+                alt="Indianhotels App"
                 style={{
                   position: "absolute",
                   top: "50%",
@@ -1344,7 +1352,7 @@ const Home = () => {
                     boxShadow: "0 6px 20px rgba(0,0,0,0.08)",
                   }}
                 >
-                  <div style={{ fontSize: 40, color: "#FF385C", marginBottom: 12 }}>{r.icon}</div>
+                  <div style={{ fontSize: 40, color: "#02B538", marginBottom: 12 }}>{r.icon}</div>
                   <h3 style={{ fontSize: "1.15rem", fontWeight: 600 }}>{r.title}</h3>
                   <p style={{ color: "#555" }}>{r.text}</p>
                 </div>
@@ -1373,7 +1381,7 @@ const Home = () => {
                   alignItems: "center",
                 }}
               >
-                <div style={{ fontSize: 32, color: "#FF385C" }}>{r.icon}</div>
+                <div style={{ fontSize: 32, color: "#02B538" }}>{r.icon}</div>
                 <div>
                   <h3 style={{ margin: 0, fontSize: 16, fontWeight: 700 }}>{r.title}</h3>
                   <p style={{ margin: "4px 0 0", color: "#555", fontSize: 14 }}>{r.text}</p>
@@ -1396,7 +1404,7 @@ const Home = () => {
         <span
           style={{
             background: "#ffe6ef",
-            color: "#FF385C",
+            color: "#02B538",
             padding: "6px 16px",
             fontWeight: 600,
             fontSize: 13,
@@ -1428,7 +1436,7 @@ const Home = () => {
             margin: "0 auto 40px",
           }}
         >
-          From cozy hostels to premium villas, StayFindr helps you discover verified stays across
+          From cozy hostels to premium villas, Indianhotels helps you discover verified stays across
           India. Book instantly and travel worry-free.
         </p>
 
@@ -1484,7 +1492,7 @@ const Home = () => {
           <span
             style={{
               background: "#fff",
-              color: "#FF385C",
+              color: "#02B538",
               fontWeight: 600,
               fontSize: 13,
               padding: "10px 14px",
@@ -1503,7 +1511,7 @@ const Home = () => {
               color: "#fff",
             }}
           >
-            Download StayFindr
+            Download Indianhotels
             <br />
             for hassle-free <span style={{ color: "#ffe066" }}>bookings</span>
           </h2>
@@ -1516,12 +1524,16 @@ const Home = () => {
               color: "#fff",
             }}
           >
-            Find cozy rooms, premium stays, and verified listings across India. StayFindr makes
+            Find cozy rooms, premium stays, and verified listings across India. Indianhotels makes
             travel easy, affordable, and secure.
           </p>
 
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a href="#">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={googlePlayImg}
                 alt="Google Play"
@@ -1575,7 +1587,7 @@ const Home = () => {
             fontSize: isMobile ? "2rem" : "2.5rem",
             fontWeight: "bold",
             marginBottom: 12,
-            color: "#FF385C",
+            color: "#02B538",
           }}
         >
           💬 What Our Clients Say
@@ -1615,7 +1627,7 @@ const Home = () => {
                     height: isMobile ? 80 : 90,
                     borderRadius: "50%",
                     margin: "0 auto 12px",
-                    border: "4px solid #ff385c",
+                    border: "4px solid #02B538",
                     objectFit: "cover",
                   }}
                 />
@@ -1628,9 +1640,9 @@ const Home = () => {
                     fontStyle: "italic",
                   }}
                 >
-                  <span style={{ fontSize: "2rem", color: "#ff385c" }}>“</span>
+                  <span style={{ fontSize: "2rem", color: "#02B538" }}>“</span>
                   {t.text}
-                  <span style={{ fontSize: "2rem", color: "#ff385c" }}>”</span>
+                  <span style={{ fontSize: "2rem", color: "#02B538" }}>”</span>
                 </p>
               </div>
             </div>
@@ -1652,13 +1664,13 @@ const Home = () => {
             fontSize: isMobile ? "2rem" : "2.5rem",
             fontWeight: "bold",
             marginBottom: 10,
-            color: "#ff385c",
+            color: "#02B538",
           }}
         >
           Our App Screenshots
         </h2>
         <p style={{ maxWidth: 700, margin: "0 auto 40px", color: "#666" }}>
-          Explore how StayFindr makes booking simple, fast, and secure. From search to checkout,
+          Explore how Indianhotels makes booking simple, fast, and secure. From search to checkout,
           every screen is designed for a smooth experience.
         </p>
 
@@ -1732,7 +1744,7 @@ const Home = () => {
               style={{
                 fontSize: isMobile ? "1.05rem" : "1.2rem",
                 fontWeight: 600,
-                color: "#ff385c",
+                color: "#02B538",
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",

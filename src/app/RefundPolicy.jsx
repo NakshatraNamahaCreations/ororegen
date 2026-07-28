@@ -15,7 +15,7 @@ const RefundPolicy = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        StayFindr – Refund & Cancellation Policy
+        Indianhotels – Refund & Cancellation Policy
       </h1>
       <p>
         <strong>Effective Date:</strong> [October: 06-10-2025]

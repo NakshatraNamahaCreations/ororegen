@@ -13,7 +13,7 @@ const faqData = [
   {
     question: "2. What apps does Oro Regen offer?",
     answer:
-      "We currently have four apps under our umbrella: StayFindr – A travel & stay booking app like Airbnb, 30forty – A real estate discovery & property management app, Networkx – A consultancy & expert marketplace app, Masterji – A learning & courses platform.",
+      "We currently have four apps under our umbrella: Indianhotels – A travel & stay booking app like Airbnb, 30forty – A real estate discovery & property management app, Networkx – A consultancy & expert marketplace app, Masterji – A learning & courses platform.",
   },
   {
     question: "3. How are Oro Regen apps different from others?",
@@ -21,9 +21,9 @@ const faqData = [
       "Each of our apps is designed with a user-first approach, focusing on simplicity, trust, and real-world problem-solving.",
   },
   {
-    question: "4. Is Stay Findr available worldwide?",
+    question: "4. Is Indianhotels available worldwide?",
     answer:
-      "Currently, Stay Findr is expanding city by city. Our goal is to scale across India first and then move to international markets.",
+      "Currently, Indianhotels is expanding city by city. Our goal is to scale across India first and then move to international markets.",
   },
   {
     question: "5. Can I list my property on the 30forty app?",

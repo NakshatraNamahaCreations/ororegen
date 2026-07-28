@@ -1,6 +1,6 @@
 import React from "react";
 import "./AppsSection.css";
-import { FaBuilding, FaHotel, FaClock, FaChalkboardTeacher } from "react-icons/fa";
+import { FaClock, FaChalkboardTeacher } from "react-icons/fa";
 
 const AppsSection = () => {
   return (
@@ -14,14 +14,14 @@ const AppsSection = () => {
 
         <div className="apps-grid">
           <div className="app-card">
-            <FaBuilding className="app-icon" />
+            <img src="/30FortyLogo.png" alt="30Forty" className="app-logo" />
             <h3>30Forty</h3>
             <p>Find and explore properties with ease using our smart real-estate solution.</p>
           </div>
 
           <div className="app-card">
-            <FaHotel className="app-icon" />
-            <h3>StayFindr</h3>
+            <img src="/IndianHotelsLogo.png" alt="Indianhotels" className="app-logo" />
+            <h3>Indianhotels</h3>
             <p>Discover and book your perfect stay with trusted hosts worldwide.</p>
           </div>
 

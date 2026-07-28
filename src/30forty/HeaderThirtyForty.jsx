@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import logo from "../assets/30fortylogo.webp";
+const logo = "/30FortyLogo.png";
 
 const HeaderThirtyForty = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -174,7 +174,7 @@ const HeaderThirtyForty = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ ...linkBase, padding: "12px 0" }}
-                onMouseOver={(e) => (e.currentTarget.style.color = "#ffcbcb")}
+                onMouseOver={(e) => (e.currentTarget.style.color = "#e8ffc2")}
                 onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
                 onClick={() => setMenuOpen(false)}
               >
@@ -186,7 +186,7 @@ const HeaderThirtyForty = () => {
                 href={item.link}
                 onClick={(e) => handleSmoothScroll(e, item.link)}
                 style={{ ...linkBase, padding: "12px 0" }}
-                onMouseOver={(e) => (e.currentTarget.style.color = "#ffcbcb")}
+                onMouseOver={(e) => (e.currentTarget.style.color = "#e8ffc2")}
                 onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
               >
                 {item.name}
@@ -204,7 +204,7 @@ const HeaderThirtyForty = () => {
               display: "inline-block",
               width: "100%",
               textAlign: "center",
-              backgroundColor: "#d1001f",
+              backgroundColor: "#5DBB1F",
               color: "#fff",
               padding: "12px 16px",
               borderRadius: 10,
@@ -213,10 +213,10 @@ const HeaderThirtyForty = () => {
               transition: "background .3s ease",
             }}
             onMouseOver={(e) =>
-              (e.currentTarget.style.backgroundColor = "#a30018")
+              (e.currentTarget.style.backgroundColor = "#3F8A12")
             }
             onMouseOut={(e) =>
-              (e.currentTarget.style.backgroundColor = "#d1001f")
+              (e.currentTarget.style.backgroundColor = "#5DBB1F")
             }
           >
             Download App
@@ -300,7 +300,7 @@ const HeaderThirtyForty = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={linkBase}
-                    onMouseOver={(e) => (e.currentTarget.style.color = "#ffcbcb")}
+                    onMouseOver={(e) => (e.currentTarget.style.color = "#e8ffc2")}
                     onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
                   >
                     {item.name}
@@ -310,7 +310,7 @@ const HeaderThirtyForty = () => {
                     href={item.link}
                     onClick={(e) => handleSmoothScroll(e, item.link)}
                     style={linkBase}
-                    onMouseOver={(e) => (e.currentTarget.style.color = "#ffcbcb")}
+                    onMouseOver={(e) => (e.currentTarget.style.color = "#e8ffc2")}
                     onMouseOut={(e) => (e.currentTarget.style.color = "#fff")}
                   >
                     {item.name}
@@ -328,7 +328,7 @@ const HeaderThirtyForty = () => {
     href="#download"
     onClick={(e) => handleSmoothScroll(e, "#download")}
     style={{
-      backgroundColor: "#d1001f",
+      backgroundColor: "#5DBB1F",
       color: "#fff",
       padding: "12px 24px",
       borderRadius: "6px",
@@ -339,10 +339,10 @@ const HeaderThirtyForty = () => {
           marginRight: 85,
     }}
     onMouseOver={(e) =>
-      (e.currentTarget.style.backgroundColor = "#a30018")
+      (e.currentTarget.style.backgroundColor = "#3F8A12")
     }
     onMouseOut={(e) =>
-      (e.currentTarget.style.backgroundColor = "#d1001f")
+      (e.currentTarget.style.backgroundColor = "#5DBB1F")
     }
   >
     Download App

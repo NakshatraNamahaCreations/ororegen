@@ -9,12 +9,12 @@ const StayFinder = () => {
         {/* Left Text */}
         <div className="stayfinder-left">
           <h2 className="sf-title">
-            Stay Findr – <span>Travel & Short-Stay Rental App</span>
+            Indianhotels – <span>Travel & Short-Stay Rental App</span>
           </h2>
           <p className="sf-description">
-            StayFindr is a next-gen travel and accommodation app that connects
+            Indianhotels is a next-gen travel and accommodation app that connects
             explorers with hosts offering unique stays. Whether it’s a cozy
-            apartment, a luxury villa, or a budget-friendly homestay, Stay Finder
+            apartment, a luxury villa, or a budget-friendly homestay, Indianhotels
             makes booking the right space effortless.
           </p>
 
@@ -45,7 +45,7 @@ const StayFinder = () => {
 
           {/* <h3 className="sf-subtitle">🌟 Vision</h3>
           <p className="sf-description">
-            Stay Finder envisions building a community-driven travel ecosystem
+            Indianhotels envisions building a community-driven travel ecosystem
             where stays are more than just accommodation—they’re experiences. By
             connecting hosts and travelers, it makes every journey unique,
             personal, and memorable.
@@ -54,7 +54,7 @@ const StayFinder = () => {
 
         {/* Right Image */}
         <div className="stayfinder-right">
-          <img src={stayImg} alt="Stay Finder" />
+          <img src={stayImg} alt="Indianhotels" />
         </div>
       </div>
     </section>

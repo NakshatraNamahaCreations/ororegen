@@ -82,6 +82,20 @@
   transform: scale(1.15);
 }
 
+/* 🔹 Logo Image */
+.app-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.app-card:hover .app-logo {
+  transform: scale(1.15);
+}
+
 /* 🔹 Texts */
 .app-card h3 {
   font-size: 20px;

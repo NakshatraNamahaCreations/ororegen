@@ -79,7 +79,7 @@
 //     display: "inline-block",
 //   };
 
-//   const hoverIn = (e) => (e.target.style.color = "#FF385C");
+//   const hoverIn = (e) => (e.target.style.color = "#02B538");
 //   const hoverOut = (e) => (e.target.style.color = "#111");
 
 //   // desktop links (kept same)
@@ -289,7 +289,7 @@
 //             onClick={() => {
 //               try {
 //                 window.open(
-//                   "https://play.google.com/store/apps/details?id=com.yourapp",
+//                   "https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN",
 //                   "_blank"
 //                 );
 //               } catch {}
@@ -366,7 +366,7 @@
 //             onClick={() => {
 //               try {
 //                 window.open(
-//                   "https://play.google.com/store/apps/details?id=com.yourapp",
+//                   "https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN",
 //                   "_blank"
 //                 );
 //               } catch {}
@@ -384,7 +384,7 @@
 //               transition: "background .3s ease",
 //               fontFamily: "'Poppins', sans-serif",
 //             }}
-//             onMouseEnter={(e) => (e.target.style.background = "#FF385C")}
+//             onMouseEnter={(e) => (e.target.style.background = "#02B538")}
 //             onMouseLeave={(e) => (e.target.style.background = "#000")}
 //           >
 //             Download the App
@@ -420,7 +420,7 @@
 //   );
 // }
 import React, { useEffect, useState, useCallback } from "react";
-import logo from "../assets/stay.png"; // ensure path is correct
+const logo = "/IndianHotelsLogo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -498,7 +498,7 @@ export default function Navbar() {
     display: "inline-block",
   };
 
-  const hoverIn = (e) => (e.target.style.color = "#FF385C");
+  const hoverIn = (e) => (e.target.style.color = "#02B538");
   const hoverOut = (e) => (e.target.style.color = "#111");
 
   // desktop links (kept same)
@@ -708,7 +708,7 @@ export default function Navbar() {
             onClick={() => {
               try {
                 window.open(
-                  "https://play.google.com/store/apps/details?id=com.yourapp",
+                  "https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN",
                   "_blank"
                 );
               } catch {}
@@ -762,7 +762,6 @@ export default function Navbar() {
         style={{
           display: "flex",
           alignItems: "center",
-          marginTop: isMobile ? 0 : -50, // keep big-screen look same as your original
           zIndex: 1001,
         }}
       >
@@ -772,16 +771,27 @@ export default function Navbar() {
           rel="noopener noreferrer"
           aria-label="Oro Regen Companies - Home"
           title="Oro Regen Companies"
-          style={{ display: "inline-flex", alignItems: "center" }}
+          style={{ display: "inline-flex", alignItems: "center", gap: 10 }}
         >
           <img
             src={logo}
-            alt="Logo"
+            alt="Indianhotels"
             style={{
-              height: isMobile ? 56 : 120, // slightly tuned for mobile
+              height: isMobile ? 40 : 56,
               objectFit: "contain",
             }}
           />
+          <span
+            style={{
+              fontSize: isMobile ? 18 : 24,
+              fontWeight: 800,
+              color: "#02B538",
+              fontFamily: "'Poppins', sans-serif",
+              letterSpacing: 0.2,
+            }}
+          >
+            Indianhotels
+          </span>
         </a>
       </div>
 
@@ -794,7 +804,7 @@ export default function Navbar() {
             onClick={() => {
               try {
                 window.open(
-                  "https://play.google.com/store/apps/details?id=com.yourapp",
+                  "https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN",
                   "_blank"
                 );
               } catch {}
@@ -812,7 +822,7 @@ export default function Navbar() {
               transition: "background .3s ease",
               fontFamily: "'Poppins', sans-serif",
             }}
-            onMouseEnter={(e) => (e.target.style.background = "#FF385C")}
+            onMouseEnter={(e) => (e.target.style.background = "#02B538")}
             onMouseLeave={(e) => (e.target.style.background = "#000")}
           >
             Download the App

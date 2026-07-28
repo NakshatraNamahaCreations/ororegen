@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
       </p>
       <p>
         At Oro Regen Company., we respect your privacy and are committed to
-        protecting your personal data across our website and apps (StayFindr,
+        protecting your personal data across our website and apps (Indianhotels,
         30Forty, NetworkX, and Masterji).
       </p>
 

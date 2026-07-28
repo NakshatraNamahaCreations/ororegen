@@ -31,7 +31,7 @@ const TermsAndConditions = () => {
       <p>
         These Terms govern the use of the Oro Regen corporate website and its
         associated products, platforms, and services. Additional terms may apply
-        within each app (Stay Findr, 30Forty, NetworkX, Masterji).
+        within each app (Indianhotels, 30Forty, NetworkX, Masterji).
       </p>
 
       <h2>2. User Eligibility</h2>

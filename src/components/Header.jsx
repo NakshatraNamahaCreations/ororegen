@@ -63,7 +63,7 @@ const Header = () => {
             <div className="dropdown-menu">
               <Link to="/apps/sellmytime">Networkx</Link>
               <Link to="/apps/30forty">30Forty</Link>
-              <Link to="/apps/stayfinder">StayFindr</Link>
+              <Link to="/apps/indianhotels">Indianhotels</Link>
             </div>
           </div>
 

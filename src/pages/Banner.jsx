@@ -6,7 +6,7 @@ import ban1 from "../assets/ban3.jpg";
 import ban2 from "../assets/ban2.jpg";
 import ban3 from "../assets/network.jpg";
 import ban4 from "../assets/masterjinew.jpg";
-import { FaHome, FaHotel, FaClock, FaSchool } from "react-icons/fa";
+import { FaClock, FaSchool } from "react-icons/fa";
 
 const banners = [ban1, ban2, ban3, ban4];
 
@@ -15,13 +15,13 @@ const texts = [
     title: "30forty",
     slogan:
       "Explore dream properties with smart search tools. Find your perfect home faster than ever before.",
-    icon: <FaHome className="banner-icon" />,
+    icon: <img src="/30FortyLogo.png" alt="30Forty" className="banner-logo" />,
   },
   {
-    title: "Stay Findr",
+    title: "Indianhotels",
     slogan:
       "Book trusted stays worldwide with confidence. Comfort and convenience are always just a click away.",
-    icon: <FaHotel className="banner-icon" />,
+    icon: <img src="/IndianHotelsLogo.png" alt="Indianhotels" className="banner-logo" />,
   },
   {
     title: "NETWORKX",
