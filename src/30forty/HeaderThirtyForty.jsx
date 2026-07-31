@@ -194,45 +194,6 @@ const HeaderThirtyForty = () => {
             )
           )}
         </nav>
-
-        {/* CTA */}
-        <div style={{ marginTop: "auto" }}>
-          <a
-            href="#download"
-            onClick={(e) => handleSmoothScroll(e, "#download")}
-            style={{
-              display: "inline-block",
-              width: "100%",
-              textAlign: "center",
-              backgroundColor: "#5DBB1F",
-              color: "#fff",
-              padding: "12px 16px",
-              borderRadius: 10,
-              fontWeight: 700,
-              textDecoration: "none",
-              transition: "background .3s ease",
-            }}
-            onMouseOver={(e) =>
-              (e.currentTarget.style.backgroundColor = "#3F8A12")
-            }
-            onMouseOut={(e) =>
-              (e.currentTarget.style.backgroundColor = "#5DBB1F")
-            }
-          >
-            Download App
-          </a>
-          <p
-            style={{
-              fontSize: 12,
-              color: "#bbb",
-              marginTop: 10,
-              lineHeight: 1.4,
-              textAlign: "center",
-            }}
-          >
-            By continuing, you agree to our Terms & Privacy Policy.
-          </p>
-        </div>
       </aside>
     </>
   );
@@ -325,8 +286,9 @@ const HeaderThirtyForty = () => {
   {/* Desktop CTA */}
 {!isMobile && (
   <a
-    href="#download"
-    onClick={(e) => handleSmoothScroll(e, "#download")}
+    href="https://play.google.com/store/apps/details?id=com.ororegencompanies.thirtyforty&hl=en_IN"
+    target="_blank"
+    rel="noopener noreferrer"
     style={{
       backgroundColor: "#5DBB1F",
       color: "#fff",

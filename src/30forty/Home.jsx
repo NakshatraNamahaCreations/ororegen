@@ -1109,6 +1109,47 @@ function Home() {
               Find your dream home effortlessly with <strong>30Forty</strong> — where
               technology meets comfort.
             </p>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ororegencompanies.thirtyforty&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tf-download-btn"
+              style={{
+                display: "block",
+                width: "100%",
+                margin: "20px auto 0",
+                padding: "18px 24px",
+                background: "#5DBB1F",
+                color: "#fff",
+                fontWeight: 700,
+                fontSize: 20,
+                textAlign: "center",
+                textDecoration: "none",
+                fontFamily: '"Poppins", sans-serif',
+              }}
+            >
+              Download
+            </a>
+            <style>{`
+              @keyframes tfPulse {
+                0%, 100% {
+                  box-shadow: 0 0 0 0 rgba(93, 187, 31, 0.55);
+                }
+                70% {
+                  box-shadow: 0 0 0 16px rgba(93, 187, 31, 0);
+                }
+              }
+              .tf-download-btn {
+                animation: tfPulse 2s infinite;
+                transition: transform 0.2s ease, background 0.2s ease;
+              }
+              .tf-download-btn:hover,
+              .tf-download-btn:active {
+                transform: translateY(-3px) scale(1.02);
+                background: #3F8A12 !important;
+                animation: none;
+              }
+            `}</style>
           </div>
         </section>
       )}
