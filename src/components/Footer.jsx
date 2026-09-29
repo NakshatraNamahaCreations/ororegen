@@ -107,18 +107,37 @@
 // };
 
 // export default Footer;
-import React from "react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaPinterestP,
-} from "react-icons/fa";
-import logo from "../assets/ororegen.jpg";
+import React, { useEffect, useState } from "react";
+import logo from "../assets/ororegen-logo-480.webp";
 import "./Footer.css";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from "react-icons/fa";
+
+const RING_RADIUS = 26;
+const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
 
 const Footer = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const y = window.scrollY;
+      setScrollProgress(scrollable > 0 ? Math.min(y / scrollable, 1) : 0);
+      setShowTop(y > 300);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <footer className="footer">
       {/* 🔹 Subscribe / Register Section */}
@@ -142,8 +161,7 @@ const Footer = () => {
       <div className="footer-main">
         <div className="footer-about">
           <div className="footer-logo">
-            <img src={logo} alt="ORO-REGEN" />
-            <h3>ORO-REGEN</h3>
+            <img src={logo} alt="Oro Regen Companies" />
           </div>
           <p>
             At ORO-REGEN, innovation meets convenience. We create powerful
@@ -177,7 +195,7 @@ const Footer = () => {
           <ul>
             <li>
               <a href="https://ororegencompanies.in/apps/sellmytime">
-                Networkx
+                Sell My Time
               </a>
             </li>
             <li>
@@ -218,20 +236,6 @@ const Footer = () => {
 
       {/* 🔹 Bottom Section */}
       <div className="footer-bottom">
-        <div className="social-icons">
-          <a href="#" aria-label="Facebook">
-            <FaFacebookF />
-          </a>
-          <a href="#" aria-label="Twitter">
-            <FaTwitter />
-          </a>
-          <a href="#" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-          <a href="#" aria-label="Pinterest">
-            <FaPinterestP />
-          </a>
-        </div>
 
         <p className="footer-legal">
           <a href="/ororegen/pricavy-policy">Privacy Policy</a> |{" "}
@@ -240,6 +244,30 @@ const Footer = () => {
 
         <p>© Copyright 2025 ORO-REGEN. All Rights Reserved.</p>
       </div>
+
+      {/* 🔹 Back to Top */}
+      <button
+        type="button"
+        className={`back-to-top ${showTop ? "visible" : ""}`}
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        title="Back to top"
+      >
+        <svg className="btt-ring" viewBox="0 0 60 60" aria-hidden="true">
+          <circle className="btt-ring-track" cx="30" cy="30" r={RING_RADIUS} />
+          <circle
+            className="btt-ring-progress"
+            cx="30"
+            cy="30"
+            r={RING_RADIUS}
+            strokeDasharray={RING_CIRCUMFERENCE}
+            strokeDashoffset={RING_CIRCUMFERENCE * (1 - scrollProgress)}
+          />
+        </svg>
+        <span className="btt-core">
+          <FaArrowUp className="btt-arrow" />
+        </span>
+      </button>
     </footer>
   );
 };

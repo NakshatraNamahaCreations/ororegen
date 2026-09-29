@@ -9,7 +9,6 @@ import SellMyTime from './SellMyTime'
 import FaQ from './FAQ'
 import AppsSection from './AppsSection'
 import EnquiryForm from './EnquiryForm'
-import AppDownloadSection from './AppDownloadSection'
 import Masterji from './Masterji'
 
 function Home() {
@@ -26,7 +25,6 @@ function Home() {
        <FaQ />
       <AppsSection />
        <EnquiryForm />
-       <AppDownloadSection />
     </div>
   )
 }

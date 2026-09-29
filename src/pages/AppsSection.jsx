@@ -27,7 +27,7 @@ const AppsSection = () => {
 
           <div className="app-card">
             <FaClock className="app-icon" />
-            <h3>NetworkX</h3>
+            <h3>Sell My Time</h3>
             <p>Connect, collaborate, and monetize your time effectively.</p>
           </div>
 

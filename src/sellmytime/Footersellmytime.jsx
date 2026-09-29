@@ -193,7 +193,7 @@ import {
   FaYoutube,
   FaTwitter,
 } from "react-icons/fa";
-import logo from "../assets/networkzlogo.png";
+import logo from "../assets/sellmytimelogo.png";
 
 const Footersellmytime = () => {
   const footerLinks = [
@@ -284,7 +284,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
 
       {/* 🔸 Bottom Bar */}
       <div className="smt-footer-bottom">
-        <p>© 2025 Networkx. This App is managed by Oro Regen Companies. All Rights Reserved.</p>
+        <p>© 2025 Sell My Time. This App is managed by Oro Regen Companies. All Rights Reserved.</p>
         <div>
           <a href="/sellmytime/privacy-policy">Privacy Policy</a>
           <a href="/sellmytime/terms-and-conditions">Terms & Conditions</a>

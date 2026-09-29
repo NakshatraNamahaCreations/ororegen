@@ -6,6 +6,8 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease,
+    border-color 0.4s ease;
 }
 
 .header-container {
@@ -25,10 +27,19 @@
 }
 
 .logo img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
+  display: block;
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  transition: height 0.35s ease, transform 0.35s ease;
+}
+
+.logo a:hover img {
+  transform: scale(1.04);
+}
+
+.header--scrolled .logo img {
+  height: 72px;
 }
 
 .logo-text h2 {
@@ -159,6 +170,52 @@
   transition: all 0.3s ease;
 }
 
+/* ---------- OVERLAY HEADER (Home: sits on top of the banner) ---------- */
+.header--overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+}
+
+.header--overlay .nav-links a,
+.header--overlay .dropdown-caret,
+.header--overlay .contact-info p {
+  color: #ffffff;
+}
+
+.header--overlay .contact-info small {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.header--overlay .nav-links a:hover,
+.header--overlay .nav-links .active,
+.header--overlay .phone-icon {
+  color: #f7d774;
+}
+
+.header--overlay .hamburger span {
+  background-color: #ffffff;
+}
+
+.header--overlay .dropdown-menu a {
+  color: #333;
+}
+
+.header--overlay .dropdown-menu a:hover {
+  color: #b8860b;
+}
+
+.header--overlay.header--scrolled {
+  background-color: rgba(12, 10, 6, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: rgba(247, 215, 116, 0.35);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
 /* ---------- MOBILE RESPONSIVE ---------- */
 @media (max-width: 900px) {
   .header-container {
@@ -166,8 +223,11 @@
   }
 
   .logo img {
-    width: 44px;
-    height: 44px;
+    height: 72px;
+  }
+
+  .header--scrolled .logo img {
+    height: 60px;
   }
 
   .logo-text h2 {
@@ -185,11 +245,11 @@
     display: none;
     flex-direction: column;
     background-color: #fff;
-    position: fixed;
-    top: 69px;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    max-height: calc(100vh - 69px);
+    max-height: 80vh;
     overflow-y: auto;
     border-top: 1px solid #ddd;
     padding: 20px 0;
@@ -229,6 +289,23 @@
     display: none;
   }
 
+  .header--overlay .nav-links a,
+  .header--overlay .dropdown-caret {
+    color: #333;
+  }
+
+  .header--overlay .nav-links a:hover,
+  .header--overlay .nav-links .active {
+    color: #b8860b;
+  }
+
+  /* backdrop-filter would trap the fixed tap-to-close overlay inside the header */
+  .header--overlay.header--scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: rgba(12, 10, 6, 0.95);
+  }
+
   .hamburger {
     display: flex;
   }
@@ -244,7 +321,10 @@
   }
 
   .logo img {
-    width: 38px;
-    height: 38px;
+    height: 64px;
+  }
+
+  .header--scrolled .logo img {
+    height: 54px;
   }
 }

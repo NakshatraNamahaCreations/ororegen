@@ -8,7 +8,7 @@ const ThirtyForty = () => {
       <div className="tf-heading">
         <h1 className="tf-main-title">Explore the Oro-Regen Universe</h1>
         <p className="tf-main-subtitle">
-          30Forty, Indianhotels, Networkx, and Masterji — four powerful apps
+          30Forty, Indianhotels, Sell My Time, and Masterji — four powerful apps
           under one umbrella, built to shape the future of how we live, work,
           and learn.
         </p>

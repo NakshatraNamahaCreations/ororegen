@@ -13,7 +13,7 @@ const faqData = [
   {
     question: "2. What apps does Oro Regen offer?",
     answer:
-      "We currently have four apps under our umbrella: Indianhotels – A travel & stay booking app like Airbnb, 30forty – A real estate discovery & property management app, Networkx – A consultancy & expert marketplace app, Masterji – A learning & courses platform.",
+      "We currently have four apps under our umbrella: Indianhotels – A travel & stay booking app like Airbnb, 30forty – A real estate discovery & property management app, Sell My Time – A consultancy & expert marketplace app, Masterji – A learning & courses platform.",
   },
   {
     question: "3. How are Oro Regen apps different from others?",
@@ -31,9 +31,9 @@ const faqData = [
       "Yes! Property owners, developers, and brokers can list properties directly on the app for greater visibility and seamless management.",
   },
   {
-    question: "6. How does Networkx work?",
+    question: "6. How does Sell My Time work?",
     answer:
-      "Networkx connects consultants and experts with individuals or businesses seeking guidance. You can register, list your expertise, and start monetizing your time.",
+      "Sell My Time connects consultants and experts with individuals or businesses seeking guidance. You can register, list your expertise, and start monetizing your time.",
   },
   {
     question: "7. Are the courses on Masterji certified?",

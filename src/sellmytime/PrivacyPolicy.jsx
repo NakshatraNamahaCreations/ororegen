@@ -13,14 +13,14 @@ const PrivacyPolicy = () => {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#ff4500" }}>
-       NetworkX – Privacy Policy
+       Sell My Time – Privacy Policy
       </h1>
       <p style={{ textAlign: "center", fontStyle: "italic", marginBottom: "40px" }}>
         Effective Date: <strong>[August 5, 2025]</strong>
       </p>
 
       <p>
-        At <strong>NetworkX</strong>, we value your privacy and are committed
+        At <strong>Sell My Time</strong>, we value your privacy and are committed
         to safeguarding your personal information. This Privacy Policy outlines
         how we collect, use, and protect data when you use our platform.
       </p>

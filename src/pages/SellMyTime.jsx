@@ -14,13 +14,13 @@ const SellMyTime = () => {
         {/* Right Text */}
         <div className="sellmytime-right">
           <h2 className="smt-title">
-            🕒 NetworkX  –{" "}
+            🕒 Sell My Time  –{" "}
             <span>Consultancy & Expert Marketplace App</span>
           </h2>
           <p className="smt-description">
-            NetworkX is a unique platform where individuals and professionals
+            Sell My Time is a unique platform where individuals and professionals
             can share their time, skills, and expertise with those who need
-            them. Instead of traditional job models, NetworkX focuses on
+            them. Instead of traditional job models, Sell My Time focuses on
             time-based services, making it easy for anyone to book, connect, and
             learn from experts across different fields.
           </p>
@@ -52,7 +52,7 @@ const SellMyTime = () => {
 
           {/* <h3 className="smt-subtitle">🌟 Vision</h3>
           <p className="smt-description">
-            NetworkX bridges the gap between those who need guidance and those
+            Sell My Time bridges the gap between those who need guidance and those
             willing to share their expertise, creating a flexible, on-demand
             knowledge economy.
           </p> */}

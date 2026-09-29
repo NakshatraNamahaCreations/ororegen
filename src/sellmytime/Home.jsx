@@ -605,7 +605,7 @@ function Home() {
           "api-key": import.meta.env.VITE_BREVO_KEY,
         },
         body: JSON.stringify({
-          sender: { email: "ororegencompanies@gmail.com", name: "NetworkX Website" },
+          sender: { email: "ororegencompanies@gmail.com", name: "Sell My Time Website" },
           to: [{ email: "ororegencompanies@gmail.com", name: "Oro Regen Admin" }],
           subject: `📩 New Enquiry from ${formData.name}`,
           htmlContent: `
@@ -640,10 +640,10 @@ function Home() {
   ];
 
   const faqs = [
-    { question: "1. What is NetworkX?", answer: "NetworkX is a digital platform that allows professionals to offer their time and expertise to clients on an hourly basis." },
+    { question: "1. What is Sell My Time?", answer: "Sell My Time is a digital platform that allows professionals to offer their time and expertise to clients on an hourly basis." },
     { question: "2. How do I become a consultant or expert?", answer: "Register on the app, create your profile, set hourly rates, and get verified. Clients can book you directly." },
     { question: "3. How do users book sessions?", answer: "Users can browse experts, select a service, and book sessions instantly using our scheduling system." },
-    { question: "4. Who can join NetworkX?", answer: "Anyone with valuable skills — business mentors, teachers, fitness trainers, designers, and more." },
+    { question: "4. Who can join Sell My Time?", answer: "Anyone with valuable skills — business mentors, teachers, fitness trainers, designers, and more." },
     { question: "5. How are payments handled?", answer: "All payments are secure and processed via the app. Experts get payouts after each session." },
   ];
 
@@ -685,7 +685,7 @@ function Home() {
               Book Time. Share Knowledge. <span style={{ color: "#24428B" }}>Grow Together.</span>
             </h1>
             <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 30, color: "#333" }}>
-              From mentors to creators, NetworkX makes it effortless to connect, collaborate, and grow through time-based services.
+              From mentors to creators, Sell My Time makes it effortless to connect, collaborate, and grow through time-based services.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <a href="#playStore" aria-label="Get it on Google Play">
@@ -703,7 +703,7 @@ function Home() {
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <img
               src={bannerImg}           // <-- force using bannerImg on mobile so it never "misses"
-              alt="NetworkX banner"
+              alt="Sell My Time banner"
               loading="eager"
               decoding="async"
               style={{
@@ -735,7 +735,7 @@ function Home() {
                   maxWidth: 640,
                 }}
               >
-                From mentors to creators, NetworkX makes it effortless to connect,
+                From mentors to creators, Sell My Time makes it effortless to connect,
                 collaborate, and grow through time-based services.
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
@@ -769,7 +769,7 @@ function Home() {
             Turn Your Expertise <span style={{ color: "#24428B" }}>Into Income.</span>
           </h2>
           <p style={{ fontSize: isMobile ? 15 : 16, lineHeight: 1.8, marginBottom: 14 }}>
-            NetworkX is built on a simple idea — time is the most valuable currency. We connect professionals,
+            Sell My Time is built on a simple idea — time is the most valuable currency. We connect professionals,
             creators, and learners through a seamless platform that values every moment shared.
           </p>
           <p style={{ fontSize: isMobile ? 15 : 16, lineHeight: 1.8 }}>
@@ -779,7 +779,7 @@ function Home() {
         <div style={{ textAlign: "center" }}>
           <img
             src={aboutImage}
-            alt="About NetworkX"
+            alt="About Sell My Time"
             style={{
               width: "100%",
               maxWidth: isMobile ? 520 : 600,

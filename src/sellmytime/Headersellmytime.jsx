@@ -1,7 +1,7 @@
 
 
 // // import React, { useState, useEffect } from "react";
-// // import logo from "../assets/networkzlogo.png";
+// // import logo from "../assets/sellmytimelogo.png";
 // // import { FaBars, FaTimes } from "react-icons/fa";
 
 // // const Headersellmytime = () => {
@@ -244,7 +244,7 @@
 
 // // export default Headersellmytime;
 // import React, { useState, useEffect, useRef } from "react";
-// import logo from "../assets/networkzlogo.png";
+// import logo from "../assets/sellmytimelogo.png";
 // import { FaBars, FaTimes } from "react-icons/fa";
 
 // const Headersellmytime = () => {
@@ -585,7 +585,7 @@
 
 // export default Headersellmytime;
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/networkzlogo.png";
+import logo from "../assets/sellmytimelogo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Headersellmytime = () => {
@@ -651,7 +651,7 @@ const Headersellmytime = () => {
         onClick={() => (window.location.href = "https://ororegencompanies.in/")}
         aria-label="Go to homepage"
       >
-        <img src={logo} alt="NetworkX Logo" />
+        <img src={logo} alt="Sell My Time Logo" />
       </div>
 
       {/* Desktop Nav (unchanged) */}
@@ -713,7 +713,7 @@ const Headersellmytime = () => {
             aria-label="Mobile Navigation"
           >
             <div className="smt-drawer-header">
-              <img src={logo} alt="NetworkX Logo" />
+              <img src={logo} alt="Sell My Time Logo" />
               <button
                 className="smt-drawer-close"
                 onClick={() => setMenuOpen(false)}

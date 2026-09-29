@@ -23,7 +23,7 @@ const TermsAndConditions = () => {
       <p>
         Welcome to Oro Regen Company(“Oro Regen,” “we,” “our,” or “us”). By
         accessing our website and digital platforms, including our apps Stay
-        Findr, 30Forty, NetworkX, and Masterji, you agree to the following
+        Findr, 30Forty, Sell My Time, and Masterji, you agree to the following
         Terms & Conditions.
       </p>
 
@@ -31,7 +31,7 @@ const TermsAndConditions = () => {
       <p>
         These Terms govern the use of the Oro Regen corporate website and its
         associated products, platforms, and services. Additional terms may apply
-        within each app (Indianhotels, 30Forty, NetworkX, Masterji).
+        within each app (Indianhotels, 30Forty, Sell My Time, Masterji).
       </p>
 
       <h2>2. User Eligibility</h2>
