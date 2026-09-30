@@ -19,10 +19,10 @@ const slides = [
   {
     image: ban1,
     tag: "Real Estate",
-    title: "30forty",
+    title: "Thirty Forty",
     slogan:
       "Explore dream properties with smart search tools. Find your perfect home faster than ever before.",
-    icon: <img src="/30FortyLogo.png" alt="30Forty" className="banner-logo" />,
+    icon: <img src="/30FortyLogo.png" alt="Thirty Forty" className="banner-logo" />,
     link: "/apps/30forty",
   },
   {
