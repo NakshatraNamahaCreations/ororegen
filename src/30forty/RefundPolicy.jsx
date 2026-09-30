@@ -23,7 +23,7 @@ const RefundPolicy = () => {
         <strong>Effective Date:</strong> August 5, 2025
       </p>
       <p>
-        <strong>Company Name:</strong> 30Forty
+        <strong>Company Name:</strong> Thirty Forty
       </p>
       <p>
         <strong>Website:</strong>{" "}

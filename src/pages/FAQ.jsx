@@ -13,7 +13,7 @@ const faqData = [
   {
     question: "2. What apps does Oro Regen offer?",
     answer:
-      "We currently have four apps under our umbrella: Indianhotels – A travel & stay booking app like Airbnb, 30forty – A real estate discovery & property management app, Sell My Time – A consultancy & expert marketplace app, Masterji – A learning & courses platform.",
+      "We currently have four apps under our umbrella: Indianhotels – A travel & stay booking app like Airbnb, Thirty Forty – A real estate discovery & property management app, Sell My Time – A consultancy & expert marketplace app, Masterji – A learning & courses platform.",
   },
   {
     question: "3. How are Oro Regen apps different from others?",
@@ -26,7 +26,7 @@ const faqData = [
       "Currently, Indianhotels is expanding city by city. Our goal is to scale across India first and then move to international markets.",
   },
   {
-    question: "5. Can I list my property on the 30forty app?",
+    question: "5. Can I list my property on the Thirty Forty app?",
     answer:
       "Yes! Property owners, developers, and brokers can list properties directly on the app for greater visibility and seamless management.",
   },

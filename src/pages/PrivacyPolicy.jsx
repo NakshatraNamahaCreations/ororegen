@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
       <p>
         At Oro Regen Company., we respect your privacy and are committed to
         protecting your personal data across our website and apps (Indianhotels,
-        30Forty, Sell My Time, and Masterji).
+        Thirty Forty, Sell My Time, and Masterji).
       </p>
 
       <h2>1. Information We Collect</h2>

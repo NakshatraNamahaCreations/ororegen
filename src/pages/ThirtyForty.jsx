@@ -8,7 +8,7 @@ const ThirtyForty = () => {
       <div className="tf-heading">
         <h1 className="tf-main-title">Explore the Oro-Regen Universe</h1>
         <p className="tf-main-subtitle">
-          30Forty, Indianhotels, Sell My Time, and Masterji — four powerful apps
+          Thirty Forty, Indianhotels, Sell My Time, and Masterji — four powerful apps
           under one umbrella, built to shape the future of how we live, work,
           and learn.
         </p>
@@ -16,18 +16,18 @@ const ThirtyForty = () => {
 
       <div className="tf-content">
         <div className="thirtyforty-left">
-          <img src={propertyImg} alt="30Forty Property" />
+          <img src={propertyImg} alt="Thirty Forty Property" />
         </div>
 
         <div className="thirtyforty-right">
           <h2 className="tf-title">
-            30Forty – <span>Smart Real Estate & Property Marketplace</span>
+            Thirty Forty – <span>Smart Real Estate & Property Marketplace</span>
           </h2>
 
           <p className="tf-description">
-            30Forty is a modern property discovery platform that simplifies the
+            Thirty Forty is a modern property discovery platform that simplifies the
             way people buy, sell, and rent properties. Designed for today’s
-            fast-paced real estate market, 30Forty connects property owners,
+            fast-paced real estate market, Thirty Forty connects property owners,
             agents, and seekers with ease and transparency.
           </p>
 
@@ -60,7 +60,7 @@ const ThirtyForty = () => {
           <div className="tf-card vision">
             {/* <h3 className="tf-subtitle">🌟 Vision</h3>
             <p className="tf-description">
-              30Forty redefines property discovery by making it smarter, faster,
+              Thirty Forty redefines property discovery by making it smarter, faster,
               and more transparent. It creates a trusted digital marketplace
               where every seeker finds their perfect space and every owner
               connects with genuine buyers or tenants.

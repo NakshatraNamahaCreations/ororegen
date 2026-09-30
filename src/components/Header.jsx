@@ -100,7 +100,7 @@ const Header = () => {
                 Sell My Time
               </Link>
               <Link to="/apps/30forty" onClick={closeAll}>
-                30Forty
+                Thirty Forty
               </Link>
               <Link to="/apps/indianhotels" onClick={closeAll}>
                 Indianhotels

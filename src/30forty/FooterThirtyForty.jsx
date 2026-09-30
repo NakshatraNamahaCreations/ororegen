@@ -403,7 +403,7 @@ const FooterThirtyForty = () => {
           >
             <img
               src={logo}
-              alt="30Forty Logo"
+              alt="Thirty Forty Logo"
               style={{
                 height: isMobile ? 90 : 130,
                 objectFit: "contain",
@@ -420,7 +420,7 @@ const FooterThirtyForty = () => {
               maxWidth: 420,
             }}
           >
-            30Forty is a modern real estate platform that makes searching,
+            Thirty Forty is a modern real estate platform that makes searching,
             buying, and managing properties effortless through smart,
             app-driven solutions.
           </p>
@@ -661,7 +661,7 @@ const FooterThirtyForty = () => {
           </a>
         </div>
         <p style={{ margin: 0, fontSize: 13 }}>
-          © 2025 <strong>30FORTY.  </strong> This App is managed by Oro Regen Companies. All Rights Reserved.
+          © 2025 <strong>THIRTY FORTY.  </strong> This App is managed by Oro Regen Companies. All Rights Reserved.
         </p>
       </div>
     </footer>

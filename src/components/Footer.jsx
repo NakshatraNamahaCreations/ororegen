@@ -199,7 +199,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="https://ororegencompanies.in/apps/30forty">30Forty</a>
+              <a href="https://ororegencompanies.in/apps/30forty">Thirty Forty</a>
             </li>
             <li>
               <a href="https://ororegencompanies.in/apps/indianhotels">

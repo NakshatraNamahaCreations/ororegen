@@ -840,7 +840,7 @@ function Home() {
     {
       number: "1",
       title: "Expertise You Can Trust",
-      text: "With years of real estate experience, 30Forty brings unmatched industry knowledge and a network of reliable professionals.",
+      text: "With years of real estate experience, Thirty Forty brings unmatched industry knowledge and a network of reliable professionals.",
       icon: <FaBullseye size={22} color="#5DBB1F" />,
     },
     {
@@ -852,7 +852,7 @@ function Home() {
     {
       number: "3",
       title: "Seamless End-to-End Process",
-      text: "Real estate shouldn’t be stressful — with 30Forty, we simplify every step from search to possession.",
+      text: "Real estate shouldn’t be stressful — with Thirty Forty, we simplify every step from search to possession.",
       icon: <FaListAlt size={22} color="#5DBB1F" />,
     },
     {
@@ -865,22 +865,22 @@ function Home() {
 
   const faqs = [
     {
-      question: "How do I find properties listed on 30Forty?",
+      question: "How do I find properties listed on Thirty Forty?",
       answer:
         "Simply use our smart filters, location search, and verified listings to find your ideal property.",
     },
     {
-      question: "How do I start using 30Forty?",
+      question: "How do I start using Thirty Forty?",
       answer:
         "Download the app from Play Store or App Store, sign up, and start exploring instantly.",
     },
     {
-      question: "Does 30Forty ensure data security?",
+      question: "Does Thirty Forty ensure data security?",
       answer:
         "Yes, we use enterprise-grade encryption and privacy controls to keep your data safe.",
     },
     {
-      question: "Can I use 30Forty with a team?",
+      question: "Can I use Thirty Forty with a team?",
       answer:
         "Absolutely! You can collaborate with team members, share listings, and manage deals together.",
     },
@@ -1060,7 +1060,7 @@ function Home() {
                 fontFamily: '"Poppins", sans-serif',
               }}
             >
-              Find your dream home effortlessly with <strong>30Forty</strong> — where
+              Find your dream home effortlessly with <strong>Thirty Forty</strong> — where
               technology meets comfort.
             </p>
           </div>
@@ -1069,7 +1069,7 @@ function Home() {
         <section id="home" style={{ paddingTop: 100 }}>
           <img
             src={bannerImg}
-            alt="30Forty – Smart Homes for Smarter Living"
+            alt="Thirty Forty – Smart Homes for Smarter Living"
             loading="eager"
             style={{
               width: "100%",
@@ -1106,7 +1106,7 @@ function Home() {
                 fontFamily: '"Poppins", sans-serif',
               }}
             >
-              Find your dream home effortlessly with <strong>30Forty</strong> — where
+              Find your dream home effortlessly with <strong>Thirty Forty</strong> — where
               technology meets comfort.
             </p>
             <a
@@ -1187,7 +1187,7 @@ function Home() {
                     fontFamily: "'Poppins', sans-serif",
               }}
             >
-              At 30Forty, we’re redefining how people discover, buy, and sell
+              At Thirty Forty, we’re redefining how people discover, buy, and sell
               properties — integrating digital solutions with expert guidance to
               make your real estate journey stress-free.
             </p>

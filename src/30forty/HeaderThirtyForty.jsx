@@ -141,7 +141,7 @@ const HeaderThirtyForty = () => {
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <img
               src={logo}
-              alt="30Forty Logo"
+              alt="Thirty Forty Logo"
               style={{ height: 40, objectFit: "contain" }}
             />
             <span style={{ fontWeight: 600, fontSize: 17 }}>Menu</span>
@@ -228,7 +228,7 @@ const HeaderThirtyForty = () => {
       >
         <img
           src={logo}
-          alt="30Forty Logo"
+          alt="Thirty Forty Logo"
           style={{
             height: isMobile ? 56 : 90,
             cursor: "pointer",

@@ -14,8 +14,8 @@ const AppsSection = () => {
 
         <div className="apps-grid">
           <div className="app-card">
-            <img src="/30FortyLogo.png" alt="30Forty" className="app-logo" />
-            <h3>30Forty</h3>
+            <img src="/30FortyLogo.png" alt="Thirty Forty" className="app-logo" />
+            <h3>Thirty Forty</h3>
             <p>Find and explore properties with ease using our smart real-estate solution.</p>
           </div>
 
