@@ -82,6 +82,62 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* ===== Action Buttons ===== */
+.sf-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.sf-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #02b538, #0a7a2c);
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(2, 181, 56, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.sf-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(2, 181, 56, 0.45);
+  background: linear-gradient(135deg, #0a7a2c, #053b17);
+  color: #fff;
+}
+
+.sf-download-btn .sf-btn-icon {
+  font-size: 18px;
+}
+
+.sf-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #02b538;
+  border: 2px solid #02b538;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14.5px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.sf-explore-btn:hover {
+  background: #02b538;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* ===== Right Image ===== */
 .stayfinder-right {
   flex: 1;
@@ -181,6 +237,10 @@ font-family: "Poppins", sans-serif;
     max-width: 500px;
     margin: 0 auto 25px;
     font-family: "Poppins", sans-serif;
+  }
+
+  .sf-actions {
+    justify-content: center;
   }
 
   .stayfinder-right img {

@@ -1,6 +1,10 @@
 import React from "react";
 import "./StayFinder.css";
 import stayImg from "../assets/indianhotels-section.webp";
+import { FaGooglePlay, FaArrowRight } from "react-icons/fa";
+
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.ororegencompanies.stayfindr&hl=en_IN";
 
 const StayFinder = () => {
   return (
@@ -42,6 +46,21 @@ const StayFinder = () => {
               and 24/7 support ensure a worry-free experience.
             </li>
           </ul>
+
+          <div className="sf-actions">
+            <a
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="sf-download-btn"
+            >
+              <FaGooglePlay className="sf-btn-icon" />
+              <span>Download on Google Play</span>
+            </a>
+            <a href="/apps/indianhotels" className="sf-explore-btn">
+              Explore Indianhotels <FaArrowRight />
+            </a>
+          </div>
 
           {/* <h3 className="sf-subtitle">🌟 Vision</h3>
           <p className="sf-description">

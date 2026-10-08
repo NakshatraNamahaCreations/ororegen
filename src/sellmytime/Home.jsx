@@ -574,6 +574,9 @@ import { FaLightbulb, FaDollarSign, FaShieldAlt, FaGlobe, FaChevronDown, FaPaper
 import contactImg from "../assets/enquirycontact.jpg";
 import downloadBanner from "../assets/sellmytime-download.png";
 
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.bizmats&hl=en_IN";
+
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth <= breakpoint : false
@@ -1227,10 +1230,23 @@ function Home() {
 
   const heroStores = (
     <div className="smh-stores">
-      <a href="#playStore" aria-label="Get it on Google Play" className="smh-store">
+      <a
+        href={PLAY_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Get it on Google Play"
+        title="Get it on Google Play"
+        className="smh-store"
+      >
         <img src={googlePlayImg} alt="Google Play" />
       </a>
-      <a href="#appstore" aria-label="Download on the App Store" className="smh-store">
+      <a
+        href="#appstore"
+        aria-label="Download on the App Store (Coming Soon)"
+        title="App Store (Coming Soon)"
+        onClick={(e) => e.preventDefault()}
+        className="smh-store"
+      >
         <img src={appStoreImg} alt="App Store" />
       </a>
     </div>
@@ -1385,10 +1401,23 @@ function Home() {
               <span className="smh-accent">connections</span>
             </h2>
             <div className="smh-stores">
-              <a href="#appstore" aria-label="Download on the App Store" className="smh-store">
+              <a
+                href="#appstore"
+                aria-label="Download on the App Store (Coming Soon)"
+                title="App Store (Coming Soon)"
+                onClick={(e) => e.preventDefault()}
+                className="smh-store"
+              >
                 <img src={appStoreImg} alt="App Store" />
               </a>
-              <a href="#playstore" aria-label="Get it on Google Play" className="smh-store">
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get it on Google Play"
+                title="Get it on Google Play"
+                className="smh-store"
+              >
                 <img src={googlePlayImg} alt="Google Play" />
               </a>
             </div>

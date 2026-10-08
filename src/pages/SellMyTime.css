@@ -87,6 +87,62 @@
    font-family: "Poppins", sans-serif;
 }
 
+/* ---------- ACTION BUTTONS ---------- */
+.smt-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.smt-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #8B1FC0, #F45A63);
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(139, 31, 192, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.smt-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(244, 90, 99, 0.45);
+  background: linear-gradient(135deg, #F45A63, #8B1FC0);
+  color: #fff;
+}
+
+.smt-download-btn .smt-btn-icon {
+  font-size: 18px;
+}
+
+.smt-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #8B1FC0;
+  border: 2px solid #8B1FC0;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14.5px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.smt-explore-btn:hover {
+  background: #8B1FC0;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* ---------- TABLET VIEW ---------- */
 @media (max-width: 1024px) {
   .sellmytime {
@@ -155,6 +211,10 @@
     text-align: left;
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  .smt-actions {
+    justify-content: center;
   }
 }
 

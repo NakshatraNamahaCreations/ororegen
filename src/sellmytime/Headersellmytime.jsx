@@ -585,8 +585,11 @@
 
 // export default Headersellmytime;
 import React, { useState, useEffect, useRef } from "react";
-const logo = "/SellMyTimeLogo.png";
 import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
+const logo = "/SellMyTimeLogo.png";
+
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.bizmats&hl=en_IN";
 
 const Headersellmytime = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -685,8 +688,9 @@ const Headersellmytime = () => {
           </nav>
 
           <a
-            href="#download"
-            onClick={(e) => handleSmoothScroll(e, "#download")}
+            href={PLAY_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="smt-btn"
           >
             Download the App <FaArrowRight aria-hidden="true" className="smt-btn-arrow" />
@@ -750,8 +754,10 @@ const Headersellmytime = () => {
               <div className="smt-mobile-divider" />
 
               <a
-                href="#download"
-                onClick={(e) => handleSmoothScroll(e, "#download")}
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
                 className="smt-btn-mobile"
               >
                 Download the App

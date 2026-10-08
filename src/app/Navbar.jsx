@@ -631,16 +631,16 @@ export default function Navbar() {
         </nav>
 
         <div className="ih-drawer-foot">
-          <button
+          <a
             className="ih-btn"
-            onClick={() => {
-              openPlayStore();
-              setMenuOpen(false);
-            }}
+            href={PLAY_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
           >
             <FaGooglePlay aria-hidden="true" />
             Download the App
-          </button>
+          </a>
           <p>By continuing, you agree to our Terms and acknowledge our Privacy Policy.</p>
         </div>
       </aside>
@@ -670,10 +670,15 @@ export default function Navbar() {
           {!isMobile && <DesktopLinks />}
 
           {!isMobile && (
-            <button className="ih-btn" onClick={openPlayStore}>
+            <a
+              className="ih-btn"
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGooglePlay aria-hidden="true" />
               Download the App
-            </button>
+            </a>
           )}
 
           {/* Mobile menu button */}

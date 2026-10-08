@@ -867,10 +867,23 @@ const PLAY_STORE_URL =
 
 const StoreButtons = () => (
   <div className="ih-stores">
-    <a className="ih-store" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
+    <a
+      className="ih-store"
+      href={PLAY_STORE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Download Indianhotels on Google Play"
+      title="Download Indianhotels on Google Play"
+    >
       <img src={googlePlayImg} alt="Google Play" />
     </a>
-    <a className="ih-store" href="#">
+    <a
+      className="ih-store"
+      href="#"
+      aria-label="App Store (Coming Soon)"
+      title="App Store (Coming Soon)"
+      onClick={(e) => e.preventDefault()}
+    >
       <img src={appStoreImg} alt="App Store" />
     </a>
   </div>

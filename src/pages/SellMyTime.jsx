@@ -1,6 +1,10 @@
 import React from "react";
 import "./SellMyTime.css";
 import sellImg from "../assets/sellmytime-section.webp";
+import { FaGooglePlay, FaArrowRight } from "react-icons/fa";
+
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.bizmats&hl=en_IN";
 
 const SellMyTime = () => {
   return (
@@ -49,6 +53,21 @@ const SellMyTime = () => {
               and reviews help users choose the right expert.
             </li>
           </ul>
+
+          <div className="smt-actions">
+            <a
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="smt-download-btn"
+            >
+              <FaGooglePlay className="smt-btn-icon" />
+              <span>Download on Google Play</span>
+            </a>
+            <a href="/apps/sellmytime" className="smt-explore-btn">
+              Explore Sell My Time <FaArrowRight />
+            </a>
+          </div>
 
           {/* <h3 className="smt-subtitle">🌟 Vision</h3>
           <p className="smt-description">

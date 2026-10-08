@@ -239,8 +239,15 @@ const Footersellmytime = () => {
 Whether you’re a coach, mentor, or freelancer — we help you share your knowledge, grow your network, and earn effortlessly.
           </p>
           <div className="store-buttons">
-            <button><FaApple aria-hidden="true" /> App Store</button>
-            <button><FaGooglePlay aria-hidden="true" /> Google Play</button>
+            <button type="button" title="App Store (Coming Soon)"><FaApple aria-hidden="true" /> App Store</button>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.bizmats&hl=en_IN"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Sell My Time on Google Play"
+            >
+              <FaGooglePlay aria-hidden="true" /> Google Play
+            </a>
           </div>
         </div>
 
@@ -472,7 +479,8 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
         .fc-ic svg { color: #F39C45; }
 
         .store-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
-        .store-buttons button {
+        .store-buttons button,
+        .store-buttons a {
           display: inline-flex;
           align-items: center;
           gap: 8px;
@@ -485,11 +493,14 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           font-size: 14px;
           font-weight: 500;
           cursor: pointer;
+          text-decoration: none;
           transition: background .25s ease, border-color .25s ease, transform .25s ease;
         }
-        .store-buttons button:hover {
+        .store-buttons button:hover,
+        .store-buttons a:hover {
           background: linear-gradient(135deg, #8B1FC0, #F45A63);
           border-color: transparent;
+          color: #fff;
           transform: translateY(-2px);
         }
 
