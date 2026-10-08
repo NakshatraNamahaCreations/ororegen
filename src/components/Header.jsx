@@ -125,10 +125,10 @@ const Header = () => {
             <p>
               <strong>
                 <a
-                  href="tel:+917829125869"
+                  href="tel:+916366921746"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  +91 78291 25869
+                  +91 63669 21746
                 </a>
               </strong>
             </p>

@@ -59,7 +59,7 @@
 //           Have questions or need help? We’re here for you 24/7.
 //         </p>
 //         <a
-//           href="tel:+919876543210"
+//           href="tel:+916366921746"
 //           style={{
 //             backgroundColor: "#fff",
 //             color: "#000",
@@ -91,7 +91,7 @@
 //       >
 //         {/* Logo + About */}
 //         <div>
-//           <img src={logo} alt="Sell Your Time" style={{ height: "60px", marginBottom: "15px" }} />
+//           <img src={logo} alt="Sell My Time" style={{ height: "60px", marginBottom: "15px" }} />
 //           <p style={{ fontSize: "14px", color: "#333", marginBottom: "20px" }}>
 //             Connect, collaborate, and earn through meaningful interactions. Sell your time — your way.
 //           </p>
@@ -192,8 +192,10 @@ import {
   FaFacebook,
   FaYoutube,
   FaTwitter,
+  FaApple,
+  FaGooglePlay,
 } from "react-icons/fa";
-import logo from "../assets/sellmytimelogo.png";
+const logo = "/SellMyTimeLogo.png";
 
 const Footersellmytime = () => {
   const footerLinks = [
@@ -218,9 +220,11 @@ const Footersellmytime = () => {
     <footer className="smt-footer">
       {/* 🔸 Support Bar */}
       <div className="smt-support-bar">
-        <h3>Need Support?</h3>
-        <p>Have questions or need help? We’re here for you 24/7.</p>
-        <a href="tel:+919876543210">
+        <div className="smt-support-text">
+          <h3>Need Support?</h3>
+          <p>Have questions or need help? We’re here for you 24/7.</p>
+        </div>
+        <a href="tel:+916366921746">
           <FaPhone /> Call us now
         </a>
       </div>
@@ -228,20 +232,20 @@ const Footersellmytime = () => {
       {/* 🔸 Main Footer */}
       <div className="smt-footer-main">
         {/* Logo + About */}
-        <div className="footer-section">
-          <img src={logo} alt="Sell Your Time" className="footer-logo" />
+        <div className="footer-section footer-about">
+          <img src={logo} alt="Sell My Time" className="footer-logo" />
           <p>
           Our platform transforms traditional consulting into flexible, on-demand opportunities that fit every schedule.
 Whether you’re a coach, mentor, or freelancer — we help you share your knowledge, grow your network, and earn effortlessly.
           </p>
           <div className="store-buttons">
-            <button> App Store</button>
-            <button>▶ Google Play</button>
+            <button><FaApple aria-hidden="true" /> App Store</button>
+            <button><FaGooglePlay aria-hidden="true" /> Google Play</button>
           </div>
         </div>
 
         {/* Quick Links */}
-        <div className="footer-section" style={{marginRight:'-40px'}}>
+        <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
             {footerLinks.map((item, i) => (
@@ -262,16 +266,19 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
         </div>
 
         {/* Contact */}
-        <div className="footer-section">
+        <div className="footer-section footer-contact">
           <h4>Contact Us</h4>
           <p>
-            <FaPhone />+91 78291 25869
+            <span className="fc-ic"><FaPhone /></span>
+            <a href="tel:+916366921746" style={{ color: "inherit", textDecoration: "none" }}>
+              +91 63669 21746
+            </a>
           </p>
           <p>
-            <FaEnvelope /> support@networkx.com
+            <span className="fc-ic"><FaEnvelope /></span>support@networkx.com
           </p>
           <p>
-            <FaMapMarkerAlt />#36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
+            <span className="fc-ic"><FaMapMarkerAlt /></span>#36 A-WING, 2ND MAIN, SRINAGARA BADAVANE, SRINAGARA, MYSORE-570008
           </p>
           {/* <div className="social-icons">
             <FaInstagram />
@@ -295,95 +302,195 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
       {/* 🔹 CSS */}
       <style>{`
         .smt-footer {
+          position: relative;
           font-family: 'Poppins', sans-serif;
-          background: #edeff8ff;
-          color: #000;
+          color: #fff;
+          padding-top: 40px;
+          isolation: isolate;
+        }
+        .smt-footer *, .smt-footer *::before, .smt-footer *::after { box-sizing: border-box; }
+        /* Dark body starts halfway down the support bar so the bar straddles the edge */
+        .smt-footer::before {
+          content: "";
+          position: absolute;
+          left: 0; right: 0; top: 110px; bottom: 0;
+          z-index: -1;
+          background:
+            radial-gradient(700px 360px at 10% 0%, rgba(139,31,192,.28), transparent 70%),
+            radial-gradient(600px 320px at 100% 100%, rgba(243,156,69,.14), transparent 70%),
+            #0D0630;
+          border-top: 3px solid #F45A63;
+          border-image: linear-gradient(90deg, #8B1FC0, #F45A63, #F39C45) 1;
         }
 
-        /* Support bar */
+        /* Support bar (overlaps the section above) */
         .smt-support-bar {
-          background: #24428B;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+          background: linear-gradient(135deg, #8B1FC0 0%, #F45A63 60%, #F39C45 100%);
           color: #fff;
-          text-align: center;
-          padding: 40px 20px;
-          border-radius: 10px;
+          padding: 34px 44px;
+          border-radius: 26px;
           max-width: 1100px;
+          width: calc(100% - 48px);
           margin: 0 auto;
-          transform: translateY(-40px);
+          box-shadow: 0 30px 60px -24px rgba(139,31,192,.6);
+          overflow: hidden;
+          z-index: 1;
         }
+        .smt-support-bar::after {
+          content: "";
+          position: absolute;
+          right: -60px; top: -80px;
+          width: 240px; height: 240px;
+          border-radius: 50%;
+          background: rgba(255,255,255,.12);
+          pointer-events: none;
+        }
+        .smt-support-text { position: relative; }
         .smt-support-bar h3 {
-          font-size: 24px;
-          font-weight: 700;
-          margin-bottom: 10px;
+          font-size: 26px;
+          font-weight: 800;
+          letter-spacing: -0.01em;
+          margin: 0 0 6px;
         }
         .smt-support-bar p {
-          font-size: 14px;
-          margin-bottom: 15px;
+          font-size: 15px;
+          margin: 0;
+          opacity: .92;
         }
         .smt-support-bar a {
+          position: relative;
+          flex: 0 0 auto;
           display: inline-flex;
           align-items: center;
-          gap: 8px;
+          gap: 10px;
           background: #fff;
-          color: #000;
-          padding: 10px 20px;
-          border-radius: 25px;
-          font-weight: 600;
+          color: #0D0630;
+          padding: 13px 26px;
+          border-radius: 999px;
+          font-weight: 700;
           text-decoration: none;
+          box-shadow: 0 12px 24px -10px rgba(13,6,48,.5);
+          transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .smt-support-bar a svg { color: #8B1FC0; }
+        .smt-support-bar a:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 18px 30px -12px rgba(13,6,48,.6);
         }
 
         /* Footer main */
         .smt-footer-main {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 40px;
-          max-width: 1300px;
+          grid-template-columns: 1.4fr 0.8fr 1.2fr;
+          gap: 56px;
+          max-width: 1200px;
           margin: 0 auto;
-          padding: 80px 60px;
-          background: #edeff8ff;
+          padding: 72px 40px 56px;
         }
 
-        .footer-section {
-          text-align: left;
-        }
+        .footer-section { text-align: left; }
         .footer-logo {
-          height: 65px;
-          margin-bottom: 15px;
+          height: 72px;
+          margin-bottom: 18px;
+          border-radius: 16px;
+          box-shadow: 0 12px 28px -10px rgba(244,90,99,.45);
         }
         .footer-section h4 {
+          position: relative;
           font-size: 16px;
           font-weight: 700;
-          margin-bottom: 15px;
+          margin: 6px 0 22px;
+          padding-bottom: 12px;
+          color: #fff;
+        }
+        .footer-section h4::after {
+          content: "";
+          position: absolute;
+          left: 0; bottom: 0;
+          width: 36px; height: 3px;
+          border-radius: 3px;
+          background: linear-gradient(90deg, #8B1FC0, #F45A63, #F39C45);
         }
         .footer-section p {
           font-size: 14px;
-          line-height: 1.6;
-          margin-bottom: 10px;
-          color: #333;
+          line-height: 1.75;
+          margin: 0 0 14px;
+          color: rgba(255,255,255,.68);
         }
         .footer-section ul {
           list-style: none;
           padding: 0;
+          margin: 0;
         }
+        .footer-section ul li { margin-bottom: 12px; }
         .footer-section ul li a {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
           text-decoration: none;
-          color: #000;
+          color: rgba(255,255,255,.75);
           font-size: 14px;
-          transition: color 0.3s;
+          transition: color .25s ease, transform .25s ease;
+        }
+        .footer-section ul li a::before {
+          content: "";
+          width: 6px; height: 6px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #F45A63, #F39C45);
+          opacity: .6;
+          transition: opacity .25s ease;
         }
         .footer-section ul li a:hover {
-          color: #24428B;
-        }
-
-        .store-buttons button {
-          background: #000;
           color: #fff;
-          border: none;
-          border-radius: 6px;
-          padding: 8px 15px;
-          margin-right: 8px;
+          transform: translateX(4px);
+        }
+        .footer-section ul li a:hover::before { opacity: 1; }
+
+        .footer-contact p {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .fc-ic {
+          flex: 0 0 auto;
+          width: 32px; height: 32px;
+          border-radius: 10px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 13px;
+          color: #fff;
+          background: rgba(255,255,255,.07);
+          border: 1px solid rgba(255,255,255,.12);
+          margin-top: -3px;
+        }
+        .fc-ic svg { color: #F39C45; }
+
+        .store-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+        .store-buttons button {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          font-family: inherit;
+          background: rgba(255,255,255,.06);
+          color: #fff;
+          border: 1px solid rgba(255,255,255,.16);
+          border-radius: 12px;
+          padding: 10px 16px;
           font-size: 14px;
+          font-weight: 500;
           cursor: pointer;
+          transition: background .25s ease, border-color .25s ease, transform .25s ease;
+        }
+        .store-buttons button:hover {
+          background: linear-gradient(135deg, #8B1FC0, #F45A63);
+          border-color: transparent;
+          transform: translateY(-2px);
         }
 
         .social-icons {
@@ -391,7 +498,7 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           gap: 12px;
           margin-top: 15px;
           font-size: 18px;
-          color: #24428B;
+          color: #F45A63;
         }
 
         /* Bottom bar */
@@ -399,71 +506,61 @@ Whether you’re a coach, mentor, or freelancer — we help you share your knowl
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 15px 40px;
-          border-top: 1px solid #ddd;
-          background: #fff3e0;
-          font-size: 14px;
+          gap: 12px;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 22px 40px 26px;
+          border-top: 1px solid rgba(255,255,255,.1);
+          font-size: 13.5px;
           flex-wrap: wrap;
+          color: rgba(255,255,255,.6);
         }
+        .smt-footer-bottom p { margin: 0; }
+        .smt-footer-bottom div { display: flex; flex-wrap: wrap; gap: 6px 20px; }
         .smt-footer-bottom a {
-          color: #000;
+          color: rgba(255,255,255,.72);
           text-decoration: none;
-          margin-right: 15px;
+          transition: color .25s ease;
         }
-        .smt-footer-bottom a:hover {
-          color: #24428B;
-        }
+        .smt-footer-bottom a:hover { color: #F39C45; }
 
         /* 🔹 Responsive */
         @media (max-width: 992px) {
           .smt-footer-main {
-            grid-template-columns: 1fr;
-            text-align: center;
-            padding: 50px 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 56px 28px 40px;
           }
-
-          .footer-section {
-            margin-bottom: 40px;
-          }
-
-          .footer-section ul li {
-            margin-bottom: 10px;
-          }
-
-          .social-icons {
-            justify-content: center;
-          }
-
-          .smt-footer-bottom {
-            flex-direction: column;
-            gap: 10px;
-            text-align: center;
-          }
-
-          .smt-support-bar {
-            transform: none;
-            border-radius: 0;
-            margin-top: 100px;
-          }
+          .footer-about { grid-column: 1 / -1; }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 640px) {
+          .smt-footer::before { top: 150px; }
+          .smt-support-bar {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 22px;
+            width: calc(100% - 32px);
+            border-radius: 22px;
+            gap: 18px;
+          }
+          .smt-support-bar h3 { font-size: 22px; }
           .smt-footer-main {
-            padding: 40px 20px;
+            grid-template-columns: 1fr;
+            gap: 34px;
+            padding: 48px 22px 32px;
           }
-
-          .smt-support-bar h3 {
-            font-size: 20px;
-          }
-
           .smt-footer-bottom {
-            font-size: 13px;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 22px 24px;
+            font-size: 12.5px;
           }
-
-          .store-buttons button {
-            font-size: 12px;
-            padding: 6px 10px;
-          }
+          .smt-footer-bottom div { justify-content: center; }
+          .store-buttons button { font-size: 13px; padding: 9px 14px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .smt-footer * { transition: none !important; }
         }
       `}</style>
     </footer>

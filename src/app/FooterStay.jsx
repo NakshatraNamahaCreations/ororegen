@@ -206,7 +206,7 @@
 //               }}
 //             >
 //               <FaPhoneAlt style={{ marginRight: "10px", color: "black" }} />{" "}
-//              +91 78291 25869
+//              +91 63669 21746
 //             </div>
 
 //             <div
@@ -315,24 +315,13 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaArrowUp,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
+import "./StayFinderPage.css";
 const logo = "/IndianHotelsLogo.png";
 import footerBg from "../assets/footer.jpeg";
 
-function useIsMobile(bp = 768) {
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth <= bp : false
-  );
-  useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth <= bp);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [bp]);
-  return isMobile;
-}
-
 const FooterStay = () => {
-  const isMobile = useIsMobile(768);
   const [showTop, setShowTop] = useState(false);
 
   useEffect(() => {
@@ -346,421 +335,155 @@ const FooterStay = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const wrap = (style) => ({
-    ...style,
-    // shared small-screen tweaks
-    ...(isMobile
-      ? {
-          textAlign: "center",
-        }
-      : {}),
-  });
-
   return (
     <>
-    <footer
-      style={wrap({
-        fontFamily: "'Poppins', sans-serif",
-        position: "relative",
-        // remove negative margins that caused horizontal scrolling on phones
-        margin: 0,
-      })}
-    >
-      {/* Top Arc (with real gradient definition) */}
-      <div
-        style={{
-          position: "absolute",
-          top: "-60px",
-          left: 0,
-          width: "100%",
-          overflow: "hidden",
-          lineHeight: 0,
-          zIndex: 2,
-        }}
-        aria-hidden
-      >
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          style={{ display: "block", width: "100%", height: "60px" }}
-        >
-          <defs>
-            <linearGradient id="footerGradient" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#FFB4D6" />
-              <stop offset="100%" stopColor="#FFFFFF" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0,0 C300,100 900,-100 1200,0 L1200,120 L0,120 Z"
-            fill="url(#footerGradient)"
-          />
-        </svg>
-      </div>
-
-      {/* Main Footer */}
-      <div
-        style={wrap({
-          backgroundImage: `url(${footerBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          color: "#000",
-          padding: isMobile ? "70px 18px 28px" : "100px 60px 50px",
-          position: "relative",
-          zIndex: 1,
-          overflow: "hidden",
-        })}
-      >
-        {/* Soft overlay for readability */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.9))",
-            zIndex: 0,
-          }}
-        />
-
-        <div
-          style={wrap({
-            maxWidth: 1200,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
-            gap: isMobile ? 22 : 40,
-            position: "relative",
-            zIndex: 1,
-            alignItems: "start",
-          })}
-        >
-          {/* Brand / About */}
-          <div>
-            <img
-              src={logo}
-              alt="Indianhotels"
-              style={{
-                height: isMobile ? 80 : 120,
-                objectFit: "contain",
-                marginBottom: isMobile ? 8 : 12,
-              }}
+      <footer className="ih-footer">
+        {/* Top wave */}
+        <div className="ih-footer-wave" aria-hidden>
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="footerGradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#053B17" />
+                <stop offset="100%" stopColor="#064a1d" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M0,0 C300,100 900,-100 1200,0 L1200,120 L0,120 Z"
+              fill="url(#footerGradient)"
             />
-            <p
-              style={{
-                fontSize: 14,
-                lineHeight: 1.8,
-                color: "#111",
-                maxWidth: isMobile ? "100%" : 420,
-                margin: isMobile ? "6px auto 0" : "6px 0 0",
-              }}
-            >
-              Discover unique stays and unforgettable experiences. Book your
-              perfect getaway with Indianhotels.
-            </p>
+          </svg>
+        </div>
 
-            <div
-              style={{
-                display: "flex",
-                gap: 12,
-                marginTop: 16,
-                justifyContent: isMobile ? "center" : "flex-start",
-                flexWrap: "wrap",
-              }}
-            >
-              {[
-                { Icon: FaFacebookF, href: "#", label: "Facebook" },
-                { Icon: FaTwitter, href: "#", label: "Twitter" },
-                { Icon: FaInstagram, href: "#", label: "Instagram" },
-                { Icon: FaGooglePlusG, href: "#", label: "Google Plus" },
-                {
-                  Icon: FaWhatsapp,
-                  href: "https://wa.me/917829125869",
-                  label: "WhatsApp",
-                },
-              ].map(({ Icon, href, label }, idx) => (
-                <a
-                  key={idx}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  aria-label={label}
-                  style={{
-                    color: "#111",
-                    fontSize: 18,
-                    width: 42,
-                    height: 42,
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    background: "rgba(0,0,0,0.06)",
-                    transition: "transform .2s ease, background .2s ease",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.background = "#02B538";
-                    e.currentTarget.style.color = "#fff";
-                    e.currentTarget.style.transform = "translateY(-2px)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.background = "rgba(0,0,0,0.06)";
-                    e.currentTarget.style.color = "#111";
-                    e.currentTarget.style.transform = "translateY(0)";
-                  }}
-                >
-                  <Icon />
-                </a>
-              ))}
+        {/* Main Footer */}
+        <div className="ih-footer-main" style={{ backgroundImage: `url(${footerBg})` }}>
+          <div className="ih-footer-grid">
+            {/* Brand / About */}
+            <div>
+              <div className="ih-footer-logo">
+                <img src={logo} alt="Indianhotels" />
+                <span>Indianhotels</span>
+              </div>
+              <p className="ih-footer-about">
+                Discover unique stays and unforgettable experiences. Book your perfect getaway with
+                Indianhotels.
+              </p>
+
+              <div className="ih-socials">
+                {[
+                  { Icon: FaFacebookF, href: "#", label: "Facebook" },
+                  { Icon: FaTwitter, href: "#", label: "Twitter" },
+                  { Icon: FaInstagram, href: "#", label: "Instagram" },
+                  { Icon: FaGooglePlusG, href: "#", label: "Google Plus" },
+                  {
+                    Icon: FaWhatsapp,
+                    href: "https://wa.me/916366921746",
+                    label: "WhatsApp",
+                  },
+                ].map((social, idx) => {
+                  const { href, label } = social;
+                  return (
+                  <a
+                    key={idx}
+                    className="ih-social"
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    aria-label={label}
+                  >
+                    <social.Icon />
+                  </a>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3>QUICK LINKS</h3>
+              <ul className="ih-footer-links">
+                {[
+                  { label: "Home", href: "#home" },
+                  { label: "About Us", href: "#about" },
+                  { label: "Why Choose Us", href: "#whychooseus" },
+                  { label: "FAQ's", href: "#faq" },
+                  { label: "Contact Us", href: "#contact" },
+                ].map((item, idx) => (
+                  <li key={idx}>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3>CONTACT US</h3>
+
+              <a className="ih-contact" href="tel:+916366921746">
+                <span className="ih-contact-icon">
+                  <FaPhoneAlt aria-hidden />
+                </span>
+                +91 63669 21746
+              </a>
+
+              <a className="ih-contact" href="mailto:support@indianhotels.com">
+                <span className="ih-contact-icon">
+                  <FaEnvelope aria-hidden />
+                </span>
+                support@indianhotels.com
+              </a>
+
+              <p className="ih-address">
+                <span className="ih-contact-icon">
+                  <FaMapMarkerAlt aria-hidden />
+                </span>
+                <span>
+                  #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE,
+                  <br />
+                  SRINAGARA, MYSORE-570008
+                </span>
+              </p>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3
-              style={{
-                marginBottom: 12,
-                fontWeight: 800,
-                fontSize: 18,
-                display: "inline-block",
-                paddingBottom: 4,
-                borderBottom: "2px solid #02B538",
-                color: "#111",
-              }}
-            >
-              QUICK LINKS
-            </h3>
-            <ul
-              style={{
-                listStyle: "none",
-                padding: 0,
-                margin: isMobile ? "6px auto 0" : "6px 0 0",
-                fontSize: 15,
-                color: "#111",
-                display: "grid",
-                gap: 8,
-                justifyContent: isMobile ? "center" : "start",
-              }}
-            >
-              {[
-                { label: "Home", href: "#home" },
-                { label: "About Us", href: "#about" },
-                { label: "Why Choose Us", href: "#whychooseus" },
-                { label: "FAQ's", href: "#faq" },
-                { label: "Contact Us", href: "#contact" },
-              ].map((item, idx) => (
-                <li key={idx}>
-                  <a
-                    href={item.href}
-                    style={{
-                      color: "#111",
-                      textDecoration: "none",
-                      fontWeight: 600,
-                      padding: "6px 8px",
-                      display: "inline-block",
-                      borderRadius: 8,
-                      transition: "background .2s ease, color .2s ease",
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.background = "rgba(255,56,92,0.12)";
-                      e.currentTarget.style.color = "#02B538";
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.background = "transparent";
-                      e.currentTarget.style.color = "#111";
-                    }}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Bottom bar */}
+          <div className="ih-footer-bottom">
+            <div className="ih-legal">
+              <a href="/privacy-policy">Privacy Policy</a>
+              <span>•</span>
+              <a href="/refund-policy">Refund Policy</a>
+              <span>•</span>
+              <a href="/terms-and-conditions">Terms & Conditions</a>
+            </div>
 
-          {/* Contact */}
-          <div>
-            <h3
-              style={{
-                marginBottom: 12,
-                fontWeight: 900,
-                fontSize: 19,
-                display: "inline-block",
-                paddingBottom: 4,
-                borderBottom: "2px solid #02B538",
-                color: "#111",
-              }}
-            >
-              CONTACT US
-            </h3>
-
-            <a
-              href="tel:+917829125869"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-                marginTop: 8,
-                color: "#111",
-                textDecoration: "none",
-                fontWeight: 600,
-                justifyContent: isMobile ? "center" : "flex-start",
-              }}
-            >
-              <FaPhoneAlt aria-hidden />
-              +91 78291 25869
-            </a>
-
-            <a
-              href="mailto:support@indianhotels.com"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-                marginTop: 10,
-                color: "#111",
-                textDecoration: "none",
-                fontWeight: 600,
-                justifyContent: isMobile ? "center" : "flex-start",
-              }}
-            >
-              <FaEnvelope aria-hidden />
-              support@indianhotels.com
-            </a>
-
-            <p
-              style={{
-                marginTop: 12,
-                color: "#111",
-                fontWeight: 600,
-                lineHeight: 1.6,
-              }}
-            >
-              #36 A-WING, 2ND MAIN, SRINAGARA BADAVANE,
-              <br />
-              SRINAGARA, MYSORE-570008
+            <p className="ih-copy">
+              © 2025<strong> Indianhotels. </strong> This App is managed by Oro Regen Companies.
+              All Rights Reserved.
             </p>
           </div>
         </div>
+      </footer>
 
-        {/* Bottom bar */}
-        <div
-          style={wrap({
-            marginTop: isMobile ? 24 : 40,
-            paddingTop: 16,
-            borderTop: "1px solid rgba(0,0,0,0.18)",
-            fontSize: 14,
-            position: "relative",
-            zIndex: 1,
-            color: "#111",
-          })}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: 14,
-              flexWrap: "wrap",
-              justifyContent: isMobile ? "center" : "center",
-              marginBottom: 10,
-            }}
-          >
-            <a
-              href="/privacy-policy"
-              style={{
-                color: "#02B538",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
-            >
-              Privacy Policy
-            </a>
-            <span style={{ opacity: 0.4 }}>•</span>
-            <a
-              href="/refund-policy"
-              style={{
-                color: "#02B538",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
-            >
-              Refund Policy
-            </a>
-            <span style={{ opacity: 0.4 }}>•</span>
-            <a
-              href="/terms-and-conditions"
-              style={{
-                color: "#02B538",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
-            >
-              Terms & Conditions
-            </a>
-          </div>
+      {/* Floating WhatsApp button */}
+      <a
+        className="ih-fab ih-fab--wa"
+        href="https://wa.me/916366921746"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp />
+      </a>
 
-  
-             <p style={{ margin: 0, fontSize: 16 ,alignItems:'center',textAlign:'center'}}>
-          © 2025<strong>  Indianhotels.  </strong> This App is managed by Oro Regen Companies. All Rights Reserved.
-        </p>
-        </div>
-
-      </div>
-    </footer>
-
-    {/* Floating WhatsApp button */}
-    <a
-      href="https://wa.me/917829125869"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-      style={{
-        position: "fixed",
-        bottom: isMobile ? 20 : 28,
-        left: isMobile ? 20 : 28,
-        width: 56,
-        height: 56,
-        borderRadius: "50%",
-        background: "#25D366",
-        color: "#fff",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: 28,
-        boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
-        zIndex: 1000,
-        transition: "transform .2s ease",
-      }}
-      onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
-      onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-    >
-      <FaWhatsapp />
-    </a>
-
-    {/* Floating Back-to-top button */}
-    <button
-      onClick={scrollToTop}
-      aria-label="Back to top"
-      style={{
-        position: "fixed",
-        bottom: isMobile ? 20 : 28,
-        right: isMobile ? 20 : 28,
-        width: 48,
-        height: 48,
-        borderRadius: "50%",
-        background: "#02B538",
-        color: "#fff",
-        border: "none",
-        display: showTop ? "flex" : "none",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: 20,
-        cursor: "pointer",
-        boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
-        zIndex: 1000,
-        transition: "transform .2s ease, opacity .2s ease",
-      }}
-      onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-3px)")}
-      onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-    >
-      <FaArrowUp />
-    </button>
+      {/* Floating Back-to-top button */}
+      <button
+        className="ih-fab ih-fab--top"
+        onClick={scrollToTop}
+        aria-label="Back to top"
+        style={{ display: showTop ? "flex" : "none" }}
+      >
+        <FaArrowUp />
+      </button>
     </>
   );
 };

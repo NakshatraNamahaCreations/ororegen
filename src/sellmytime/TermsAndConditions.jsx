@@ -12,7 +12,7 @@ const TermsAndConditions = () => {
         color: "#333",
       }}
     >
-      <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#ff4500" }}>
+      <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#F45A63" }}>
         Sell My Time – Terms & Conditions
       </h1>
       <p style={{ textAlign: "center", fontStyle: "italic", marginBottom: "40px" }}>
@@ -62,7 +62,7 @@ const TermsAndConditions = () => {
 
       <h2 style={{ marginTop: "30px", color: "#000" }}>6. Cancellations & Refunds</h2>
       <p>
-        Governed by the <a href="/refund-policy" style={{ color: "#ff4500" }}>Refund & Cancellation Policy</a>.
+        Governed by the <a href="/refund-policy" style={{ color: "#F45A63" }}>Refund & Cancellation Policy</a>.
       </p>
       <p>Refunds are processed to the original payment method.</p>
 

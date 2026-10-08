@@ -173,8 +173,8 @@ const ContactPage = () => {
                 <div>
                   <h4>Phone</h4>
                   <p>
-                    <a href="tel:+917829125869" style={{ color: "#000" }}>
-                      +91 78291 25869
+                    <a href="tel:+916366921746" style={{ color: "#000" }}>
+                      +91 63669 21746
                     </a>
                   </p>
                 </div>

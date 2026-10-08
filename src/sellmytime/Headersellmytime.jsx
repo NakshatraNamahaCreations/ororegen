@@ -1,7 +1,7 @@
 
 
 // // import React, { useState, useEffect } from "react";
-// // import logo from "../assets/sellmytimelogo.png";
+// // const logo = "/SellMyTimeLogo.png";
 // // import { FaBars, FaTimes } from "react-icons/fa";
 
 // // const Headersellmytime = () => {
@@ -244,7 +244,7 @@
 
 // // export default Headersellmytime;
 // import React, { useState, useEffect, useRef } from "react";
-// import logo from "../assets/sellmytimelogo.png";
+// const logo = "/SellMyTimeLogo.png";
 // import { FaBars, FaTimes } from "react-icons/fa";
 
 // const Headersellmytime = () => {
@@ -585,13 +585,16 @@
 
 // export default Headersellmytime;
 import React, { useState, useEffect, useRef } from "react";
-import logo from "../assets/sellmytimelogo.png";
-import { FaBars, FaTimes } from "react-icons/fa";
+const logo = "/SellMyTimeLogo.png";
+import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
 
 const Headersellmytime = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < 900 : false
+  );
+  const [scrolled, setScrolled] = useState(
+    typeof window !== "undefined" ? window.scrollY > 10 : false
   );
   const headerRef = useRef(null);
 
@@ -603,6 +606,13 @@ const Headersellmytime = () => {
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Stronger glass + shadow once the page is scrolled
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   // Lock body scroll when mobile menu is open
@@ -644,7 +654,7 @@ const Headersellmytime = () => {
   };
 
   return (
-    <header className="smt-header" ref={headerRef}>
+    <header className={`smt-header${scrolled ? " is-scrolled" : ""}`} ref={headerRef}>
       {/* Logo */}
       <div
         className="smt-logo"
@@ -654,7 +664,7 @@ const Headersellmytime = () => {
         <img src={logo} alt="Sell My Time Logo" />
       </div>
 
-      {/* Desktop Nav (unchanged) */}
+      {/* Desktop Nav */}
       {!isMobile ? (
         <>
           <nav className="smt-nav" aria-label="Primary">
@@ -679,7 +689,7 @@ const Headersellmytime = () => {
             onClick={(e) => handleSmoothScroll(e, "#download")}
             className="smt-btn"
           >
-            Download the App
+            Download the App <FaArrowRight aria-hidden="true" className="smt-btn-arrow" />
           </a>
         </>
       ) : (
@@ -754,98 +764,131 @@ const Headersellmytime = () => {
       {/* Styles */}
       <style>{`
         .smt-header {
-          --shadow: 0 2px 6px rgba(0,0,0,0.08);
+          box-sizing: border-box;
           width: 100%;
-          background: #fff;
+          background: rgba(255,255,255,0.78);
+          backdrop-filter: saturate(180%) blur(14px);
+          -webkit-backdrop-filter: saturate(180%) blur(14px);
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 12px 30px;
+          gap: 24px;
+          padding: 10px 40px;
           position: fixed;
           top: 0;
           left: 0;
           z-index: 1000; /* below overlay/drawer */
-          box-shadow: var(--shadow);
+          border-bottom: 1px solid rgba(139,31,192,0.08);
           font-family: 'Poppins', sans-serif;
-          transition: background .25s ease, box-shadow .25s ease;
+          transition: background .3s ease, box-shadow .3s ease, padding .3s ease;
         }
+        .smt-header::after {
+          content: "";
+          position: absolute;
+          left: 0; right: 0; bottom: -1px;
+          height: 2px;
+          background: linear-gradient(90deg, #8B1FC0, #F45A63, #F39C45);
+          opacity: 0;
+          transition: opacity .3s ease;
+        }
+        .smt-header.is-scrolled {
+          background: rgba(255,255,255,0.92);
+          box-shadow: 0 10px 30px -12px rgba(13,6,48,0.18);
+        }
+        .smt-header.is-scrolled::after { opacity: .9; }
 
         .smt-logo img {
-          height: 70px;
+          height: 64px;
           cursor: pointer;
           display: block;
+          border-radius: 14px;
+          transition: transform .3s ease;
         }
+        .smt-logo img:hover { transform: scale(1.04) rotate(-2deg); }
 
-        /* Desktop Nav (unchanged) */
+        /* Desktop Nav */
         .smt-nav ul {
           list-style: none;
           display: flex;
-          gap: 35px;
+          gap: 6px;
           margin: 0;
-          padding: 0;
+          padding: 6px;
+          background: rgba(139,31,192,0.05);
+          border: 1px solid rgba(139,31,192,0.08);
+          border-radius: 999px;
         }
         .smt-nav ul li a {
+          position: relative;
+          display: inline-block;
           text-decoration: none;
-          color: #000;
+          color: #0D0630;
           font-weight: 500;
-          font-size: 15px;
-          transition: color 0.3s;
+          font-size: 14.5px;
+          padding: 8px 16px;
+          border-radius: 999px;
+          transition: color .25s ease, background .25s ease;
         }
-        .smt-nav ul li a:hover {
-          color: #24428B;
+        .smt-nav ul li a:hover,
+        .smt-nav ul li a:focus-visible {
+          color: #8B1FC0;
+          background: #fff;
+          box-shadow: 0 4px 14px -6px rgba(139,31,192,.35);
+          outline: none;
         }
 
         .smt-btn {
-          background-color: #24428B;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: linear-gradient(135deg, #8B1FC0 0%, #F45A63 60%, #F39C45 100%);
+          background-size: 160% 100%;
+          background-position: 0% 0;
           color: #fff;
-          padding: 8px 20px;
-          border-radius: 5px;
+          padding: 11px 22px;
+          border-radius: 999px;
           font-weight: 600;
           text-decoration: none;
           font-size: 14px;
-          transition: transform .15s ease, box-shadow .15s ease;
-          margin-right: 40px;
-          box-shadow: 0 8px 16px rgba(36,66,139,.15);
+          white-space: nowrap;
+          transition: transform .2s ease, box-shadow .2s ease, background-position .4s ease;
+          box-shadow: 0 12px 24px -10px rgba(244,90,99,.65);
         }
         .smt-btn:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 10px 18px rgba(36,66,139,.2);
+          transform: translateY(-2px);
+          background-position: 100% 0;
+          box-shadow: 0 16px 30px -10px rgba(139,31,192,.6);
         }
+        .smt-btn-arrow { font-size: 12px; transition: transform .2s ease; }
+        .smt-btn:hover .smt-btn-arrow { transform: translateX(3px); }
 
         /* Mobile base */
         .smt-menu-icon {
-          font-size: 26px;
-          color: #000;
+          font-size: 20px;
+          color: #fff;
           cursor: pointer;
           z-index: 1202;
-          background: transparent;
+          background: linear-gradient(135deg, #8B1FC0, #F45A63);
           border: 0;
+          width: 44px;
+          height: 44px;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 6px;
-          border-radius: 8px;
-          transition: background .2s ease;
+          border-radius: 12px;
+          box-shadow: 0 10px 20px -8px rgba(139,31,192,.6);
+          transition: transform .2s ease;
         }
-        .smt-menu-icon:active { background: rgba(0,0,0,.06); }
-
-        /* Glass header on small screens */
-        @media (max-width: 900px) {
-          .smt-header {
-            background: rgba(255,255,255,0.9);
-            backdrop-filter: saturate(180%) blur(8px);
-            -webkit-backdrop-filter: saturate(180%) blur(8px);
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-          }
-        }
+        .smt-menu-icon:active { transform: scale(.95); }
 
         /* Overlay above header, below drawer */
         .smt-overlay {
           position: fixed;
           inset: 0;
-          background: rgba(0,0,0,.40);
+          background: rgba(13,6,48,.55);
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px);
           z-index: 1100;
-          animation: fadeIn .2s ease forwards;
+          animation: smtFadeIn .2s ease forwards;
         }
 
         /* Left Drawer */
@@ -856,9 +899,11 @@ const Headersellmytime = () => {
           height: 100vh;
           width: 82%;
           max-width: 360px;
-          background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
-          border-right: 1px solid rgba(0,0,0,0.06);
-          box-shadow: 12px 0 30px rgba(0,0,0,0.15);
+          background:
+            radial-gradient(320px 240px at 0% 0%, rgba(139,31,192,.12), transparent 70%),
+            radial-gradient(280px 220px at 100% 100%, rgba(243,156,69,.12), transparent 70%),
+            #fff;
+          box-shadow: 18px 0 40px rgba(13,6,48,0.25);
           z-index: 1200;
           transform: translateX(-100%);
           opacity: 0;
@@ -877,90 +922,104 @@ const Headersellmytime = () => {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 12px 14px;
-          border-bottom: 1px solid rgba(0,0,0,0.06);
+          padding: 14px 16px;
+          border-bottom: 1px solid rgba(139,31,192,0.1);
           position: sticky;
           top: 0;
-          background: inherit;
           z-index: 1;
         }
         .smt-drawer-header img {
-          height: 42px;
+          height: 46px;
+          border-radius: 10px;
         }
         .smt-drawer-close {
-          background: transparent;
+          background: #F8EEFD;
+          color: #8B1FC0;
           border: none;
-          font-size: 22px;
-          padding: 6px;
-          border-radius: 8px;
+          font-size: 18px;
+          width: 40px;
+          height: 40px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 12px;
           cursor: pointer;
         }
-        .smt-drawer-close:active { background: rgba(0,0,0,.06); }
+        .smt-drawer-close:active { background: #F1E2FB; }
 
         .smt-drawer-scroll {
-          padding: 14px;
+          padding: 16px;
           overflow: auto;
           -webkit-overflow-scrolling: touch;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 6px;
         }
 
         .smt-mobile-link {
           text-decoration: none;
-          color: #111;
+          color: #0D0630;
           font-weight: 600;
           font-size: 16px;
-          padding: 12px 10px;
-          border-radius: 10px;
-          transition: background .2s ease, color .2s ease, transform .05s ease;
+          padding: 13px 14px;
+          border-radius: 12px;
+          border-left: 3px solid transparent;
+          transition: background .2s ease, color .2s ease, border-color .2s ease;
         }
         .smt-mobile-link:active { transform: scale(.99); }
         .smt-mobile-link:hover {
-          background: rgba(36,66,139,.08);
-          color: #24428B;
+          background: rgba(139,31,192,.07);
+          color: #8B1FC0;
+          border-left-color: #F45A63;
         }
 
         .smt-mobile-divider {
           height: 1px;
-          background: rgba(0,0,0,.08);
-          margin: 6px 2px 4px;
+          background: rgba(139,31,192,.12);
+          margin: 10px 2px 10px;
         }
 
         .smt-btn-mobile {
-          background: linear-gradient(90deg, #24428B 0%, #2e4aa1 100%);
+          background: linear-gradient(135deg, #8B1FC0 0%, #F45A63 60%, #F39C45 100%);
           color: #fff;
-          padding: 12px 16px;
-          border-radius: 10px;
+          padding: 14px 16px;
+          border-radius: 14px;
           font-weight: 700;
           text-align: center;
           text-decoration: none;
-          box-shadow: 0 12px 24px rgba(36,66,139,.25);
+          box-shadow: 0 14px 28px -12px rgba(244,90,99,.7);
           transition: transform .15s ease, box-shadow .15s ease;
         }
         .smt-btn-mobile:active {
           transform: translateY(1px);
-          box-shadow: 0 8px 18px rgba(36,66,139,.2);
+          box-shadow: 0 8px 18px rgba(139,31,192,.2);
         }
 
-        @keyframes fadeIn {
+        @keyframes smtFadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
         }
 
         /* Responsive tweaks */
+        @media (max-width: 1100px) {
+          .smt-header { padding: 10px 24px; }
+          .smt-nav ul li a { padding: 8px 11px; font-size: 14px; }
+        }
         @media (max-width: 900px) {
           .smt-btn { display: none; }
         }
         @media (max-width: 768px) {
           .smt-header { padding: 10px 18px; }
-          .smt-logo img { height: 68px; }
+          .smt-logo img { height: 60px; }
         }
         @media (max-width: 480px) {
           .smt-header { padding: 10px 14px; }
-          .smt-logo img { height: 48px; }
-          .smt-mobile-link { font-size: 15px; padding: 11px 10px; }
-          .smt-btn-mobile { font-size: 15px; padding: 11px 14px; }
+          .smt-logo img { height: 50px; border-radius: 11px; }
+          .smt-mobile-link { font-size: 15px; padding: 12px 12px; }
+          .smt-btn-mobile { font-size: 15px; padding: 13px 14px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .smt-header, .smt-header * { transition: none !important; animation: none !important; }
         }
 
         html, body {

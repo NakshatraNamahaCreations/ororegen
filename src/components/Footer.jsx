@@ -67,7 +67,7 @@
 //   <ul className="contact-list">
 //     <li>
 //       <FaPhone className="contact-icon" />
-//       <a href="tel:+917829125869">+91 78291 25869</a>
+//       <a href="tel:+916366921746">+91 63669 21746</a>
 //     </li>
 //     <li>
 //       <FaEnvelope className="contact-icon" />
@@ -215,7 +215,7 @@ const Footer = () => {
           <ul className="contact-list">
             <li>
               <FaPhone className="contact-icon" />
-              <a href="tel:+917829125869">+91 78291 25869</a>
+              <a href="tel:+916366921746">+91 63669 21746</a>
             </li>
             <li>
               <FaEnvelope className="contact-icon" />

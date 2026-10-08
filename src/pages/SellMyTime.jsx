@@ -1,6 +1,6 @@
 import React from "react";
 import "./SellMyTime.css";
-import sellImg from "../assets/mobile2.png";
+import sellImg from "../assets/sellmytime-section.webp";
 
 const SellMyTime = () => {
   return (

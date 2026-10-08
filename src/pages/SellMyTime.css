@@ -38,7 +38,11 @@
 }
 
 .smt-title span {
-  color: #ff9d09;
+  background: linear-gradient(90deg, #8B1FC0, #F45A63, #F39C45);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #8B1FC0;
 }
 
 .smt-description {
@@ -53,7 +57,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin: 25px 0 10px;
-  color: #1d3557;
+  color: #8B1FC0;
    font-family: "Poppins", sans-serif;
 }
 
@@ -78,7 +82,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #06d6a0;
+  color: #F45A63;
   font-weight: bold;
    font-family: "Poppins", sans-serif;
 }

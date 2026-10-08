@@ -1,6 +1,6 @@
 import React from "react";
 import "./ThirtyForty.css";
-import propertyImg from "../assets/30forty.png";
+import propertyImg from "../assets/thirtyforty-section.webp";
 
 const ThirtyForty = () => {
   return (

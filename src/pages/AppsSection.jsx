@@ -1,6 +1,6 @@
 import React from "react";
 import "./AppsSection.css";
-import { FaClock, FaChalkboardTeacher } from "react-icons/fa";
+import { FaChalkboardTeacher } from "react-icons/fa";
 
 const AppsSection = () => {
   return (
@@ -26,7 +26,7 @@ const AppsSection = () => {
           </div>
 
           <div className="app-card">
-            <FaClock className="app-icon" />
+            <img src="/SellMyTimeLogo.png" alt="Sell My Time" className="app-logo" />
             <h3>Sell My Time</h3>
             <p>Connect, collaborate, and monetize your time effectively.</p>
           </div>

@@ -6,7 +6,6 @@ import ban2 from "../assets/ban2.jpg";
 import ban3 from "../assets/network.jpg";
 import ban4 from "../assets/masterjinew.jpg";
 import {
-  FaClock,
   FaSchool,
   FaChevronLeft,
   FaChevronRight,
@@ -46,7 +45,13 @@ const slides = [
     title: "Sell My Time",
     slogan:
       "Turn your time into new opportunities. Connect, collaborate, and earn while doing what you love.",
-    icon: <FaClock className="banner-icon" />,
+    icon: (
+      <img
+        src="/SellMyTimeLogo.png"
+        alt="Sell My Time"
+        className="banner-logo"
+      />
+    ),
     link: "/apps/sellmytime",
   },
   {

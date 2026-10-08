@@ -1,6 +1,6 @@
 import React from "react";
 import "./StayFinder.css";
-import stayImg from "../assets/stayfinder.png";
+import stayImg from "../assets/indianhotels-section.webp";
 
 const StayFinder = () => {
   return (
