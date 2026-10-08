@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Banner.css";
 import ban1 from "../assets/ban3.jpg";
 import ban2 from "../assets/ban2.jpg";
-import ban3 from "../assets/network.jpg";
+import ban3 from "../assets/sellmytime-hero.jpg";
 import ban4 from "../assets/masterjinew.jpg";
 import {
   FaSchool,

@@ -560,19 +560,27 @@
 // }
 
 // export default Home;
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Footersellmytime from "./Footersellmytime";
 import Headersellmytime from "./Headersellmytime";
 
-import bannerImg from "../assets/network.jpg";          // <- used for both desktop + mobile hero now
-import aboutImage from "../assets/sellmytime-about.jpg";   // (kept import in case you want it elsewhere)
+import bannerImg from "../assets/sellmytime-hero.jpg";          // <- used for both desktop + mobile hero now
 
 import appStoreImg from "../assets/appstore.webp";
 import googlePlayImg from "../assets/playstore.webp";
 
-import { FaLightbulb, FaDollarSign, FaShieldAlt, FaGlobe, FaChevronDown, FaPaperPlane } from "react-icons/fa";
+import { FaLightbulb, FaDollarSign, FaShieldAlt, FaGlobe, FaChevronDown, FaPaperPlane, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import contactImg from "../assets/enquirycontact.jpg";
-import downloadBanner from "../assets/sellmytime-download.png";
+import scrWelcome from "../assets/sellmytime-scr-welcome.webp";
+import scrChoosePath from "../assets/sellmytime-scr-choose-path.webp";
+import scrHome from "../assets/sellmytime-scr-home.webp";
+import scrAllProfiles from "../assets/sellmytime-scr-all-profiles.webp";
+import scrFilters from "../assets/sellmytime-scr-filters.webp";
+import scrProfile from "../assets/sellmytime-scr-profile.webp";
+import scrPickDate from "../assets/sellmytime-scr-pick-date.webp";
+import scrPickTime from "../assets/sellmytime-scr-pick-time.webp";
+import scrFavourites from "../assets/sellmytime-scr-favourites.webp";
+import scrSettings from "../assets/sellmytime-scr-settings.webp";
 
 const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.bizmats&hl=en_IN";
@@ -1108,6 +1116,90 @@ const pageCss = `
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ---------- Phone frame (real app screenshots) ---------- */
+.smh-phone {
+  position: relative;
+  width: 100%;
+  padding: 7px;
+  border-radius: 34px;
+  background: linear-gradient(160deg, #2A1F5C 0%, var(--smh-navy) 60%);
+  box-shadow: 0 30px 60px -24px rgba(13,6,48,.55), inset 0 0 0 1.5px rgba(255,255,255,.08);
+}
+.smh-phone img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 644 / 1440;
+  object-fit: cover;
+  border-radius: 27px;
+  background: var(--smh-tint);
+}
+.smh-phones {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 520px;
+}
+.smh-phones .smh-phone { width: 230px; }
+.smh-phones .smh-phone.back { transform: translateX(62px) rotate(7deg); opacity: .96; }
+.smh-phones .smh-phone.front { position: absolute; transform: translateX(-70px) rotate(-5deg); z-index: 1; animation: smhFloat 6s ease-in-out infinite; }
+@keyframes smhFloat {
+  0%, 100% { transform: translateX(-70px) translateY(0) rotate(-5deg); }
+  50% { transform: translateX(-70px) translateY(-12px) rotate(-5deg); }
+}
+.smh-dl-visual .smh-phones { min-height: 470px; }
+.smh-dl-visual .smh-phones .smh-phone { width: 205px; }
+
+/* ---------- App screenshots gallery ---------- */
+.smh-shots {
+  position: relative;
+  padding: 100px 0 90px;
+  background: linear-gradient(180deg, var(--smh-tint) 0%, #fff 100%);
+  overflow: hidden;
+}
+.smh-shots .smh-head-center { padding: 0 20px; }
+.smh-shots-wrap { position: relative; max-width: 1280px; margin: 0 auto; }
+.smh-shots-track {
+  display: flex;
+  gap: 26px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 18px 60px 34px;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
+}
+.smh-shots-track::-webkit-scrollbar { display: none; }
+.smh-shot {
+  flex: 0 0 220px;
+  margin: 0;
+  scroll-snap-align: center;
+  transition: transform .35s ease;
+}
+.smh-shot:hover { transform: translateY(-8px); }
+.smh-shot:hover .smh-phone { box-shadow: 0 36px 70px -24px rgba(139,31,192,.55), inset 0 0 0 1.5px rgba(255,255,255,.08); }
+.smh-shot figcaption { text-align: center; margin-top: 16px; }
+.smh-shot figcaption strong { display: block; font-size: 15.5px; font-weight: 700; color: var(--smh-navy); }
+.smh-shot figcaption span { display: block; font-size: 13px; line-height: 1.5; color: var(--smh-muted); margin-top: 4px; }
+.smh-shots-nav {
+  position: absolute;
+  top: calc(50% - 40px);
+  z-index: 2;
+  width: 48px; height: 48px;
+  border: none;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: #fff;
+  background: var(--smh-grad);
+  box-shadow: 0 12px 26px -10px rgba(139,31,192,.7);
+  cursor: pointer;
+  transition: transform .25s ease;
+}
+.smh-shots-nav:hover { transform: scale(1.08); }
+.smh-shots-nav.prev { left: 12px; }
+.smh-shots-nav.next { right: 12px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .smh-why-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1140,6 +1232,16 @@ const pageCss = `
   .smh-form-row { grid-template-columns: 1fr; }
   .smh-contact-visual { padding-right: 10px; }
   .smh-contact-visual::before { inset: 6% 0 -4% 8%; }
+  .smh-phones { min-height: 420px; }
+  .smh-phones .smh-phone { width: 180px; }
+  .smh-phones .smh-phone.back { transform: translateX(48px) rotate(7deg); }
+  .smh-phones .smh-phone.front { transform: translateX(-52px) rotate(-5deg); animation: none; }
+  .smh-dl-visual .smh-phones { min-height: 380px; }
+  .smh-dl-visual .smh-phones .smh-phone { width: 165px; }
+  .smh-shots { padding: 70px 0 60px; }
+  .smh-shots-track { gap: 18px; padding: 14px 24px 26px; -webkit-mask-image: none; mask-image: none; }
+  .smh-shot { flex-basis: 190px; }
+  .smh-shots-nav { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .smh-page *, .smh-page *::before, .smh-page *::after {
@@ -1209,6 +1311,24 @@ function Home() {
     { question: "4. Who can join Sell My Time?", answer: "Anyone with valuable skills — business mentors, teachers, fitness trainers, designers, and more." },
     { question: "5. How are payments handled?", answer: "All payments are secure and processed via the app. Experts get payouts after each session." },
   ];
+
+  const appScreens = [
+    { img: scrWelcome, title: "Welcome", text: "India's professional time marketplace." },
+    { img: scrChoosePath, title: "Choose Your Path", text: "Offer services, hire experts, or do both." },
+    { img: scrHome, title: "Discover", text: "Browse experts online, offline or both." },
+    { img: scrAllProfiles, title: "All Profiles", text: "Explore experts and their hourly rates." },
+    { img: scrFilters, title: "Smart Filters", text: "Filter by city, availability, gender, age and price." },
+    { img: scrProfile, title: "Expert Profile", text: "See an expert's details and book a session." },
+    { img: scrPickDate, title: "Choose a Date", text: "Pick online or in-person, then a date." },
+    { img: scrPickTime, title: "Pick a Time Slot", text: "Book a full day or an hourly slot." },
+    { img: scrFavourites, title: "Profiles You Love", text: "Save the experts you like." },
+    { img: scrSettings, title: "Settings", text: "Manage your profile, payouts and privacy." },
+  ];
+  const shotsRef = useRef(null);
+  const scrollShots = (dir) => {
+    const el = shotsRef.current;
+    if (el) el.scrollBy({ left: dir * 492, behavior: "smooth" });
+  };
 
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => setActiveIndex(activeIndex === index ? null : index);
@@ -1326,10 +1446,51 @@ function Home() {
             </p>
           </div>
           <div className="smh-about-visual">
-            <img src={aboutImage} alt="About Sell My Time" />
+            <div className="smh-phones">
+              <div className="smh-phone back">
+                <img src={scrProfile} alt="Sell My Time expert profile screen" loading="lazy" />
+              </div>
+              <div className="smh-phone front">
+                <img src={scrHome} alt="Sell My Time home screen" loading="lazy" />
+              </div>
+            </div>
           </div>
         </section>
       </div>
+
+      {/* ===== App Screenshots ===== */}
+      <section id="screenshots" className="smh-shots">
+        <div className="smh-head-center">
+          <span className="smh-eyebrow">Inside the App</span>
+          <h2 className="smh-h2">
+            App <span className="smh-grad-text">Screenshots</span>
+          </h2>
+          <p className="smh-sub">
+            A quick look at Sell My Time: find the right expert, pick a slot and book in a few taps.
+          </p>
+        </div>
+        <div className="smh-shots-wrap">
+          <button type="button" className="smh-shots-nav prev" onClick={() => scrollShots(-1)} aria-label="Previous screenshots">
+            <FaChevronLeft />
+          </button>
+          <div className="smh-shots-track" ref={shotsRef}>
+            {appScreens.map((sc) => (
+              <figure className="smh-shot" key={sc.title}>
+                <div className="smh-phone">
+                  <img src={sc.img} alt={`Sell My Time app: ${sc.title}`} loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>{sc.title}</strong>
+                  <span>{sc.text}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <button type="button" className="smh-shots-nav next" onClick={() => scrollShots(1)} aria-label="Next screenshots">
+            <FaChevronRight />
+          </button>
+        </div>
+      </section>
 
       {/* ===== Why Choose Us ===== */}
       <section id="why-choose-us" className="smh-why">
@@ -1423,7 +1584,14 @@ function Home() {
             </div>
           </div>
           <div className="smh-dl-visual">
-            <img src={downloadBanner} alt="Sell My Time app preview" loading="lazy" />
+            <div className="smh-phones">
+              <div className="smh-phone back">
+                <img src={scrChoosePath} alt="Sell My Time choose your path screen" loading="lazy" />
+              </div>
+              <div className="smh-phone front">
+                <img src={scrWelcome} alt="Sell My Time welcome screen" loading="lazy" />
+              </div>
+            </div>
           </div>
         </section>
       </div>
